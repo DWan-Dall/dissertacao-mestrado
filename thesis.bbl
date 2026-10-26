@@ -1,178 +1,129 @@
 \begin{thebibliography}{10}
 
+\bibitem{ipcc2021}
+{Intergovernmental Panel on Climate Change (IPCC)}, {\em Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}.
+\newblock Cambridge, UK; New York, NY, USA: Cambridge University Press, 2021.
+
+\bibitem{ana2021}
+{Brasil. Ag{\^e}ncia Nacional de {\'A}guas e Saneamento B{\'a}sico (ANA)}, {\em Atlas Irriga{\c c}{\~a}o: Uso da {\'A}gua na Agricultura Irrigada}.
+\newblock Bras{\'i}lia: ANA, 2021.
+
 \bibitem{mosavi2018}
-A.~Mosavi, P.~Ozturk, and K.-W. Chau, ``Flood prediction using machine learning
-  models: Literature review,'' {\em Water}, vol.~10, no.~11, 2018.
+A.~Mosavi, P.~Ozturk, and K.-W. Chau, ``Flood prediction using machine learning models: Literature review,'' {\em Water}, vol.~10, no.~11, 2018.
 \newblock art. 1536, doi: 10.3390/w10111536.
 
+\bibitem{zhang2019}
+X.~Zhang, B.~Zhang, F.~H.~S. Chiew, B.~Jarihani, Y.~Zhang, J.~Wei, Y.~Wang, J.~Jin, and C.~Liu, ``Urban drought challenge to 2030 sustainable development goals,'' {\em Science of the Total Environment}, vol.~693, p.~133455, 2019.
+
 \bibitem{oliveira2013}
-R.~A. Oliveira, C.~S. Martins, and E.~M. Mendiondo, ``An{\'a}lise do uso de
-  redes neurais artificiais na previs{\~a}o de vaz{\~o}es em rios urbanos,'' in
-  {\em XX SBRH}, 2013.
+R.~A. Oliveira, C.~S. Martins, and E.~M. Mendiondo, ``An{\'a}lise do uso de redes neurais artificiais na previs{\~a}o de vaz{\~o}es em rios urbanos,'' in {\em XX SBRH}, 2013.
 
 \bibitem{ipcc2022}
 {IPCC}, {\em Climate Change 2022: Impacts, Adaptation and Vulnerability}.
 \newblock Cambridge, UK: Cambridge University Press, 2022.
 
 \bibitem{wahl2015}
-T.~Wahl, S.~Jain, J.~Bender, S.~D. Meyers, and M.~E. Luther, ``Increasing risk
-  of compound flooding from storm surge and rainfall for major {US} cities,''
-  {\em Nature Climate Change}, vol.~5, pp.~1093--1097, 2015.
+T.~Wahl, S.~Jain, J.~Bender, S.~D. Meyers, and M.~E. Luther, ``Increasing risk of compound flooding from storm surge and rainfall for major {US} cities,'' {\em Nature Climate Change}, vol.~5, pp.~1093--1097, 2015.
 \newblock doi: 10.1038/nclimate2736.
 
 \bibitem{shen2018}
-C.~Shen, ``A transdisciplinary review of deep learning research and its
-  relevance for water resources scientists,'' {\em Water Resources Research},
-  vol.~54, no.~11, pp.~8558--8593, 2018.
+C.~Shen, ``A transdisciplinary review of deep learning research and its relevance for water resources scientists,'' {\em Water Resources Research}, vol.~54, no.~11, pp.~8558--8593, 2018.
 \newblock doi: 10.1029/2018WR022643.
 
 \bibitem{kratzert2018}
-F.~Kratzert, D.~Klotz, C.~Brenner, K.~Schulz, and M.~Herrnegger,
-  ``Rainfall--runoff modelling using {Long Short-Term Memory} ({LSTM})
-  networks,'' {\em Hydrology and Earth System Sciences}, vol.~22,
-  pp.~6005--6022, 2018.
+F.~Kratzert, D.~Klotz, C.~Brenner, K.~Schulz, and M.~Herrnegger, ``Rainfall--runoff modelling using {Long Short-Term Memory} ({LSTM}) networks,'' {\em Hydrology and Earth System Sciences}, vol.~22, pp.~6005--6022, 2018.
 \newblock doi: 10.5194/hess-22-6005-2018.
 
 \bibitem{nearing2021}
-G.~S. Nearing {\em et~al.}, ``What role does hydrological science play in the
-  age of machine learning?,'' {\em Water Resources Research}, vol.~57, no.~3,
-  2021.
+G.~S. Nearing {\em et~al.}, ``What role does hydrological science play in the age of machine learning?,'' {\em Water Resources Research}, vol.~57, no.~3, 2021.
 \newblock art. e2020WR028091, doi: 10.1029/2020WR028091.
 
 \bibitem{nearing2024}
-G.~Nearing {\em et~al.}, ``Global prediction of extreme floods in ungauged
-  watersheds,'' {\em Nature}, vol.~627, pp.~559--563, 2024.
+G.~Nearing {\em et~al.}, ``Global prediction of extreme floods in ungauged watersheds,'' {\em Nature}, vol.~627, pp.~559--563, 2024.
 \newblock doi: 10.1038/s41586-024-07145-1.
 
 \bibitem{aria2017}
-M.~Aria and C.~Cuccurullo, ``bibliometrix: An {R}-tool for comprehensive
-  science mapping analysis,'' {\em Journal of Informetrics}, vol.~11, no.~4,
-  pp.~959--975, 2017.
+M.~Aria and C.~Cuccurullo, ``bibliometrix: An {R}-tool for comprehensive science mapping analysis,'' {\em Journal of Informetrics}, vol.~11, no.~4, pp.~959--975, 2017.
 \newblock doi: 10.1016/j.joi.2017.08.007.
 
 \bibitem{page2021}
-M.~J. Page {\em et~al.}, ``The {PRISMA} 2020 statement: An updated guideline
-  for reporting systematic reviews,'' {\em BMJ}, vol.~372, 2021.
+M.~J. Page {\em et~al.}, ``The {PRISMA} 2020 statement: An updated guideline for reporting systematic reviews,'' {\em BMJ}, vol.~372, 2021.
 \newblock art. n71, doi: 10.1136/bmj.n71.
 
 \bibitem{xiang2020}
-Z.~Xiang, J.~Yan, and I.~Demir, ``A rainfall--runoff model with {LSTM}-based
-  sequence-to-sequence learning,'' {\em Water Resources Research}, vol.~56,
-  no.~1, 2020.
+Z.~Xiang, J.~Yan, and I.~Demir, ``A rainfall--runoff model with {LSTM}-based sequence-to-sequence learning,'' {\em Water Resources Research}, vol.~56, no.~1, 2020.
 \newblock art. e2019WR025326, doi: 10.1029/2019WR025326.
 
 \bibitem{tyralis2019}
-H.~Tyralis, G.~Papacharalampous, and A.~Langousis, ``A brief review of {Random
-  Forests} for water scientists and practitioners and their recent history in
-  water resources,'' {\em Water}, vol.~11, no.~5, 2019.
+H.~Tyralis, G.~Papacharalampous, and A.~Langousis, ``A brief review of {Random Forests} for water scientists and practitioners and their recent history in water resources,'' {\em Water}, vol.~11, no.~5, 2019.
 \newblock art. 910, doi: 10.3390/w11050910.
 
 \bibitem{hu2018}
-C.~Hu, Q.~Wu, H.~Li, S.~Jian, N.~Li, and Z.~Lou, ``Deep learning with a {Long
-  Short-Term Memory} networks approach for rainfall--runoff simulation,'' {\em
-  Water}, vol.~10, no.~11, 2018.
+C.~Hu, Q.~Wu, H.~Li, S.~Jian, N.~Li, and Z.~Lou, ``Deep learning with a {Long Short-Term Memory} networks approach for rainfall--runoff simulation,'' {\em Water}, vol.~10, no.~11, 2018.
 \newblock art. 1543, doi: 10.3390/w10111543.
 
 \bibitem{janizadeh2019}
-S.~Janizadeh {\em et~al.}, ``Prediction success of machine learning methods for
-  flash flood susceptibility mapping in the {Tafresh Watershed, Iran},'' {\em
-  Sustainability}, vol.~11, no.~19, 2019.
+S.~Janizadeh {\em et~al.}, ``Prediction success of machine learning methods for flash flood susceptibility mapping in the {Tafresh Watershed, Iran},'' {\em Sustainability}, vol.~11, no.~19, 2019.
 \newblock art. 5426, doi: 10.3390/su11195426.
 
 \bibitem{dodangeh2020}
-E.~Dodangeh {\em et~al.}, ``Integrated machine learning methods with resampling
-  algorithms for flood susceptibility prediction,'' {\em Science of the Total
-  Environment}, vol.~705, 2020.
+E.~Dodangeh {\em et~al.}, ``Integrated machine learning methods with resampling algorithms for flood susceptibility prediction,'' {\em Science of the Total Environment}, vol.~705, 2020.
 \newblock art. 135983, doi: 10.1016/j.scitotenv.2019.135983.
 
 \bibitem{rafieisardooi2021}
-E.~Rafiei-Sardooi, A.~Azareh, B.~Choubin, A.~Mosavi, and J.~J. Clague,
-  ``Evaluating urban flood risk using hybrid method of {TOPSIS} and machine
-  learning,'' {\em International Journal of Disaster Risk Reduction}, vol.~66,
-  2021.
+E.~Rafiei-Sardooi, A.~Azareh, B.~Choubin, A.~Mosavi, and J.~J. Clague, ``Evaluating urban flood risk using hybrid method of {TOPSIS} and machine learning,'' {\em International Journal of Disaster Risk Reduction}, vol.~66, 2021.
 \newblock art. 102614, doi: 10.1016/j.ijdrr.2021.102614.
 
 \bibitem{zhao2019}
-G.~Zhao, B.~Pang, Z.~Xu, D.~Peng, and L.~Xu, ``Assessment of urban flood
-  susceptibility using semi-supervised machine learning model,'' {\em Science
-  of the Total Environment}, vol.~659, pp.~940--949, 2019.
+G.~Zhao, B.~Pang, Z.~Xu, D.~Peng, and L.~Xu, ``Assessment of urban flood susceptibility using semi-supervised machine learning model,'' {\em Science of the Total Environment}, vol.~659, pp.~940--949, 2019.
 \newblock doi: 10.1016/j.scitotenv.2018.12.217.
 
 \bibitem{fang2021}
-Z.~Fang, Y.~Wang, L.~Peng, and H.~Hong, ``Predicting flood susceptibility using
-  {LSTM} neural networks,'' {\em Journal of Hydrology}, vol.~594, 2021.
+Z.~Fang, Y.~Wang, L.~Peng, and H.~Hong, ``Predicting flood susceptibility using {LSTM} neural networks,'' {\em Journal of Hydrology}, vol.~594, 2021.
 \newblock art. 125734, doi: 10.1016/j.jhydrol.2020.125734.
 
 \bibitem{costache2020}
-R.~Costache {\em et~al.}, ``Flash-flood susceptibility assessment using
-  multi-criteria decision making and machine learning supported by remote
-  sensing and {GIS} techniques,'' {\em Remote Sensing}, vol.~12, no.~1, 2020.
+R.~Costache {\em et~al.}, ``Flash-flood susceptibility assessment using multi-criteria decision making and machine learning supported by remote sensing and {GIS} techniques,'' {\em Remote Sensing}, vol.~12, no.~1, 2020.
 \newblock art. 106, doi: 10.3390/rs12010106.
 
 \bibitem{shahabi2020}
-H.~Shahabi {\em et~al.}, ``Flood detection and susceptibility mapping using
-  {Sentinel-1} remote sensing data and a machine learning approach: Hybrid
-  intelligence of bagging ensemble based on {K}-nearest neighbor classifier,''
-  {\em Remote Sensing}, vol.~12, no.~2, 2020.
+H.~Shahabi {\em et~al.}, ``Flood detection and susceptibility mapping using {Sentinel-1} remote sensing data and a machine learning approach: Hybrid intelligence of bagging ensemble based on {K}-nearest neighbor classifier,'' {\em Remote Sensing}, vol.~12, no.~2, 2020.
 \newblock art. 266, doi: 10.3390/rs12020266.
 
 \bibitem{arora2021}
-A.~Arora {\em et~al.}, ``Optimization of state-of-the-art fuzzy-metaheuristic
-  {ANFIS}-based machine learning models for flood susceptibility prediction
-  mapping in the {Middle Ganga Plain, India},'' {\em Science of the Total
-  Environment}, vol.~750, 2021.
+A.~Arora {\em et~al.}, ``Optimization of state-of-the-art fuzzy-metaheuristic {ANFIS}-based machine learning models for flood susceptibility prediction mapping in the {Middle Ganga Plain, India},'' {\em Science of the Total Environment}, vol.~750, 2021.
 \newblock art. 141565, doi: 10.1016/j.scitotenv.2020.141565.
 
 \bibitem{wu2020}
-W.~Wu, R.~Emerton, Q.~Duan, A.~W. Wood, F.~Wetterhall, and D.~E. Robertson,
-  ``Ensemble flood forecasting: Current status and future opportunities,'' {\em
-  {WIREs} Water}, vol.~7, no.~3, 2020.
+W.~Wu, R.~Emerton, Q.~Duan, A.~W. Wood, F.~Wetterhall, and D.~E. Robertson, ``Ensemble flood forecasting: Current status and future opportunities,'' {\em {WIREs} Water}, vol.~7, no.~3, 2020.
 \newblock art. e1432, doi: 10.1002/wat2.1432.
 
 \bibitem{saha2021}
-A.~Saha {\em et~al.}, ``Flood susceptibility assessment using novel ensemble of
-  {Hyperpipes} and support vector regression algorithms,'' {\em Water},
-  vol.~13, no.~2, 2021.
+A.~Saha {\em et~al.}, ``Flood susceptibility assessment using novel ensemble of {Hyperpipes} and support vector regression algorithms,'' {\em Water}, vol.~13, no.~2, 2021.
 \newblock art. 241, doi: 10.3390/w13020241.
 
 \bibitem{roberts2017}
-D.~R. Roberts {\em et~al.}, ``Cross-validation strategies for data with
-  temporal, spatial, hierarchical, or phylogenetic structure,'' {\em
-  Ecography}, vol.~40, no.~8, pp.~913--929, 2017.
+D.~R. Roberts {\em et~al.}, ``Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure,'' {\em Ecography}, vol.~40, no.~8, pp.~913--929, 2017.
 \newblock doi: 10.1111/ecog.02881.
 
 \bibitem{dias2025}
-M.~R.~F. Dias, Y.~L. Martins, M.~De~Campos, and J.~P. Sausen, ``State of the
-  art techniques for flood prediction models -- a systematic review,'' in {\em
-  17th Seminar on Power Electronics and Control ({SEPOC})}, pp.~1--7, 2025.
+M.~R.~F. Dias, Y.~L. Martins, M.~De~Campos, and J.~P. Sausen, ``State of the art techniques for flood prediction models -- a systematic review,'' in {\em 17th Seminar on Power Electronics and Control ({SEPOC})}, pp.~1--7, 2025.
 \newblock doi: 10.1109/SEPOC67005.2025.11297645.
 
 \bibitem{soares2015}
-D.~G. Soares and R.~C.~G. Teive, ``Previs{\~a}o de cheias do {Rio
-  Itaja{\'i}-A{\c c}u} utilizando redes neurais artificiais,'' in {\em
-  SIBGRAPI}, 2015.
+D.~G. Soares and R.~C.~G. Teive, ``Previs{\~a}o de cheias do {Rio Itaja{\'i}-A{\c c}u} utilizando redes neurais artificiais,'' in {\em SIBGRAPI}, 2015.
 
 \bibitem{valle2021}
-R.~F. Valle, ``Avalia{\c c}{\~a}o da utiliza{\c c}{\~a}o de redes neurais para
-  previs{\~a}o do risco de inunda{\c c}{\~a}o em {Curitiba/PR}.'' UTFPR, 2021.
+R.~F. Valle, ``Avalia{\c c}{\~a}o da utiliza{\c c}{\~a}o de redes neurais para previs{\~a}o do risco de inunda{\c c}{\~a}o em {Curitiba/PR}.'' UTFPR, 2021.
 
 \bibitem{estrada2021}
-A.~V. Estrada, ``Aplica{\c c}{\~a}o de redes neurais artificiais em modelos de
-  previs{\~a}o de demanda de {\'a}gua.'' UDESC, 2021.
+A.~V. Estrada, ``Aplica{\c c}{\~a}o de redes neurais artificiais em modelos de previs{\~a}o de demanda de {\'a}gua.'' UDESC, 2021.
 
 \bibitem{magro2022}
-R.~B. Magro, ``Utiliza{\c c}{\~a}o de t{\'e}cnicas de intelig{\^e}ncia
-  computacional para estimativa de vaz{\~o}es afluentes.'' UFPel, 2022.
+R.~B. Magro, ``Utiliza{\c c}{\~a}o de t{\'e}cnicas de intelig{\^e}ncia computacional para estimativa de vaz{\~o}es afluentes.'' UFPel, 2022.
 
 \bibitem{islam2025}
-T.~Islam {\em et~al.}, ``A systematic review of urban flood susceptibility
-  mapping: Remote sensing, machine learning, and other modeling approaches,''
-  {\em Remote Sensing}, vol.~17, no.~3, 2025.
+T.~Islam {\em et~al.}, ``A systematic review of urban flood susceptibility mapping: Remote sensing, machine learning, and other modeling approaches,'' {\em Remote Sensing}, vol.~17, no.~3, 2025.
 \newblock art. 524, doi: 10.3390/rs17030524.
-
-\bibitem{ana2021}
-{Brasil. Ag{\^e}ncia Nacional de {\'A}guas e Saneamento B{\'a}sico (ANA)}, {\em
-  Atlas Irriga{\c c}{\~a}o: Uso da {\'A}gua na Agricultura Irrigada}.
-\newblock Bras{\'i}lia: ANA, 2021.
 
 \end{thebibliography}
