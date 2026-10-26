@@ -1,0 +1,335 @@
+% --------------------------------------------------------------------
+% --------------------------------------------------------------------
+% Modelo de Trabalho Acadêmico (tese de doutorado, dissertação de
+% mestrado) em conformidade com 
+% --------------------------------------------------------------------
+% --------------------------------------------------------------------
+
+% Opção	Efeito no Documento
+% qualificacao =	Formata para monografia de qualificação
+% mestrado	 = Dissertação de mestrado
+% doutorado	 = Tese de doutorado (padrão)
+% pre-defesa	 = Versão para apresentação à banca
+% pos-defesa	 = Versão final do trabalho
+% impressao	 = Versão para impressão (desativa capa em PDF)
+
+\documentclass[mestrado,pre-defesa]{packages/ppg-ieee}
+
+\usepackage[numbers]{natbib}
+\bibliographystyle{ieeetr}
+
+
+
+% --------------------------------------------------------------------
+% Pacotes Opcionais
+% --------------------------------------------------------------------
+\usepackage{rotating}           % Usado para rotacionar o texto
+\usepackage[all,knot,arc,import,poly]{xy}   % Pacote para desenhos gráficos
+% Este pacote pode conflitar com outros pacotes gráficos como o ``pictex''
+% Então é necessário usar apenas um dos pacotes conflitantes
+\newcommand{\VerbL}{0.52\textwidth}
+\newcommand{\LatL}{0.42\textwidth}
+
+% --------------------------------------------------------------------
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+% Tanto na capa quanto nas folhas de rosto apenas a primeira letra da primeira palavra (ou nomes próprios) devem estar em letra maiúscula, todas as demais devem ser em letra minúscula.
+\tituloPT{Aplicação de inteligência artificial para previsão de enchentes e mitigação de impactos nas comunidades costeiras}
+\tituloEN{Application of artificial intelligence for flood prediction and impact mitigation in coastal communities}
+\autor[Silva, D. W. S.]{Daiane Wan-Dall Splitter da Silva}
+\genero{F} % Gênero da autora (M = Masculino / F = Feminino)
+\orientador[Orientador]{Prof. Dr.}{Rodrigo Sant'Ana}
+% \coorientador{Prof. Dr.}{Nome do Coorientador} % descomente se houver coorientação
+\curso{PPGC}
+\data{20}{10}{2026} % Data do depósito (ajuste na entrega)
+\idioma{PT} % Idioma principal do documento (PT = português / EN = inglês)
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% Resumo em PORTUGUÊS
+% conter no máximo 500 palavras
+% conter no mínimo 1 e no máximo 5 palavras-chave
+\textoresumo[brazil]{
+
+Este projeto tem como objetivo o desenvolvimento de um modelo preditivo para a previsão de enchentes em comunidades costeiras do estado de Santa Catarina, utilizando técnicas avançadas de inteligência artificial. O aumento da frequência e da intensidade de eventos climáticos extremos, como chuvas intensas, marés elevadas e alagamentos, tem afetado diretamente a vida das populações litorâneas, ocasionando prejuízos sociais, ambientais e econômicos consideráveis. Nesse contexto, torna-se essencial a antecipação desses eventos, por meio de métodos mais precisos e eficazes do que os atualmente utilizados. A proposta deste trabalho é criar um sistema preditivo baseado na análise de dados ambientais, climáticos, hidrológicos e socioeconômicos, com foco na identificação de padrões e na projeção de cenários futuros de risco. Justifica-se a relevância da pesquisa pela possibilidade de oferecer uma ferramenta capaz de auxiliar a tomada de decisão por parte de autoridades e órgãos de proteção civil, promovendo maior segurança, planejamento urbano eficiente e proteção de áreas vulneráveis. A metodologia a ser adotada é de natureza aplicada, com abordagem quantitativa e método hipotético-dedutivo. O projeto incluirá a consolidação de um banco de dados estruturado com informações provenientes de sensores ambientais, imagens de satélite e registros históricos de enchentes. Serão aplicadas técnicas de aprendizado de máquina para o desenvolvimento, ajuste e validação dos modelos preditivos. Espera-se, como resultado, a criação de um modelo robusto e confiável, capaz de antecipar a ocorrência de enchentes com maior precisão, identificar áreas de risco com base em múltiplas variáveis e contribuir para a formulação de políticas públicas voltadas à mitigação de desastres naturais em ambientes costeiros. O trabalho visa gerar impacto social positivo e ampliar o uso da inteligência computacional na gestão de riscos ambientais.
+}
+{ Inteligência Artificial. Previsão de Enchentes. Comunidades Costeiras.}
+
+
+% resumo em INGLÊS
+% conter no máximo 500 palavras
+% conter no mínimo 1 e no máximo 5 palavras-chave
+\textoresumo[english]{
+This project aims to develop a predictive model for flood forecasting in coastal communities of the state of Santa Catarina, Brazil, using advanced artificial intelligence techniques. The increasing frequency and intensity of extreme weather events, such as heavy rainfall, high tides and flooding, has directly affected the lives of coastal populations, causing considerable social, environmental and economic losses. In this context, anticipating these events through methods that are more accurate and effective than those currently in use becomes essential. The proposal of this work is to create a predictive system based on the analysis of environmental, climatic, hydrological and socioeconomic data, focusing on the identification of patterns and on the projection of future risk scenarios. The relevance of the research is justified by the possibility of offering a tool able to support decision-making by authorities and civil protection agencies, promoting greater safety, efficient urban planning and protection of vulnerable areas. The methodology to be adopted is applied in nature, with a quantitative approach and the hypothetico-deductive method. The project will include the consolidation of a structured database with information from environmental sensors, satellite images and historical flood records. Machine learning techniques will be applied for the development, tuning and validation of the predictive models. The expected result is a robust and reliable model able to anticipate the occurrence of floods with greater accuracy, identify risk areas based on multiple variables and contribute to the formulation of public policies aimed at mitigating natural disasters in coastal environments. The work aims to generate positive social impact and to expand the use of computational intelligence in environmental risk management.
+}{Artificial Intelligence. Flood Forecasting. Coastal Communities.}
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+% Inserir a ficha catalográfica
+%\incluifichacatalografica{tex/pre-textual/Embranco.pdf}
+% DEDICATÓRIA / AGRADECIMENTO / EPÍGRAFE
+
+% Dedicatória, agradecimentos e epígrafe: os arquivos do modelo são textos de exemplo.
+% Escreva os seus em tex/pre-textual/ e descomente as três linhas abaixo.
+%\textodedicatoria*{tex/pre-textual/dedicatoria}
+%\textoagradecimentos*{tex/pre-textual/agradecimentos}
+%\textoepigrafe*{tex/pre-textual/epigrafe}
+
+% Inclui a lista de figuras
+\incluilistadefiguras
+
+% Inclui a lista de tabelas
+\incluilistadetabelas
+
+% Inclui a lista de quadros
+\incluilistadequadros
+
+% Inclui a lista de algoritmos
+%\incluilistadealgoritmos
+
+% Inclui a lista de códigos
+%\incluilistadecodigos
+
+% Inclui a lista de siglas e abreviaturas
+\incluilistadesiglas
+
+
+\nomenclature{ANA}{Agência Nacional de Águas e Saneamento Básico}
+\nomenclature{AUC}{Área sob a curva (\textit{Area Under the Curve})}
+\nomenclature{CNN}{Rede neural convolucional (\textit{Convolutional Neural Network})}
+\nomenclature{DL}{Aprendizado profundo (\textit{Deep Learning})}
+\nomenclature{DOI}{\textit{Digital Object Identifier}}
+\nomenclature{IA}{Inteligência Artificial}
+\nomenclature{IoU}{\textit{Intersection over Union}}
+\nomenclature{IPCC}{Painel Intergovernamental sobre Mudanças Climáticas}
+\nomenclature{KGE}{Eficiência de Kling--Gupta}
+\nomenclature{LSTM}{\textit{Long Short-Term Memory}}
+\nomenclature{ML}{Aprendizado de máquina (\textit{Machine Learning})}
+\nomenclature{NSE}{Eficiência de Nash--Sutcliffe}
+\nomenclature{PRISMA}{\textit{Preferred Reporting Items for Systematic Reviews and Meta-Analyses}}
+\nomenclature{RNA}{Rede Neural Artificial}
+\nomenclature{SC}{Santa Catarina}
+\nomenclature{SEPOC}{\textit{Seminar on Power Electronics and Control}}
+\nomenclature{SIG}{Sistema de Informação Geográfica}
+\nomenclature{SVM}{Máquina de vetores de suporte (\textit{Support Vector Machine})}
+% Inclui a lista de símbolos
+%\incluilistadesimbolos
+% \usepackage{subfig} — removido: incompatível com subcaption (já carregado pelo ppg-ieee.cls)
+\usepackage{multirow}
+\usepackage{makecell}           % Comandos \thead e \headrow para cabeçalhos de tabela
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\usepackage[breakable,skins]{tcolorbox}
+\hypersetup{hidelinks} % remove as molduras coloridas dos links no PDF
+
+% --------------------------------------------------------------------
+% Marcações de revisão (Capítulo 1 e pendências do projeto)
+%   \revisor[título]{texto}  caixa vermelha: comentário do revisor
+%   \sugestao[título]{texto}     caixa azul: sugestão de ajuste
+%   \pendente{texto}         destaque amarelo: item a conferir
+% Para gerar a versão limpa, troque para \mostrarrevisorfalse e
+% \mostrarnotasfalse.
+% --------------------------------------------------------------------
+\newif\ifmostrarrevisor \mostrarrevisortrue
+\newif\ifmostrarnotas   \mostrarnotastrue
+\definecolor{vermelhorevisor}{RGB}{190,0,0}
+\definecolor{azulnota}{RGB}{25,70,125}
+\newcommand{\revisor}[2][Comentário do revisor]{%
+  \ifmostrarrevisor
+  \begin{tcolorbox}[breakable,enhanced,colback=red!4,colframe=vermelhorevisor,
+    coltext=vermelhorevisor,coltitle=white,fonttitle=\bfseries\small,title={#1},
+    boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+    before skip=10pt,after skip=10pt,fontupper=\small,
+    before upper={\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}}]
+  #2
+  \end{tcolorbox}%
+  \fi}
+\newcommand{\sugestao}[2][Sugestão para a revisão]{%
+  \ifmostrarnotas
+  \begin{tcolorbox}[breakable,enhanced,colback=azulnota!6,colframe=azulnota,
+    coltext=azulnota,coltitle=white,fonttitle=\bfseries\small,title={#1},
+    boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+    before skip=10pt,after skip=10pt,fontupper=\small,
+    before upper={\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}}]
+  #2
+  \end{tcolorbox}%
+  \fi}
+\newcommand{\pendente}[1]{\ifmostrarnotas\colorbox{yellow!60}{#1}\else #1\fi}
+\usepackage[brazil]{babel}
+\addto\captionsbrazil{\renewcommand{\listfigurename}{Lista de figuras}}
+\usepackage{listings} % Pacote para código fonte
+\usepackage{xcolor}
+% Estilo para código fonte
+
+\definecolor{codegreen}{RGB}{64, 180, 64}
+\definecolor{codegray}{RGB}{130, 130, 130}
+\definecolor{codemagenta}{RGB}{255, 4, 240}
+\definecolor{codeblue}{RGB}{1, 55, 255}
+\definecolor{backcolour}{RGB}{245, 245, 235}
+
+\lstdefinestyle{code}{
+    backgroundcolor = \color{backcolour},   
+    commentstyle = \color{codegreen},
+    keywordstyle = \color{magenta},
+    numberstyle=\tiny\color{codegreen},
+    numbers=left,                    
+    numbersep=5pt, 
+    %numberstyle = \tiny\color{codegray},
+    stringstyle = \color{codegreen},
+    %basicstyle = \ttfamily \small, 
+    %basicstyle=\ttfamily\footnotesize,
+    basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace = false,         
+    breaklines = true,                 
+    captionpos = b,                    
+    keepspaces = true,                 
+    numbers=left,                    
+    numbersep = 5pt,                  
+    showspaces = false,                
+    showstringspaces = false,
+    showtabs = false,                  
+    tabsize = 2,
+    otherkeywords = {cell, mse, regression}
+}
+
+\lstset{style=code}
+\lstset{language=Octave}
+\lstset{emph={fitnet, divideParam, trainRatio, testRatio, valRatio, trainParam, epochs, layers,                  numLayers, transferFcn},
+        emphstyle={\color{codeblue}},
+}
+
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+
+\textual
+
+% Estrutura seguindo as dissertações recentes do PPGCA (banco de dissertações)
+\chapter{Introdução}
+\label{chp:introducao}
+\input{tex/introducao}
+
+\chapter{Fundamentação Teórica}
+\label{chp:fundamentacao}
+\pendente{Capítulo a escrever: conceitos de hidrologia e inundações, aprendizado de máquina (RNA, LSTM, árvores de decisão), índices de vulnerabilidade e dados geoespaciais.}
+
+% Artigo submetido ao SEPOC, com os comentários do revisor
+\chapter{Revisão Sistemática da Literatura}
+\label{chp:cientometrica}
+Este capítulo apresenta o artigo submetido ao SEPOC, \emph{Aplicações de inteligência artificial na previsão e no mapeamento de inundações: uma análise cientométrica multibase}, seguido dos trabalhos relacionados.
+
+\input{tex/cap1-artigo}
+
+\section{Trabalhos relacionados}
+\label{sec:trabalhos-relacionados}
+\input{tex/refencial-teorico}
+
+\chapter{Desenvolvimento}
+\label{chp:desenvolvimento}
+\pendente{Capítulo a escrever: base de dados integrada, pré-processamento, definição de variáveis, arquitetura e treinamento dos modelos.}
+
+\chapter{Resultados}
+\label{chp:resultados}
+\pendente{Capítulo a escrever: resultados, validação e comparação entre modelos.}
+
+\chapter{Conclusão}
+\label{chp:conclusao}
+\input{tex/conclusao}
+
+
+
+% ---
+% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
+% ---
+\bookmarksetup{startatroot}% 
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+% Itens da lista de referências dos textos originais que não são citados no texto:
+\nocite{islam2025,ana2021}
+\bibliography{references}
+% Bibliography
+\printglossary
+% ---------------------------------------------------------------------
+% GLOSSÁRIO
+% ---------------------------------------------------------------------
+
+% Arquivo que contém as definições que vão aparecer no glossário
+%\input{tex/glossario}
+% Comando para incluir todas as definições do arquivo glossario.tex
+%\glsaddall
+% Impressão do glossário
+%\printglossaries
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+
+% ---
+% Inicia os apêndices
+% ---
+% Apêndices e anexos do modelo (textos de exemplo), desativados:
+% \begin{apendicesenv}
+
+%     \chapter{Apenas para Exemplo}
+%     \label{Apendice_A}
+% Aqui você colocaria o texto que iria aparecer no Apêndice. Caso não precise é só comentar essa parte.
+
+    
+%   %  \label{chapter:documento-basico}
+%   %  \input{tex/appendix/documento-basico}
+    
+%   %  \chapter{Configuração do programa JabRef}
+%   %  \label{chapter:configuracao-jabref}
+%   %  \input{tex/appendix/configuracao-jabref}
+
+% \end{apendicesenv}
+% % ---
+
+
+% % ----------------------------------------------------------
+% % Anexos
+% % ----------------------------------------------------------
+
+% % ---
+% % Inicia os anexos
+% % ---
+% \begin{anexosenv}
+
+%     \chapter{Anexo apenas para Exemplo} 
+%     \label{Anexo_A}
+
+%     Caso vc precise pode usar também a opção de colocar tabelas ou mesmo figuras, sempre seguindo o template. 
+
+
+
+% \end{anexosenv}
+
+% %\input{tex/annex/paginas-interessantes}
+% % ---
+
+
+\end{document}

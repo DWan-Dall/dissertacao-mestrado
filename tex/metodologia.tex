@@ -1,0 +1,85 @@
+% =====================================================================
+% Metodologia -- texto do projeto de dissertação
+% =====================================================================
+
+\subsection{Metodologia da pesquisa}
+\label{sec:metodologia-pesquisa}
+
+A pesquisa proposta adota o método hipotético-dedutivo, pois parte de hipóteses formuladas com base na literatura existente, que serão testadas e validadas ao longo da execução do projeto. Trata-se de uma pesquisa aplicada, uma vez que visa solucionar um problema concreto relacionado à previsão de eventos extremos e seus impactos em comunidades costeiras. A abordagem é quantitativa, pois envolve a coleta, análise e modelagem de dados numéricos em larga escala, com uso de algoritmos matemáticos e computacionais. Quanto aos objetivos, a pesquisa é exploratória, ao investigar possibilidades tecnológicas de aplicação da inteligência artificial; descritiva, ao levantar e analisar padrões históricos de enchentes; e explicativa, ao buscar compreender relações causais entre variáveis ambientais e impactos sociais.
+
+A escolha desse conjunto metodológico justifica-se pela complexidade e natureza multidisciplinar do problema abordado, que exige uma abordagem estruturada, rigorosa e orientada por dados para gerar conhecimento aplicável e reproduzível.
+
+\subsection{Procedimentos metodológicos}
+\label{sec:procedimentos}
+
+A condução da pesquisa seguirá as seguintes etapas e técnicas:
+
+\begin{itemize}
+  \item \textbf{Pesquisa bibliográfica:} levantamento e análise de estudos científicos sobre uso de inteligência artificial em hidrologia, previsão de desastres e gestão de riscos.
+  \item \textbf{Pesquisa documental:} análise de relatórios técnicos, dados públicos e registros históricos de eventos extremos em Santa Catarina.
+  \item \textbf{Levantamento e organização de dados:} compilação de informações climáticas, hidrológicas, socioeconômicas e geográficas a partir de bases abertas e oficiais.
+  \item \textbf{Modelagem preditiva com inteligência artificial:} desenvolvimento de modelos com diferentes algoritmos (ex: redes neurais artificiais, LSTM, árvores de decisão).
+  \item \textbf{Validação empírica:} testes dos modelos com dados históricos para verificar acurácia, sensibilidade e aplicabilidade prática.
+\end{itemize}
+
+\subsection{Plano de trabalho}
+\label{sec:plano-trabalho}
+
+O plano de trabalho será organizado nas seguintes etapas, articuladas com os objetivos específicos:
+
+\begin{itemize}
+  \item \textbf{Análise de Trabalhos Relacionados} (Relaciona-se ao Objetivo 2) -- Levantamento bibliográfico e mapeamento de abordagens existentes.
+  \item \textbf{Coleta e Estruturação de Dados} (Relaciona-se ao Objetivo 1) -- Compilação, limpeza e organização de dados ambientais e sociais.
+  \item \textbf{Desenvolvimento da Solução} (Relaciona-se aos Objetivos 3 e 4) -- Implementação de modelos preditivos, definição de variáveis, mapeamento de zonas de risco.
+  \item \textbf{Validação e Testes} (Relaciona-se ao \pendente{Objetivo 5}) -- Avaliação da performance dos modelos com dados reais.
+  \item \textbf{Redação da Dissertação} -- Sistematização dos resultados, escrita e revisão do trabalho final.
+\end{itemize}
+
+\sugestao{O projeto original lista apenas quatro objetivos específicos (Seção~\ref{sec:objetivos-especificos}); o ``Objetivo 5'' citado em Validação e Testes não existe. Incluir um quinto objetivo de validação ou remeter esta etapa ao Objetivo 3.}
+
+\subsection{Cronograma}
+\label{sec:cronograma}
+
+\begin{table}[H]
+\caption{Cronograma}
+\label{tab:cronograma}
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Atividade} & \textbf{M1--6} & \textbf{M7--12} & \textbf{M13--18} & \textbf{M19--24}\\
+\midrule
+Levantamento bibliográfico   & X &   &   &  \\
+Coleta e organização dos dados & X & X &   &  \\
+Análise exploratória dos dados &   & X &   &  \\
+Implementação do modelo      &   & X & X &  \\
+Validação e testes           &   &   & X &  \\
+Escrita da dissertação       &   &   & X & X\\
+Defesa                       &   &   &   & X\\
+\bottomrule
+\end{tabular}\\[1mm]
+{\small Fonte: Elaborado pela autora.}
+\end{table}
+
+\subsection{Análise de riscos}
+\label{sec:riscos}
+
+\begin{table}[H]
+\caption{Análise de riscos do projeto}
+\label{tab:riscos}
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}p{3.1cm}p{1.3cm}p{1.6cm}p{3.1cm}X@{}}
+\toprule
+\textbf{Risco potencial} & \textbf{Prob.} & \textbf{Impacto} & \textbf{Gatilho} & \textbf{Plano de contingência}\\
+\midrule
+Falta de dados históricos completos & Média & Alta & Dados incompletos ou inconsistentes & Buscar fontes alternativas, interpolação e limpeza de dados\\
+Baixa performance dos modelos de Inteligência Artificial & Média & Média & Alto erro ou baixa precisão & Testar algoritmos alternativos, ajustar hiperparâmetros\\
+Dificuldade na integração de dados heterogêneos & Alta & Média & Inconsistências entre fontes & Uso de ferramentas de ETL e padronização\\
+Mudanças na disponibilidade de bases públicas & Baixa & Média & Remoção de acesso a APIs ou sites & Armazenar backups locais, antecipar coleta de dados\\
+Atraso no cronograma devido à complexidade & Média & Alta & Atividades técnicas levarem mais tempo & Reorganizar etapas e priorizar entregas parciais\\
+\bottomrule
+\end{tabularx}\\[1mm]
+{\small Fonte: Elaborado pela autora.}
+\end{table}

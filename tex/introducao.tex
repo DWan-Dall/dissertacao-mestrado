@@ -1,0 +1,132 @@
+% =====================================================================
+% Introdução -- texto do projeto de dissertação (Contextualização,
+% Problema de pesquisa, Solução proposta e hipóteses, Delimitação de
+% escopo, Justificativa e Objetivos). A Revisão bibliográfica do projeto
+% está no capítulo seguinte (tex/refencial-teorico.tex).
+% =====================================================================
+
+Nas últimas décadas, eventos climáticos extremos têm se intensificado em todo o mundo, como consequência direta das mudanças climáticas globais. Fenômenos como tempestades, enchentes, secas e ondas de calor ocorrem com maior frequência e intensidade, colocando em risco populações vulneráveis e pressionando os sistemas de infraestrutura urbana e ambiental \pendente{(IPCC, 2021)}. No Brasil, esse cenário é especialmente preocupante em regiões costeiras, que concentram densos núcleos urbanos, grande valor econômico e significativa exposição a riscos hidrológicos.
+
+O estado de Santa Catarina, em particular, tem vivenciado recorrentes episódios de enchentes, afetando milhares de pessoas e gerando prejuízos socioeconômicos relevantes. Cidades litorâneas combinam fatores geográficos e climáticos que favorecem a ocorrência de inundações, como relevo acidentado, ocupação desordenada e sistemas de drenagem deficitários \pendente{(ANA, 2020)}.
+
+Nesse contexto, torna-se urgente o desenvolvimento de mecanismos que ampliem a capacidade preditiva desses eventos, de modo a mitigar seus impactos. A aplicação de técnicas de Inteligência Artificial na modelagem de fenômenos hidrológicos vem ganhando destaque na literatura internacional (Mosavi et al.~\cite{mosavi2018}; \pendente{Zhang et al., 2019}), demonstrando ganhos de precisão em relação aos métodos estatísticos tradicionais. No entanto, observa-se que a adoção dessas abordagens ainda é limitada em escala regional, especialmente na integração de dados socioeconômicos e geográficos às variáveis ambientais.
+
+Este projeto se insere na interseção entre ciência de dados, gestão ambiental e planejamento urbano, com foco específico na realidade das comunidades costeiras de Santa Catarina. Dentro deste contexto, este trabalho busca contribuir para o avanço da aplicação de técnicas de Inteligência Artificial na previsão de enchentes, visando apoiar a formulação de políticas públicas mais eficazes e aumentar a resiliência das populações frente aos desastres climáticos.
+
+\sugestao{Os três destaques em amarelo desta seção citam IPCC (2021), ANA (2020) e Zhang et al.\ (2019), que não constam na lista de referências do projeto. A lista traz apenas uma entrada da ANA (\emph{Atlas Irrigação}, 2021), mantida na bibliografia. Incluir as referências corretas e trocar o destaque por \texttt{\textbackslash cite\{\}}.}
+
+\section{Problema de pesquisa}
+\label{sec:problema}
+
+As mudanças climáticas vêm provocando o aumento da frequência e da intensidade de eventos extremos, como chuvas intensas, alagamentos e inundações. Comunidades costeiras, em especial, encontram-se em situação de vulnerabilidade acentuada devido a fatores geográficos, socioeconômicos e de infraestrutura urbana. Apesar da crescente disponibilidade de dados climáticos, hidrológicos e socioambientais, a aplicação prática de modelos preditivos baseados em inteligência computacional para avaliar riscos e antecipar impactos ainda é incipiente, principalmente no contexto regional de Santa Catarina.
+
+A complexidade do problema reside na necessidade de integrar múltiplas fontes de dados -- muitas vezes heterogêneas, despadronizadas ou incompletas -- e na construção de modelos capazes de gerar previsões não apenas com acurácia, mas também com antecedência suficiente para subsidiar ações preventivas por parte do poder público e da sociedade civil. Além disso, é essencial considerar variáveis socioeconômicas e espaciais para identificar áreas de maior risco e vulnerabilidade social.
+
+Diante desse cenário, este projeto busca responder à seguinte pergunta central:
+
+\begin{itemize}
+  \item Como prever, com maior precisão e antecedência, os impactos de eventos climáticos extremos em comunidades costeiras utilizando técnicas de Inteligência Artificial?
+\end{itemize}
+
+A partir dessa questão norteadora, derivam-se os seguintes questionamentos específicos:
+
+\begin{itemize}
+  \item Quais padrões podem ser extraídos dos dados históricos?
+  \item Quais padrões históricos são detectáveis nos dados sobre eventos extremos nas regiões costeiras de SC?
+  \item Como a Inteligência Artificial pode ser aplicada para prever eventos de forma precisa e antecipada?
+  \item Como identificar, com base em dados, as áreas e populações mais vulneráveis a esses impactos?
+\end{itemize}
+
+Essas questões fundamentam o desenvolvimento do modelo preditivo e sustentam as hipóteses que serão testadas na próxima seção.
+
+\subsection{Solução proposta e hipóteses}
+\label{sec:solucao-hipoteses}
+
+A solução proposta neste projeto consiste no desenvolvimento de um modelo preditivo baseado em técnicas de inteligência artificial, com o objetivo de antecipar a ocorrência e os impactos de eventos climáticos extremos em comunidades costeiras do estado de Santa Catarina. Este modelo será projetado para integrar dados de natureza diversa, incluindo variáveis climáticas (como precipitação e temperatura), hidrológicas (níveis de rios e vazões) e socioeconômicas (densidade populacional, índice de vulnerabilidade social, infraestrutura urbana, entre outros). A abordagem adotada busca oferecer previsões mais precisas, localizadas e contextualizadas, indo além das limitações dos modelos puramente físicos ou estatísticos tradicionais.
+
+A proposta contempla a construção de uma base de dados integrada, a seleção e o treinamento de algoritmos de aprendizado de máquina adequados à modelagem temporal e espacial dos eventos, bem como a validação dos resultados com base em registros históricos e dados reais de campo. Espera-se que o modelo desenvolvido possa identificar padrões preditivos relevantes, contribuir para a redução da vulnerabilidade das populações afetadas e subsidiar a formulação de políticas públicas e estratégias de mitigação mais eficazes.
+
+No entanto, a solução apresenta algumas limitações. O modelo não será projetado para operar em tempo real, nem substituirá sistemas operacionais oficiais de alerta. Além disso, a precisão das previsões dependerá da qualidade, abrangência e atualização dos dados utilizados, o que exige atenção constante durante a fase de coleta e tratamento.
+
+Com base na proposta apresentada, formulam-se as seguintes hipóteses de pesquisa:
+
+\begin{itemize}
+  \item A Inteligência Artificial melhora significativamente a precisão da previsão de enchentes;
+  \item A inclusão de variáveis socioeconômicas permite identificar áreas críticas com mais eficácia;
+\end{itemize}
+
+Essas hipóteses nortearão o desenvolvimento da metodologia e serão verificadas ao longo da implementação do projeto.
+
+\subsection{Delimitação de escopo}
+\label{sec:escopo}
+
+Este projeto de pesquisa está delimitado à aplicação de modelos preditivos baseados em inteligência artificial voltados à previsão de eventos climáticos extremos em regiões costeiras do estado de Santa Catarina. A proposta contempla o uso de dados públicos e abertos, incluindo informações climáticas, hidrológicas, geográficas e socioeconômicas, provenientes de fontes oficiais e acessíveis, como institutos meteorológicos, bases governamentais e imagens de satélite.
+
+A abordagem metodológica estará focada na construção e avaliação de modelos preditivos, com a realização de testes utilizando dados históricos e reais da região de estudo. Pretende-se investigar a eficácia de diferentes algoritmos de aprendizado de máquina, assim como o impacto da inclusão de variáveis socioeconômicas na qualidade das previsões.
+
+Estão incluídos no escopo do projeto:
+
+\begin{itemize}
+  \item Regiões costeiras de SC;
+  \item Dados públicos, modelos preditivos com IA;
+  \item Dados abertos climáticos e geográficos;
+  \item Testes com dados reais;
+\end{itemize}
+
+Estão fora do escopo do projeto:
+
+\begin{itemize}
+  \item A construção de sistemas operacionais para uso em tempo real, como sistemas de alerta imediato;
+  \item A aplicação ou generalização dos modelos para regiões fora do estado de Santa Catarina;
+\end{itemize}
+
+Ao estabelecer essas delimitações, busca-se garantir a viabilidade técnica e científica do projeto, concentrando esforços no desenvolvimento de um modelo conceitualmente robusto, testado com dados reais e aplicável ao contexto regional de interesse.
+
+\subsection{Justificativa}
+\label{sec:justificativa}
+
+A intensificação dos eventos climáticos extremos, como chuvas intensas, enchentes e alagamentos, tem provocado impactos significativos em comunidades vulneráveis, especialmente nas regiões costeiras. Segundo o Painel Intergovernamental sobre Mudanças Climáticas, a tendência global é de aumento na frequência e severidade desses eventos, exigindo respostas mais eficazes e baseadas em dados. No estado de Santa Catarina, esses impactos já são recorrentes e causam prejuízos materiais, deslocamento de populações e ameaças à vida humana e ao meio ambiente.
+
+Diante desse cenário, torna-se urgente o desenvolvimento de soluções tecnológicas que permitam antecipar com precisão os riscos e impactos associados a esses fenômenos. A proposta deste projeto se justifica pela capacidade das técnicas de inteligência artificial de processar grandes volumes de dados ambientais, climáticos e socioeconômicos, identificando padrões complexos que escapam às abordagens tradicionais. Além disso, modelos de aprendizado de máquina vêm apresentando resultados promissores na previsão de fenômenos hidrológicos, com destaque para sua capacidade de adaptação a cenários não lineares e de alta variabilidade \cite{mosavi2018,oliveira2013}.
+
+O diferencial deste projeto está na integração de dados geoespaciais e socioeconômicos aos modelos climáticos, algo ainda pouco explorado na literatura nacional, especialmente em aplicações regionais voltadas à realidade das comunidades costeiras de Santa Catarina. A maioria das abordagens atuais concentra-se em modelos hidrológicos baseados apenas em variáveis físicas e climáticas, desconsiderando o contexto social e a infraestrutura das áreas afetadas.
+
+Além da relevância científica, a proposta apresenta viabilidade técnica e aplicabilidade prática, uma vez que se baseia em dados públicos e acessíveis, além de utilizar ferramentas computacionais já consolidadas na área de ciência de dados. Os resultados esperados têm potencial para subsidiar ações de planejamento urbano, defesa civil e políticas públicas voltadas à redução de riscos, contribuindo para o fortalecimento da resiliência local frente às mudanças climáticas.
+
+\section{Objetivos}
+\label{sec:objetivos}
+
+\subsection{Objetivo geral}
+\label{sec:objetivo-geral}
+
+Desenvolver um modelo preditivo baseado em Inteligência Artificial para compreender e prever impactos de eventos extremos em regiões costeiras de SC.
+
+\subsection{Objetivos específicos}
+\label{sec:objetivos-especificos}
+
+\begin{enumerate}
+  \item Consolidar um banco de dados a ser estruturado a partir de compilação de dados de satélite, sensores ambientais e registros históricos de enchentes nas regiões costeiras do estado de Santa Catarina;
+  \item Analisar as características ambientais associadas aos eventos históricos de enchentes nas regiões costeiras de Santa Catarina;
+  \item Implementar modelos de aprendizado de máquina que aprendam com os padrões ambientais históricos e possibilitem construir potenciais cenários de previsão à luz das incertezas existentes;
+  \item Projetar para o futuro, com base nos dados de projeções climáticas baseadas nos modelos e cenários definidos pelo Painel Intergovernamental sobre Mudanças Climáticas das Nações Unidas quais serão os potenciais padrões de enchentes esperados para as regiões costeiras do estado de Santa Catarina.
+\end{enumerate}
+
+\section{Metodologia}
+\label{sec:metodologia}
+
+\input{tex/metodologia}
+
+\section{Estrutura da dissertação}
+\label{sec:estrutura}
+
+O Capítulo~\ref{chp:introducao}, Introdução, apresentou a contextualização do tema, o problema de pesquisa, a solução proposta, as hipóteses, a delimitação do escopo, a justificativa, os objetivos e a metodologia da pesquisa.
+
+O Capítulo~\ref{chp:fundamentacao} apresenta a fundamentação teórica sobre inteligência artificial aplicada à previsão de enchentes e à avaliação de vulnerabilidade de comunidades costeiras.
+
+O Capítulo~\ref{chp:cientometrica} apresenta a revisão sistemática da literatura, na forma de uma análise cientométrica multibase conduzida segundo o protocolo PRISMA, e os trabalhos relacionados.
+
+O Capítulo~\ref{chp:desenvolvimento} apresenta o desenvolvimento da proposta: preparação dos dados e construção dos modelos de aprendizado de máquina.
+
+O Capítulo~\ref{chp:resultados} apresenta e analisa os resultados obtidos.
+
+O Capítulo~\ref{chp:conclusao} apresenta as considerações finais, as contribuições do estudo e os trabalhos futuros.
