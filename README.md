@@ -13,3 +13,8 @@ Os parâmetros possíveis utilizados pelo `\documentclass` são:
 - **[pre-defesa / pos-defesa]** Identifica a situação do documento (exceto para qualificação), sendo necessário apenas uma das duas opções. O valor padrão é **pos-defesa**;
 - **[impressao]** Gera exclusivamente uma versão para impressão do documento;
 - **[french, spanish, english, brazil]** Adiciona o idioma para correta hifenização no documento. Os idiomas bases para o modelo (português e inglês) não precisam ser declarados.
+
+Para compilação utilizar o comando:
+```
+latexmk -lualatex -interaction=nonstopmode -file-line-error thesis.tex
+```
