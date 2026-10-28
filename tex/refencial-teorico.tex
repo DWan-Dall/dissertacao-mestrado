@@ -4,13 +4,13 @@
 
 O uso de técnicas de inteligência artificial na previsão de eventos hidrológicos tem ganhado destaque nos últimos anos, diante das limitações dos modelos estatísticos tradicionais e da necessidade de soluções mais eficientes frente às mudanças climáticas. Entre essas técnicas, as Redes Neurais Artificiais (RNAs), especialmente as redes profundas como LSTM e as redes multicamadas do tipo perceptron, têm se mostrado promissoras na modelagem de dados ambientais com comportamento não linear.
 
-Oliveira et al.~\cite{oliveira2013} aplicaram RNAs à previsão de vazões em rios urbanos, evidenciando ganhos expressivos de precisão em relação a métodos tradicionais baseados em regressão linear. Em estudo regional, Soares e Teive~\cite{soares2015} implementaram redes neurais para previsão de cheias no Rio Itajaí-Açu, em Santa Catarina, com resultados que demonstram a viabilidade dessas abordagens em cenários locais.
+\citeonline{oliveira2013} aplicaram RNAs à previsão de vazões em rios urbanos, evidenciando ganhos expressivos de precisão em relação a métodos tradicionais baseados em regressão linear. Em estudo regional, \citeonline{soares2015} implementaram redes neurais para previsão de cheias no Rio Itajaí-Açu, em Santa Catarina, com resultados que demonstram a viabilidade dessas abordagens em cenários locais.
 
-Mosavi et al.~\cite{mosavi2018} realizaram uma análise comparativa abrangente entre diversos modelos de aprendizado de máquina aplicados à previsão de enchentes, concluindo que as redes neurais profundas superam algoritmos mais simples, especialmente em ambientes com alta variabilidade de dados e múltiplas variáveis de entrada.
+\citeonline{mosavi2018} realizaram uma análise comparativa abrangente entre diversos modelos de aprendizado de máquina aplicados à previsão de enchentes, concluindo que as redes neurais profundas superam algoritmos mais simples, especialmente em ambientes com alta variabilidade de dados e múltiplas variáveis de entrada.
 
-No contexto urbano brasileiro, Valle~\cite{valle2021} utilizou RNAs para prever o número de ruas alagadas em Curitiba, obtendo coeficientes de determinação superiores a 0,95. Estrada~\cite{estrada2021} aplicou redes neurais à previsão da demanda hídrica em Joinville (SC), destacando o potencial dessas técnicas para auxiliar no planejamento e na gestão de recursos hídricos.
+No contexto urbano brasileiro, \citeonline{valle2021} utilizou RNAs para prever o número de ruas alagadas em Curitiba, obtendo coeficientes de determinação superiores a 0,95. \citeonline{estrada2021} aplicou redes neurais à previsão da demanda hídrica em Joinville (SC), destacando o potencial dessas técnicas para auxiliar no planejamento e na gestão de recursos hídricos.
 
-Magro~\cite{magro2022} também demonstrou a eficiência das RNAs na previsão de profundidade de alagamentos em áreas urbanas da cidade de Lages (SC), com enfoque na construção de um sistema de alerta. Seus resultados indicaram que modelos com múltiplas saídas apresentaram melhor desempenho na redução de erros e aumento da confiabilidade preditiva.
+\citeonline{magro2022} também demonstrou a eficiência das RNAs na previsão de profundidade de alagamentos em áreas urbanas da cidade de Lages (SC), com enfoque na construção de um sistema de alerta. Seus resultados indicaram que modelos com múltiplas saídas apresentaram melhor desempenho na redução de erros e aumento da confiabilidade preditiva.
 
 Apesar dos avanços, ainda existem lacunas significativas. A maioria dos estudos concentra-se na previsão de variáveis hidrológicas específicas, como vazão ou nível de rios, mas poucos integram variáveis socioeconômicas e dados geoespaciais ao processo de modelagem. A integração desses elementos é essencial para avaliar não apenas o risco físico, mas também a vulnerabilidade social e a capacidade de resposta das comunidades afetadas.
 
@@ -22,17 +22,17 @@ Dessa forma, esta pesquisa se propõe a atuar nessa lacuna, integrando dados amb
 \centering
 \small
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{@{}p{3.4cm}p{3.6cm}X@{}}
+\begin{tabular}{@{}p{3.4cm}p{3.6cm}p{\dimexpr\textwidth-7cm-4\tabcolsep\relax}@{}}
 \toprule
 \textbf{Autor(es)} & \textbf{Contexto} & \textbf{Contribuição}\\
 \midrule
-Oliveira et al.~\cite{oliveira2013} & Rios urbanos (Brasil) & Previsão de vazão com RNAs, mais precisas que modelos estatísticos tradicionais.\\
-Soares e Teive~\cite{soares2015} & Bacia do Rio Itajaí-Açu & Aplicação regional de IA para previsão de cheias com bons resultados.\\
-Mosavi et al.~\cite{mosavi2018} & Revisão internacional & Avaliação de diversos algoritmos de IA, com destaque para redes neurais profundas.\\
-Valle~\cite{valle2021} & Curitiba/PR & Previsão de alagamentos urbanos com RNAs, alta precisão preditiva.\\
-Estrada~\cite{estrada2021} & Joinville/SC & Demanda hídrica urbana com RNAs, reforçando aplicabilidade local.\\
-Magro~\cite{magro2022} & Lages/SC & Alerta de alagamentos com RNAs multivariadas, foco em sistema preventivo.\\
+\citeonline{oliveira2013} & Rios urbanos (Brasil) & Previsão de vazão com RNAs, mais precisas que modelos estatísticos tradicionais.\\
+\citeonline{soares2015} & Bacia do Rio Itajaí-Açu & Aplicação regional de IA para previsão de cheias com bons resultados.\\
+\citeonline{mosavi2018} & Revisão internacional & Avaliação de diversos algoritmos de IA, com destaque para redes neurais profundas.\\
+\citeonline{valle2021} & Curitiba/PR & Previsão de alagamentos urbanos com RNAs, alta precisão preditiva.\\
+\citeonline{estrada2021} & Joinville/SC & Demanda hídrica urbana com RNAs, reforçando aplicabilidade local.\\
+\citeonline{magro2022} & Lages/SC & Alerta de alagamentos com RNAs multivariadas, foco em sistema preventivo.\\
 \bottomrule
-\end{tabularx}\\[1mm]
+\end{tabular}\\[1mm]
 {\small Fonte: Elaborado pela autora.}
 \end{table}

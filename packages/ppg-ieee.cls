@@ -121,7 +121,7 @@
 \RequirePackage[noredefwarn,translate=false,nonumberlist,style=list,toc]{glossaries}	 % Pacote para gerar o glossario (translate=false evita warning do tracklang/datatool)
 \RequirePackage[brazilian,hyperpageref]{backref} % Paginas com as citacoes na bibl
 \RequirePackage{float}          % Pacote para criação de novos ambientes
-\RequirePackage[numbers]{natbib} % substituído abntex2cite por natbib estilo numérico IEEE   % Citacoes padrao ABNT
+% \RequirePackage[numbers]{natbib} % substituído abntex2cite por natbib estilo numérico IEEE   % Citacoes padrao ABNT
 \RequirePackage{environ}        % Pacote para definicao de ambientes
 \RequirePackage[absolute]{textpos} % Pacote para posicionamento do texto
 \RequirePackage{eso-pic}        % Pacote para incluir imagem de fundo
@@ -1192,6 +1192,9 @@
   \providecommand\@PPGLocalData{\@ppgLocalData}%
   \providecommand\@PPGCarimbo{\@ppgCarimbo}%
 }
+
+\newlength{\capalargura}\setlength{\capalargura}{125mm}
+\newcommand{\capax}{70mm}
 
 % Configuração para reduzir tamanho do Titulo da capa automaticamente
 \NewEnviron{fittext}{\def\trysize{14pt}\retry}

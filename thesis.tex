@@ -13,11 +13,12 @@
 % pos-defesa	 = Versão final do trabalho
 % impressao	 = Versão para impressão (desativa capa em PDF)
 
+\makeatletter\@namedef{ver@natbib.sty}{9999/12/31 natbib desativado}\makeatother
+
 \documentclass[mestrado,pre-defesa]{packages/ppg-ieee}
 
-\usepackage[numbers]{natbib}
-\bibliographystyle{ieeetr}
-
+% \usepackage[numbers]{natbib}
+\usepackage[alf,abnt-emphasize=bf,abnt-etal-cite=3,abnt-etal-list=3,abnt-etal-text=it]{abntex2cite}
 
 
 % --------------------------------------------------------------------
@@ -189,8 +190,9 @@ aims to generate positive social impact and to expand the use of computational i
   #2
   \end{tcolorbox}%
   \fi}
-\newcommand{\pendente}[1]{\ifmostrarnotas\colorbox{yellow!60}{#1}\else #1\fi}
-\usepackage[brazil]{babel}
+\newcommand{\pendente}[1]{\ifmostrarnotas
+  \par\noindent\colorbox{yellow!60}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\raggedright #1}}\par
+  \else #1\fi}\usepackage[brazil]{babel}
 \addto\captionsbrazil{\renewcommand{\listfigurename}{Lista de figuras}}
 \usepackage{listings} % Pacote para código fonte
 \usepackage{xcolor}
@@ -229,7 +231,7 @@ aims to generate positive social impact and to expand the use of computational i
 
 \lstset{style=code}
 \lstset{language=Octave}
-\lstset{emph={fitnet, divideParam, trainRatio, testRatio, valRatio, trainParam, epochs, layers,                  numLayers, transferFcn},
+\lstset{emph={fitnet, divideParam, trainRatio, testRatio, valRatio, trainParam, epochs, layers, numLayers, transferFcn},
         emphstyle={\color{codeblue}},
 }
 
@@ -264,9 +266,13 @@ Este capítulo apresenta o artigo submetido ao SEPOC, \emph{Aplicações de inte
 \label{sec:trabalhos-relacionados}
 \input{tex/refencial-teorico}
 
-\chapter{Desenvolvimento}
-\label{chp:desenvolvimento}
-\pendente{Capítulo a escrever: base de dados integrada, pré-processamento, definição de variáveis, arquitetura e treinamento dos modelos.}
+\chapter{Análise Exploratória dos Dados}
+\label{chp:ead}
+\pendente{Capítulo a escrever: base de dados integrada, pré-processamento, definição de variáveis, arquitetura e treinamento dos modelos. Junção dos obj 1 e 2 com tabela de metadados de onde veio cada base assim como a especificação de cada uma (com foco).}
+
+% \chapter{Desenvolvimento}
+% \label{chp:desenvolvimento}
+% \pendente{Capítulo a escrever: base de dados integrada, pré-processamento, definição de variáveis, arquitetura e treinamento dos modelos.}
 
 \chapter{Resultados}
 \label{chp:resultados}

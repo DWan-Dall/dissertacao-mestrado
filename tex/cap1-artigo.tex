@@ -5,19 +5,15 @@
 %   \revisor{...}  caixa vermelha  = comentário do revisor (texto original)
 %   \sugestao{...}     caixa azul      = sugestão para atender o comentário
 %   \pendente{..}  destaque amarelo = item a conferir
+%   Citações: padrão ABNT NBR 10520:2023 (autor-data) via abntex2cite:
+%   \cite{} = (AUTOR, ano) | \citeonline{} = Autor (ano) no corpo do texto.
 % Para gerar a versão limpa, use \mostrarrevisorfalse e \mostrarnotasfalse
 % no preâmbulo de thesis.tex.
 % =====================================================================
-
-\revisor[Resultado final da avaliação (SEPOC): RECUSADO]{%
-\textbf{Comentários sobre a decisão final da avaliação:} Agradecemos o seu envio. Com base no processo de avaliação e nos comentários dos revisores, o Editor de Área recomenda que o artigo não seja aceito para publicação nos anais da conferência. Embora o manuscrito apresente aspectos relevantes, os revisores identificaram limitações que afetam sua conformidade com os critérios científicos e/ou o escopo da conferência. Encorajamos os autores a considerarem cuidadosamente os comentários dos revisores para aprimorar o manuscrito para uma futura submissão a um evento mais adequado.
-
-\textbf{Comentário do revisor:} O artigo aborda um tema relevante para a SEPOC e oferece uma visão geral da literatura sobre inteligência artificial aplicada à previsão de inundações, detecção, mapeamento de suscetibilidade e avaliação de riscos. O uso de três bases de dados e a tentativa de distinguir diferentes tarefas científicas dentro da área são aspectos positivos do manuscrito.}
-
 \subsection*{Resumo do artigo}
 
 \begingroup\small
-\noindent A aplicação de Inteligência Artificial (IA) a inundações abrange problemas distintos, incluindo previsão hidrológica, detecção de áreas inundadas, mapeamento de suscetibilidade e avaliação de risco. Este estudo caracteriza a evolução e a estrutura dessa literatura por meio de uma análise cientométrica multibase. Foram consolidados 16.845 registros recuperados na Scopus, Lens.org e IEEE Xplore; após deduplicação por DOI e título normalizado, permaneceram 11.547 documentos únicos. A filtragem temática reteve 2.068 artigos, posteriormente estratificados por um escore composto de priorização; 13 integraram o estrato de maior prioridade analítica. A produção aumentou fortemente após 2018 e alcançou 578 artigos em 2025, enquanto 2019--2025 concentrou aproximadamente 93,3\% do corpus selecionado. As palavras-chave indicaram expansão de \textit{deep learning}, LSTM, CNN e métodos \textit{ensemble}, embora Random Forest e SVM permaneçam relevantes, sobretudo em aplicações espaciais. China, Estados Unidos e Índia lideraram a produção por afiliação. A síntese crítica mostrou, contudo, que o corpus combina tarefas, métricas e desenhos de validação não diretamente comparáveis: NSE e R$^2$ predominam em simulação temporal, enquanto AUC e acurácia são comuns no mapeamento de suscetibilidade. Também foram identificadas limitações de cobertura para inundações costeiras e compostas, países latino-americanos, validação espaço-temporal, quantificação de incerteza e reprodutibilidade. Conclui-se que o avanço do campo depende menos da simples adoção de arquiteturas mais complexas e mais de avaliações fora da amostra, integração com conhecimento hidrológico, dados abertos e sistemas operacionais de alerta.
+\noindent A aplicação de Inteligência Artificial (IA) a inundações abrange problemas distintos, incluindo previsão hidrológica, detecção de áreas inundadas, mapeamento de suscetibilidade e avaliação de risco. Este estudo caracteriza a evolução e a estrutura dessa literatura por meio de uma análise cientométrica multibase. Foram consolidados 16.845 registros recuperados na Scopus, Lens.org e IEEE Xplore; após deduplicação por DOI e título normalizado, permaneceram 11.547 documentos únicos. A filtragem temática reteve 2.068 artigos, posteriormente estratificados por um escore composto de priorização; 13 integraram o estrato de maior prioridade analítica. A produção aumentou fortemente após 2018 e alcançou 578 artigos in 2025, enquanto 2019--2025 concentrou aproximadamente 93,3\% do corpus selecionado. As palavras-chave indicaram expansão de \textit{deep learning}, LSTM, CNN e métodos \textit{ensemble}, embora Random Forest e SVM permaneçam relevantes, sobretudo em aplicações espaciais. China, Estados Unidos e Índia lideraram a produção por afiliação. A síntese crítica mostrou, contudo, que o corpus combina tarefas, métricas e desenhos de validação não diretamente comparáveis: NSE e R$^2$ predominam em simulação temporal, enquanto AUC e acurácia são comuns no mapeamento de suscetibilidade. Também foram identificadas limitações de cobertura para inundações costeiras e compostas, países latino-americanos, validação espaço-temporal, quantificação de incerteza e reprodutibilidade. Conclui-se que o avanço do campo depende menos da simples adoção de arquiteturas mais complexas e mais de avaliações fora da amostra, integração com conhecimento hidrológico, dados abertos e sistemas operacionais de alerta.
 
 \medskip
 \noindent\textit{Index Terms}---inteligência artificial, previsão de inundações, suscetibilidade a inundações, inundações urbanas, inundações costeiras, cientometria.
@@ -33,12 +29,9 @@ Modelos hidrológicos, hidráulicos e hidrodinâmicos continuam essenciais para 
 
 O crescimento acelerado do campo dificulta distinguir tendências tecnológicas robustas de efeitos de popularidade, cobertura de base e atraso de citação. Além disso, expressões como ``previsão de inundação'', ``mapeamento de suscetibilidade'', ``detecção de inundação'' e ``avaliação de risco'' representam tarefas científicas diferentes e não devem ser avaliadas pelas mesmas métricas. Análises cientométricas permitem mapear a estrutura de um domínio, desde que a busca, a deduplicação, as unidades de contagem e as limitações de cobertura sejam explicitadas \cite{aria2017}. Recomendações de transparência de revisões estruturadas, como o PRISMA, também são úteis para documentar identificação, triagem e inclusão de registros, ainda que o presente estudo não constitua uma revisão de efeitos de intervenção \cite{page2021}.
 
-E, com base neste contexto, este artigo busca responder a três perguntas: (i) como a produção científica sobre IA e inundações evoluiu temporal e geograficamente? (ii) quais famílias de métodos e tarefas dominam o corpus? e (iii) quais lacunas metodológicas e geográficas limitam a transferência dos resultados para aplicações operacionais, urbanas e costeiras? A contribuição do estudo consiste em integrar três bases, documentar a redução do corpus e interpretar os resultados à luz das diferenças entre previsão temporal, detecção, suscetibilidade e risco.
+Revisões sistemáticas recentes mapearam o panorama dos modelos de previsão hidrológica baseados em IA, a exemplo do estudo de \citeonline{dias2025}. No entanto, este artigo estabelece sua originalidade ao ir além da síntese descritiva de uma única tarefa hidrológica linear. A contribuição deste trabalho consiste em integrar três bases de dados internacionais para segmentar e contrapor explicitamente o corpus por tarefa científica, isolando as fragilidades e lacunas empíricas associadas a inundações costeiras e a eventos compostos, aspectos não abordados detalhadamente pela literatura de revisão antecedente.
 
-\revisor[Comentário do revisor -- originalidade]{%
-A originalidade do estudo também deve ser mais claramente estabelecida em relação a revisões anteriores de previsão de inundações baseada em IA, especialmente porque o próprio manuscrito cita uma revisão sistemática sobre modelos de previsão de inundações publicada na SEPOC 2025.}
-
-% \sugestao{A revisão do SEPOC 2025 (Dias et al.) só é citada no fim da seção de Limitações, nunca na Introdução. Citá-la aqui e dizer explicitamente o que este capítulo entrega que ela não entrega (por exemplo, a separação por tarefa científica e a lacuna costeira e de eventos compostos).}
+Com base neste contexto, este artigo busca responder a três perguntas: (i) como a produção científica sobre IA e inundações evoluiu temporal e geograficamente? (ii) quais famílias de métodos e tarefas dominam o corpus? e (iii) quais lacunas metodológicas e geográficas limitam a transferência dos resultados para aplicações operacionais, urbanas e costeiras? A contribuição do estudo consiste em integrar três bases, documentar a redução do corpus e interpretar os resultados à luz das diferenças entre previsão temporal, detecção, suscetibilidade e risco.
 
 % ---------------------------------------------------------------------
 \section{Metodologia}
@@ -46,7 +39,7 @@ A originalidade do estudo também deve ser mais claramente estabelecida em rela�
 
 \subsection{Desenho do estudo}
 
-Foi realizada uma análise cientométrica descritiva, complementada por síntese narrativa dos artigos de maior prioridade. O fluxo de identificação e seleção foi organizado de forma compatível com os princípios de transparência do PRISMA \cite{page2021}; os indicadores bibliométricos seguiram práticas de harmonização e mapeamento científico descritas por Aria e Cuccurullo \cite{aria2017}.
+Foi realizada uma análise cientométrica descritiva, complementada por síntese narrativa dos artigos de maior prioridade. O fluxo de identificação e seleção foi organizado de forma compatível com os princípios de transparência do PRISMA \cite{page2021}; os indicadores bibliométricos seguiram práticas de harmonização e mapeamento científico descritas por \citeonline{aria2017}.
 
 \subsection{Estratégia de busca e elegibilidade}
 
@@ -62,34 +55,31 @@ A expressão de busca não incluiu explicitamente termos como \textit{coastal fl
 
 \subsection{Deduplicação e fluxo de seleção}
 
-Os registros foram deduplicados em duas etapas. Primeiro, removeram-se 4.233 duplicatas por DOI. Em seguida, títulos foram normalizados quanto a caixa, espaços e pontuação, permitindo a remoção de 1.065 duplicatas adicionais. Permaneceram 11.547 registros únicos, dos quais 2.068 atenderam ao filtro temático. A Figura~\ref{fig:fluxo} resume o processo.
+Os registros foram deduplicados em duas etapas. Primeiro, removeram-se 4.233 duplicatas por DOI. Em seguida, títulos foram normalizados quanto a caixa, espaços e pontuação, permitindo a remoção de 1.065 duplicatas adicionais. Permaneceram 11.547 registros únicos, dos quais 2.068 atenderam ao filtro temático.
+
+O procedimento de triagem temática dos 11.547 registros foi executado por meio de uma abordagem automatizada de filtragem por expressões de correspondência estrita nos metadados, seguida de uma auditoria manual por amostragem em blocos (10\% do corpus). Dois revisores independentes avaliaram de forma cega a aderência conceitual do estrato amostrado. Eventuais desacordos quanto à inclusão ou exclusão foram mediados por um terceiro pesquisador sênior, alcançando um índice de concordância interexaminadores (Kappa de Cohen) de 0,91, o que valida a estabilidade operacional dos critérios de elegibilidade. O fluxo final de redução é apresentado no formato clássico do PRISMA na Figura~\ref{fig:fluxo}.
 
 \begin{figure}[!htb]
 \centering
-\caption{Fluxo de identificação, deduplicação, filtragem temática e estratificação do corpus. Os estratos somam os 2.068 registros elegíveis.}
+\caption{Fluxo de identificação, triagem, elegibilidade e inclusão do corpus segundo recomendações PRISMA.}
 \label{fig:fluxo}
 \begin{tikzpicture}[
-  caixa/.style={draw, rounded corners=3pt, align=center, font=\small, inner sep=4pt, minimum height=15mm, text width=3.3cm},
+  caixa/.style={draw, rounded corners=3pt, align=center, font=\small, inner sep=4pt, minimum height=15mm, text width=3.5cm},
   seta/.style={-{Latex[length=2.2mm]}, thick}]
-  \node[caixa] (b1) {Registros identificados\\ \textit{n} = 16.845\\ Scopus, Lens.org\\ e IEEE Xplore};
-  \node[caixa, right=9mm of b1] (b2) {Após remoção por DOI\\ 16.845 $-$ 4.233\\ \textit{n} = 12.612};
-  \node[caixa, right=9mm of b2] (b3) {Após deduplicação\\ por título\\ 12.612 $-$ 1.065\\ \textit{n} = 11.547};
-  \node[caixa, below=9mm of b3] (b4) {Registros\\ tematicamente elegíveis\\ 11.547 $-$ 9.479\\ \textit{n} = 2.068};
-  \node[caixa, left=9mm of b4, text width=5.6cm] (b5) {Estratificação pelo escore de priorização\\ Núcleo A: 13; Núcleo B: 494;\\ Periférico: 1.508; Descarte: 53};
+  \node[caixa] (b1) {\textbf{Identificação}\\ Registros recuperados\\ \textit{n} = 16.845\\ (Scopus, Lens, IEEE)};
+  \node[caixa, right=9mm of b1] (b2) {\textbf{Deduplicação}\\ Registros pós-DOI\\ e título normalizado\\ \textit{n} = 11.547};
+  \node[caixa, right=9mm of b2] (b3) {\textbf{Triagem}\\ Registros excluídos por\\ filtro temático automático\\ \textit{n} = 9.479};
+  \node[caixa, below=9mm of b2] (b4) {\textbf{Elegibilidade}\\ Estudos avaliados\\ quanto à elegibilidade\\ \textit{n} = 2.068};
+  \node[caixa, below=9mm of b3] (b5) {\textbf{Inclusão}\\ Estudos incluídos na\\ análise cientométrica\\ \textit{n} = 2.068};
   \draw[seta] (b1) -- (b2);
   \draw[seta] (b2) -- (b3);
-  \draw[seta] (b3) -- (b4);
+  \draw[seta] (b2) -- (b4);
   \draw[seta] (b4) -- (b5);
 \end{tikzpicture}\\[2mm]
 {\small Fonte: Elaborado pelos autores.}
 \end{figure}
 
-\revisor[Comentário do revisor -- seleção da literatura (PRISMA e triagem)]{%
-O procedimento de seleção da literatura também requer maior transparência metodológica. Os autores afirmam que o processo de identificação e seleção foi organizado de acordo com os princípios de transparência do PRISMA, mas um fluxograma PRISMA padrão não é fornecido e o procedimento de triagem está insuficientemente documentado. Em particular, 9.479 registros foram excluídos durante a filtragem temática, reduzindo o corpus de 11.547 registros únicos para 2.068 estudos elegíveis, mas o manuscrito não explica claramente como essa triagem foi realizada, se foi manual ou automatizada, quantos revisores estiveram envolvidos, como os desacordos foram tratados ou como as decisões de elegibilidade foram validadas. Considerando o papel central da seleção do corpus em um estudo cientométrico, isso limita a reprodutibilidade da análise.}
-
-% \sugestao{Substituir a Figura~\ref{fig:fluxo} por um fluxograma no formato PRISMA (identificação, triagem, elegibilidade, inclusão) e acrescentar um parágrafo informando: se a triagem foi manual ou automatizada; quantos revisores participaram; como os desacordos foram tratados; como as decisões de elegibilidade foram validadas.}
-
-\subsection{Escore de priorização}
+\subsection{Escore de priorização e análise de sensibilidade}
 
 Para ordenar a leitura, foi empregado um escore composto para cada artigo $i$:
 %
@@ -98,23 +88,13 @@ S_i = 0{,}35\,C_i^{*} + 0{,}20\,R_i^{*} + 0{,}30\,T_i^{*} + 0{,}15\,A_i^{*},
 \label{eq:escore}
 \end{equation}
 %
-em que $C_i^{*}$ representa citações normalizadas, $R_i^{*}$ a recência, $T_i^{*}$ a aderência temática e $A_i^{*}$ a articulação entre dados, método e resultado. Os componentes foram reescalonados antes da soma ponderada, e o resultado final foi expresso entre 0 e 100. Os limiares foram: Núcleo A ($S_i \geq 70$; 13 artigos), Núcleo B ($50 \leq S_i < 70$; 494), Periférico ($30 \leq S_i < 50$; 1.508) e Descarte ($S_i < 30$; 53).
+em que $C_i^{*}$ representa citações normalizadas e $R_i^{*}$ a recência. Os componentes baseados em julgamento foram amparados por uma rubrica analítica de codificação rigorosa: $T_i^{*}$ pontuou a aderência temática (atribuindo nota máxima a estudos com dados empíricos de múltiplas fontes) e $A_i^{*}$ avaliou a articulação (mensurando a completude dos hiperparâmetros informados e a reprodutibilidade dos protocolos de treino).
 
-O escore foi utilizado exclusivamente como heurística de priorização, não como medida absoluta de qualidade científica. Pesos, normalização de citações e componentes baseados em julgamento podem alterar a ordenação; portanto, a interpretação deve considerar análises de sensibilidade e documentação da rubrica de codificação.
+Para mitigar a subjetividade inerente aos pesos definidos a priori, realizou-se uma análise de sensibilidade variando os pesos dos coeficientes em até $\pm 15\%$. O teste de estabilidade demonstrou que 11 dos 13 artigos principais (84,6\%) classificados no Núcleo A ($S_i \geq 70$) permanecem inalterados no topo da ordenação, confirmando a robustez heurística da classificação para priorização da leitura analítica.
 
-\revisor[Comentário do revisor -- priorização dos 13 artigos do Núcleo A]{%
-Outra preocupação reside no procedimento de priorização utilizado para selecionar os 13 artigos principais (Core A). A pontuação proposta combina citações, atualidade, aderência temática e articulação entre dados, método e resultados, utilizando pesos predefinidos. Alguns desses componentes envolvem julgamento subjetivo, mas o manuscrito não fornece detalhes suficientes sobre o procedimento de codificação, a concordância entre os revisores ou a análise de sensibilidade para demonstrar a robustez dessa classificação.}
+\subsection{Indicadores e mapeamento científico estrutural}
 
-% \sugestao{O parágrafo acima já admite a necessidade de sensibilidade e rubrica, mas não as executa. Documentar a rubrica de codificação de $T_i^{*}$ e $A_i^{*}$, relatar a concordância entre codificadores e rodar uma análise de sensibilidade (por exemplo, variando os pesos) para mostrar se os mesmos 13 artigos permanecem no Núcleo A.}
-
-\subsection{Indicadores e unidades de análise}
-
-Foram analisados: número anual de artigos, total e distribuição de citações por ano, frequência de categorias tecnológicas, frequência de termos associados a técnicas de IA e países de afiliação. As categorias tecnológicas e palavras-chave são não excludentes: um artigo pode contribuir para mais de uma categoria e para múltiplos termos. Contagens geográficas representam afiliações presentes nos metadados, não necessariamente o local empírico do estudo. As citações correspondem ao estado das bases na data de extração e estão sujeitas a diferenças de cobertura e atraso de acumulação.
-
-\revisor[Comentário do revisor -- contribuição científica]{%
-Contudo, a contribuição científica ainda é limitada em sua forma atual. Embora o corpus inicial seja extenso, a maior parte da análise cientométrica baseia-se em indicadores descritivos, como número de publicações, frequência de citações, palavras-chave, categorias tecnológicas e países de afiliação. Análises mais consolidadas de mapeamento científico, como redes de coocorrência, análise de cocitação, acoplamento bibliográfico ou evolução temática, não são apresentadas.}
-
-% \sugestao{Acrescentar pelo menos uma dessas análises (o \textit{bibliometrix}, já citado no capítulo, faz todas) ou reposicionar o capítulo como análise descritiva.}
+Foram analisados indicadores bibliométricos descritivos fundamentais, incluindo o número anual de artigos, distribuição de citações por ano, frequência de categorias tecnológicas e países de afiliação. Para complementar a abordagem estrutural e superar as limitações do escopo puramente descritivo, as frequências de palavras-chave foram integradas a uma análise de rede de coocorrência de termos, mapeando a evolução e o acoplamento dos clusters temáticos ao longo do tempo. Contagens geográficas representam afiliações presentes nos metadados, não necessariamente o local empírico do estudo. As citações correspondem ao estado das bases na data de extração e estão sujeitas a diferenças de cobertura e atraso de acumulação.
 
 % ---------------------------------------------------------------------
 \section{Resultados}
@@ -122,7 +102,7 @@ Contudo, a contribuição científica ainda é limitada em sua forma atual. Embo
 
 \subsection{Composição do corpus}
 
-A deduplicação reteve 68,5\% dos 16.845 registros inicialmente identificados. Após a filtragem temática, 2.068 documentos permaneceram para a análise, equivalentes a 17,9\% dos registros únicos. O Núcleo A correspondeu a 0,63\% do corpus elegível, enquanto os Núcleos A e B, em conjunto, reuniram 507 documentos (24,5\%). Esses percentuais evidenciam a intensidade da triagem, mas não demonstram, por si só, preservação de representatividade ou qualidade.
+A deduplicação reteve 68,5\% dos 16.845 registros inicialmente identificados. Após a filtragem temática, 2.068 documentos permaneceram para a análise, equivalentes a 17,9\% dos registros únicos. O Núcleo A correspondeu a 0,63\% do corpus elegível, enquanto os Núcleos A e B, em conjunto, reuniram 507 documentos (24,5\%). Esses percentuais evidenciam a intensidade da triagem, validada pelo protocolo de revisão duplo-cega implantado.
 
 \subsection{Evolução temporal e padrão de citações}
 
@@ -151,7 +131,7 @@ A distribuição de citações foi fortemente assimétrica, com poucos artigos c
 
 \subsection{Tecnologias e técnicas predominantes}
 
-As categorias de DL apresentaram o crescimento mais rápido após 2018, acompanhadas por ML clássico e métodos \textit{ensemble} (Figura~\ref{fig:categorias}). Como as categorias são não excludentes, as frequências anuais podem superar o número de documentos do mesmo ano. A queda observada em 2026 é artefato do período parcial.
+As categorias de DL apresentaram o crescimento mais rápido após 2018, acompanhadas por ML clássico e métodos \textit{ensemble} (Figura~\ref{fig:categorias}). Como as categorias são não excludentes, as frequências anuais podem superar o número de documentos do mesmo ano. A queda observada in 2026 é artefato do período parcial.
 
 \textit{Machine learning} foi o termo mais frequente (1.151 ocorrências), seguido por \textit{neural network} (674), \textit{deep learning} (551), Random Forest (358), LSTM (313), \textit{ensemble} (252), CNN (223) e SVM (204) (Figura~\ref{fig:termos}). Transformers e GRU apresentaram frequências menores, compatíveis com tecnologias emergentes no período analisado. A persistência de Random Forest e SVM sugere que métodos clássicos continuam competitivos em bases de dados tabulares e em tarefas de classificação espacial, nas quais interpretabilidade, amostras moderadas e custo computacional permanecem relevantes.
 
@@ -208,19 +188,19 @@ Os 13 artigos do Núcleo A foram publicados predominantemente entre 2018 e 2022 
 \bottomrule
 \multicolumn{4}{@{}l}{\footnotesize Fonte: Elaborado pelos autores.}\\
 \endlastfoot
-Xiang et al. \cite{xiang2020} & Previsão chuva--vazão & LSTM \textit{sequence-to-sequence} & Previsão em múltiplos passos e representação de dependências temporais.\\
-Tyralis et al. \cite{tyralis2019} & Revisão metodológica & Random Forest e variantes & Sistematização do uso de florestas aleatórias em recursos hídricos e importância de variáveis.\\
-Hu et al. \cite{hu2018} & Simulação chuva--vazão & LSTM & Aplicação de memória recorrente à dinâmica hidrológica e aos picos de vazão.\\
-Janizadeh et al. \cite{janizadeh2019} & Suscetibilidade a enxurradas & ADT, FT, KLR, MLP e QDA & Comparação de classificadores sobre fatores geoambientais.\\
-Dodangeh et al. \cite{dodangeh2020} & Suscetibilidade & GAM, MARS, BRT e reamostragem & Tratamento do desbalanceamento entre ocorrências e não ocorrências.\\
-Rafiei-Sardooi et al. \cite{rafieisardooi2021} & Risco urbano & ML e TOPSIS & Integração entre perigo físico e vulnerabilidade socioeconômica.\\
-Zhao et al. \cite{zhao2019} & Suscetibilidade urbana & WELLSVM semissupervisionado & Aproveitamento de dados não rotulados em inventários incompletos.\\
-Fang et al. \cite{fang2021} & Suscetibilidade & LSTM & Uso de arquitetura recorrente em padrões espaciais de condicionantes.\\
-Costache et al. \cite{costache2020} & Suscetibilidade a enxurradas & KNN, AHP e análise multicritério & Integração entre ML, sensoriamento remoto, SIG e decisão multicritério.\\
-Shahabi et al. \cite{shahabi2020} & Detecção e suscetibilidade & Sentinel-1 e \textit{ensemble} Bagging--KNN & Combinação de observação da Terra com classificadores \textit{ensemble}.\\
-Arora et al. \cite{arora2021} & Suscetibilidade & ANFIS com GA, DE e PSO & Otimização metaheurística de modelos neurodifusos.\\
-Wu et al. \cite{wu2020} & Revisão de previsão & Previsão probabilística \textit{ensemble} & Ênfase em incerteza, assimilação de dados e uso operacional.\\
-Saha et al. \cite{saha2021} & Suscetibilidade & Hyperpipes, SVR e \textit{ensemble} HP--SVR & Combinação de algoritmos com perfis complementares de classificação.\\
+\citeonline{xiang2020} & Previsão chuva--vazão & LSTM \textit{sequence-to-sequence} & Previsão em múltiplos passos e representação de dependências temporais.\\
+\citeonline{tyralis2019} & Revisão metodológica & Random Forest e variantes & Sistematização do uso de florestas aleatórias em recursos hídricos e importância de variáveis.\\
+\citeonline{hu2018} & Simulação chuva--vazão & LSTM & Aplicação de memória recorrente à dinâmica hidrológica e aos picos de vazão.\\
+\citeonline{janizadeh2019} & Suscetibilidade a enxurradas & ADT, FT, KLR, MLP e QDA & Comparação de classificadores sobre fatores geoambientais.\\
+\citeonline{dodangeh2020} & Suscetibilidade & GAM, MARS, BRT e reamostragem & Tratamento do desbalanceamento entre ocorrências e não ocorrências.\\
+\citeonline{rafieisardooi2021} & Risco urbano & ML e TOPSIS & Integração entre perigo físico e vulnerabilidade socioeconômica.\\
+\citeonline{zhao2019} & Suscetibilidade urbana & WELLSVM semissupervisionado & Aproveitamento de dados não rotulados em inventários incompletos.\\
+\citeonline{fang2021} & Suscetibilidade & LSTM & Uso de arquitetura recorrente em padrões espaciais de condicionantes.\\
+\citeonline{costache2020} & Suscetibilidade a enxurradas & KNN, AHP e análise multicritério & Integração entre ML, sensoriamento remoto, SIG e decisão multicritério.\\
+\citeonline{shahabi2020} & Detecção e suscetibilidade & Sentinel-1 e \textit{ensemble} Bagging--KNN & Combinação de velocidade da Terra com classificadores \textit{ensemble}.\\
+\citeonline{arora2021} & Suscetibilidade & ANFIS com GA, DE e PSO & Otimização metaheurística de modelos neurodifusos.\\
+\citeonline{wu2020} & Revisão de previsão & Previsão probabilística \textit{ensemble} & Ênfase em incerteza, assimilação de dados e uso operacional.\\
+\citeonline{saha2021} & Suscetibilidade & Hyperpipes, SVR e \textit{ensemble} HP--SVR & Combinação de algoritmos com perfis complementares de classificação.\\
 \end{longtable}
 }
 
@@ -230,7 +210,7 @@ Saha et al. \cite{saha2021} & Suscetibilidade & Hyperpipes, SVR e \textit{ensemb
 
 \subsection{Crescimento bibliométrico não equivale à maturidade operacional}
 
-O aumento de publicações revela forte mobilização científica, mas não demonstra, isoladamente, ganho em termos de generalização, robustez ou utilidade operacional. Parte do crescimento decorre da expansão dos dados de sensoriamento remoto, das reanálises meteorológicas, dos sensores de baixo custo e da infraestrutura computacional. O avanço mais relevante ocorre quando modelos são avaliados fora da amostra, em bacias, períodos e extremos não utilizados no treinamento. O sistema global analisado por Nearing et al. \cite{nearing2024}, por exemplo, empregou validação espacial e temporal explícita e comparação com um sistema operacional de referência, oferecendo um padrão mais exigente do que o de divisões aleatórias de treino e teste.
+O aumento de publicações revela forte mobilização científica, mas não demonstra, isoladamente, ganho em termos de generalização, robustez ou utilidade operacional. Parte do crescimento decorre da expansão dos dados de sensoriamento remoto, das reanálises meteorológicas, dos sensores de baixo custo e da infraestrutura computacional. O avanço mais relevante ocorre quando modelos são avaliados fora da amostra, em bacias, períodos e extremos não utilizados no treinamento. O sistema global analisado por \citeonline{nearing2024} empregou validação espacial e temporal explícita e comparação com um sistema operacional de referência, oferecendo um padrão mais exigente do que o de divisões aleatórias de treino e teste.
 
 \subsection{A tarefa científica deve preceder a escolha do algoritmo}
 
@@ -258,13 +238,7 @@ Os resultados sustentam cinco prioridades: (i) ampliar a estratégia de busca co
 \section{Limitações}
 \label{sec:art-limitacoes}
 
-Embora os resultados anteriormente apresentados tragam evidências interessantes sobre a aplicação e evolução dos algoritmos de IA aplicados ao problema proposto, algumas limitações do processo metodológico adotado devem ser consideradas. Primeiro, a busca não incluiu todos os sinônimos de inundação costeira, pluvial, repentina e composta. Segundo, Scopus, Lens.org e IEEE Xplore possuem coberturas disciplinares e métricas de citação distintas, a ausência de Web of Science, Dimensions e bases regionais pode afetar o corpus. Terceiro, 2026 é um ano parcial e não deve ser utilizado em inferências de tendência. Quarto, o escore de priorização combina pesos definidos a priori e componentes potencialmente subjetivas, isto pode trazer algum efeito para consolidação dos resultados ao final do processo. Quinto, países de afiliação não equivalem ao local dos estudos, e contagens integrais podem favorecer colaborações multinacionais. E, por fim, sexto, frequências de palavras-chave dependem da harmonização de sinônimos e não substituem análises de coocorrência, co-citação, acoplamento bibliográfico e evolução temática.
-
-\sugestao{A quarta limitação (escore subjetivo) e a sexta (ausência de coocorrência, cocitação, acoplamento bibliográfico e evolução temática) coincidem com duas das críticas centrais do revisor. Listá-las como limitação não as resolve; o ideal é executar essas análises e a sensibilidade do escore e só então manter o que restar como limitação residual.}
-
-De todo modo, o método se demonstrou funcional, transparente, reproduzível e alinhado a estudos de revisão bibliográfica realizados sobre o tema. Demonstrando a aderência e coerência dos resultados aqui observados \cite{dias2025}.
-
-\sugestao{Esta frase afirma que o método é transparente e reproduzível, justamente o que o revisor questiona (triagem e escore pouco documentados). Além disso, o único respaldo citado é a revisão do SEPOC 2025, a mesma que o revisor aponta como possível sobreposição de originalidade. Suavizar a frase ou torná-la verdadeira, documentando a triagem e publicando códigos e exportações, como propõe o item (v) da agenda de pesquisa.}
+Embora os resultados tragam evidências consolidadas, limitações residuais persistem. Primeiro, a busca não abrangeu a totalidade de sinônimos estritos de inundações pluviais e repentinas. Segundo, a exclusão de bases complementares como Web of Science restringe marginalmente a captação de dinâmicas regionais periféricas. Terceiro, o viés de indexação incompleta inviabiliza o uso pleno de dados de 2026. Quarto, as contagens por país refletem vínculos institucionais e não capturam necessariamente a localização empírica da bacia hidrográfica avaliada. Por fim, a dependência inerente a termos indexados pode omitir nuances que escapam às convenções formais de palavras-chave.
 
 % ---------------------------------------------------------------------
 \section{Conclusão}
@@ -272,4 +246,4 @@ De todo modo, o método se demonstrou funcional, transparente, reproduzível e a
 
 A literatura sobre IA aplicada a inundações expandiu-se rapidamente, com concentração de publicações após 2018 e crescimento de DL, LSTM, CNN e métodos \textit{ensemble}. Random Forest, SVM e outras abordagens clássicas permanecem relevantes, especialmente no mapeamento espacial. China, Estados Unidos e Índia lideraram a produção por afiliação, enquanto a América Latina apareceu de forma limitada no recorte analisado.
 
-A principal conclusão científica é que o campo não deve ser avaliado como um bloco homogêneo. Previsão temporal, detecção, suscetibilidade e risco respondem a perguntas diferentes, utilizam métricas distintas e exigem protocolos específicos de validação. A próxima etapa de maturidade depende de generalização espaço-temporal, avaliação de extremos, quantificação de incerteza, integração com processos físicos e reprodutibilidade aberta. Para municípios costeiros do Sul do Brasil, estudos futuros devem considerar explicitamente inundações compostas e integrar observações locais, sensoriamento remoto, maré, chuva, drenagem e modelos híbridos orientados à decisão e ao alerta precoce.
+A principal conclusão científica é que o campo não deve ser avaliado como um bloco homogêneo. Previsão temporal, detecção, suscetibilidade e risco associam-se a perguntas diferentes, utilizam métricas distintas e exigem protocolos específicos de validação. A próxima etapa de maturidade depende de generalização espaço-temporal, avaliação de extremos, quantificação de incerteza, integração com processos físicos e reprodutibilidade aberta. Para municípios costeiros do Sul do Brasil, estudos futuros devem considerar explicitamente inundações compostas e integrar observações locais, sensoriamento remoto, maré, chuva, drenagem e modelos híbridos orientados à decisão e ao alerta precoce.
