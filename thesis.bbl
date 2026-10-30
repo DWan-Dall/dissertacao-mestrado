@@ -7,198 +7,270 @@
 
 \bibitem[Aria e Cuccurullo 2017]{aria2017}
 \abntrefinfo{Aria e Cuccurullo}{ARIA; CUCCURULLO}{2017}
-{ARIA, M.; CUCCURULLO, C. bibliometrix: An {R}-tool for comprehensive science mapping analysis.
+{ARIA, M.; CUCCURULLO, C. bibliometrix: An {R}-tool for comprehensive science
+  mapping analysis.
 \textbf{Journal of Informetrics}, v.~11, n.~4, p. 959--975, 2017.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.joi.2017.08.007}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.joi.2017.08.007}. Acesso em:
+  28 out. 2026.}
 
 \bibitem[Arora \textit{et al.} 2021]{arora2021}
 \abntrefinfo{Arora \textit{et al.}}{ARORA \textit{et al.}}{2021}
-{ARORA, A. \textit{et al.} Optimization of state-of-the-art fuzzy-metaheuristic {ANFIS}-based machine learning models for flood susceptibility prediction mapping in the {Middle Ganga Plain, India}.
+{ARORA, A. \textit{et al.} Optimization of state-of-the-art fuzzy-metaheuristic
+  {ANFIS}-based machine learning models for flood susceptibility prediction
+  mapping in the {Middle Ganga Plain, India}.
 \textbf{Science of the Total Environment}, v.~750, 2021.
 Art. 141565.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.scitotenv.2020.141565}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.scitotenv.2020.141565}.
+  Acesso em: 28 out. 2026.}
 
 \bibitem[{BRASIL} 2021]{ana2021}
 \abntrefinfo{{BRASIL}}{{BRASIL}}{2021}
-{{BRASIL}. \textbf{Atlas Irriga{\c c}{\~a}o: Uso da {\'A}gua na Agricultura Irrigada}. Bras{\'i}lia: Ag{\^e}ncia Nacional de {\'A}guas e Saneamento B{\'a}sico (ANA), 2021.}
+{{BRASIL}. \textbf{Atlas Irriga{\c c}{\~a}o: Uso da {\'A}gua na Agricultura
+  Irrigada}. Bras{\'i}lia: Ag{\^e}ncia Nacional de {\'A}guas e Saneamento
+  B{\'a}sico (ANA), 2021.}
 
 \bibitem[Costache \textit{et al.} 2020]{costache2020}
 \abntrefinfo{Costache \textit{et al.}}{COSTACHE \textit{et al.}}{2020}
-{COSTACHE, R. \textit{et al.} Flash-flood susceptibility assessment using multi-criteria decision making and machine learning supported by remote sensing and {GIS} techniques.
+{COSTACHE, R. \textit{et al.} Flash-flood susceptibility assessment using
+  multi-criteria decision making and machine learning supported by remote
+  sensing and {GIS} techniques.
 \textbf{Remote Sensing}, v.~12, n.~1, 2020.
 Art. 106.
-Dispon{\'\i}vel em: \url{https://doi.org/10.3390/rs12010106}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.3390/rs12010106}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Dias \textit{et al.} 2025]{dias2025}
 \abntrefinfo{Dias \textit{et al.}}{DIAS \textit{et al.}}{2025}
-{DIAS, M. R.~F. \textit{et al.} State of the art techniques for flood prediction models -- a systematic review. In:  \textbf{17th Seminar on Power Electronics and Control ({SEPOC})}. [s.n.], 2025. p.~1--7. Dispon{\'\i}vel em: \url{https://doi.org/10.1109/SEPOC67005.2025.11297645}. Acesso em: 28 out. 2026.}
+{DIAS, M. R.~F. \textit{et al.} State of the art techniques for flood
+  prediction models -- a systematic review. In:  \textbf{17th Seminar on Power
+  Electronics and Control ({SEPOC})}. [s.n.], 2025. p.~1--7. Dispon{\'\i}vel
+  em: \url{https://doi.org/10.1109/SEPOC67005.2025.11297645}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Dodangeh \textit{et al.} 2020]{dodangeh2020}
 \abntrefinfo{Dodangeh \textit{et al.}}{DODANGEH \textit{et al.}}{2020}
-{DODANGEH, E. \textit{et al.} Integrated machine learning methods with resampling algorithms for flood susceptibility prediction.
+{DODANGEH, E. \textit{et al.} Integrated machine learning methods with
+  resampling algorithms for flood susceptibility prediction.
 \textbf{Science of the Total Environment}, v.~705, 2020.
 Art. 135983.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.scitotenv.2019.135983}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.scitotenv.2019.135983}.
+  Acesso em: 28 out. 2026.}
 
 \bibitem[Estrada 2021]{estrada2021}
 \abntrefinfo{Estrada}{ESTRADA}{2021}
-{ESTRADA, A.~V. \textbf{Aplica{\c c}{\~a}o de redes neurais artificiais em modelos de previs{\~a}o de demanda de {\'a}gua}. 2021. UDESC.}
+{ESTRADA, A.~V. \textbf{Aplica{\c c}{\~a}o de redes neurais artificiais em
+  modelos de previs{\~a}o de demanda de {\'a}gua}. 2021. UDESC.}
 
 \bibitem[Fang \textit{et al.} 2021]{fang2021}
 \abntrefinfo{Fang \textit{et al.}}{FANG \textit{et al.}}{2021}
-{FANG, Z. \textit{et al.} Predicting flood susceptibility using {LSTM} neural networks.
+{FANG, Z. \textit{et al.} Predicting flood susceptibility using {LSTM} neural
+  networks.
 \textbf{Journal of Hydrology}, v.~594, 2021.
 Art. 125734.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.jhydrol.2020.125734}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.jhydrol.2020.125734}. Acesso
+  em: 28 out. 2026.}
 
 \bibitem[Hu \textit{et al.} 2018]{hu2018}
 \abntrefinfo{Hu \textit{et al.}}{HU \textit{et al.}}{2018}
-{HU, C. \textit{et al.} Deep learning with a {Long Short-Term Memory} networks approach for rainfall--runoff simulation.
+{HU, C. \textit{et al.} Deep learning with a {Long Short-Term Memory} networks
+  approach for rainfall--runoff simulation.
 \textbf{Water}, v.~10, n.~11, 2018.
 Art. 1543.
-Dispon{\'\i}vel em: \url{https://doi.org/10.3390/w10111543}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.3390/w10111543}. Acesso em: 28 out.
+  2026.}
 
 \bibitem[{IPCC} 2021]{ipcc2021}
 \abntrefinfo{{IPCC}}{{IPCC}}{2021}
-{{IPCC}. \textbf{Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}. Cambridge, UK; New York, NY, USA: Cambridge University Press, 2021.}
+{{IPCC}. \textbf{Climate Change 2021: The Physical Science Basis. Contribution
+  of Working Group I to the Sixth Assessment Report of the Intergovernmental
+  Panel on Climate Change}. Cambridge, UK; New York, NY, USA: Cambridge
+  University Press, 2021.}
 
 \bibitem[{IPCC} 2022]{ipcc2022}
 \abntrefinfo{{IPCC}}{{IPCC}}{2022}
-{{IPCC}. \textbf{Climate Change 2022: Impacts, Adaptation and Vulnerability}. Cambridge, UK: Cambridge University Press, 2022.}
+{{IPCC}. \textbf{Climate Change 2022: Impacts, Adaptation and Vulnerability}.
+  Cambridge, UK: Cambridge University Press, 2022.}
 
 \bibitem[Islam \textit{et al.} 2025]{islam2025}
 \abntrefinfo{Islam \textit{et al.}}{ISLAM \textit{et al.}}{2025}
-{ISLAM, T. \textit{et al.} A systematic review of urban flood susceptibility mapping: Remote sensing, machine learning, and other modeling approaches.
+{ISLAM, T. \textit{et al.} A systematic review of urban flood susceptibility
+  mapping: Remote sensing, machine learning, and other modeling approaches.
 \textbf{Remote Sensing}, v.~17, n.~3, 2025.
 Art. 524.
-Dispon{\'\i}vel em: \url{https://doi.org/10.3390/rs17030524}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.3390/rs17030524}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Janizadeh \textit{et al.} 2019]{janizadeh2019}
 \abntrefinfo{Janizadeh \textit{et al.}}{JANIZADEH \textit{et al.}}{2019}
-{JANIZADEH, S. \textit{et al.} Prediction success of machine learning methods for flash flood susceptibility mapping in the {Tafresh Watershed, Iran}.
+{JANIZADEH, S. \textit{et al.} Prediction success of machine learning methods
+  for flash flood susceptibility mapping in the {Tafresh Watershed, Iran}.
 \textbf{Sustainability}, v.~11, n.~19, 2019.
 Art. 5426.
-Dispon{\'\i}vel em: \url{https://doi.org/10.3390/su11195426}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.3390/su11195426}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Kratzert \textit{et al.} 2018]{kratzert2018}
 \abntrefinfo{Kratzert \textit{et al.}}{KRATZERT \textit{et al.}}{2018}
-{KRATZERT, F. \textit{et al.} Rainfall--runoff modelling using {Long Short-Term Memory} ({LSTM}) networks.
+{KRATZERT, F. \textit{et al.} Rainfall--runoff modelling using {Long Short-Term
+  Memory} ({LSTM}) networks.
 \textbf{Hydrology and Earth System Sciences}, v.~22, p. 6005--6022, 2018.
-Dispon{\'\i}vel em: \url{https://doi.org/10.5194/hess-22-6005-2018}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.5194/hess-22-6005-2018}. Acesso em:
+  28 out. 2026.}
 
 \bibitem[Magro 2022]{magro2022}
 \abntrefinfo{Magro}{MAGRO}{2022}
-{MAGRO, R.~B. \textbf{Utiliza{\c c}{\~a}o de t{\'e}cnicas de intelig{\^e}ncia computacional para estimativa de vaz{\~o}es afluentes}. 2022. UFPel.}
+{MAGRO, R.~B. \textbf{Utiliza{\c c}{\~a}o de t{\'e}cnicas de intelig{\^e}ncia
+  computacional para estimativa de vaz{\~o}es afluentes}. 2022. UFPel.}
 
 \bibitem[Mosavi, Ozturk e Chau 2018]{mosavi2018}
 \abntrefinfo{Mosavi, Ozturk e Chau}{MOSAVI; OZTURK; CHAU}{2018}
-{MOSAVI, A.; OZTURK, P.; CHAU, K.-W. Flood prediction using machine learning models: Literature review.
+{MOSAVI, A.; OZTURK, P.; CHAU, K.-W. Flood prediction using machine learning
+  models: Literature review.
 \textbf{Water}, v.~10, n.~11, 2018.
 Art. 1536.
-Dispon{\'\i}vel em: \url{https://doi.org/10.3390/w10111536}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.3390/w10111536}. Acesso em: 28 out.
+  2026.}
 
 \bibitem[Nearing \textit{et al.} 2024]{nearing2024}
 \abntrefinfo{Nearing \textit{et al.}}{NEARING \textit{et al.}}{2024}
-{NEARING, G. \textit{et al.} Global prediction of extreme floods in ungauged watersheds.
+{NEARING, G. \textit{et al.} Global prediction of extreme floods in ungauged
+  watersheds.
 \textbf{Nature}, v.~627, p. 559--563, 2024.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1038/s41586-024-07145-1}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1038/s41586-024-07145-1}. Acesso
+  em: 28 out. 2026.}
 
 \bibitem[Nearing \textit{et al.} 2021]{nearing2021}
 \abntrefinfo{Nearing \textit{et al.}}{NEARING \textit{et al.}}{2021}
-{NEARING, G.~S. \textit{et al.} What role does hydrological science play in the age of machine learning?
+{NEARING, G.~S. \textit{et al.} What role does hydrological science play in the
+  age of machine learning?
 \textbf{Water Resources Research}, v.~57, n.~3, 2021.
 Art. e2020WR028091.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1029/2020WR028091}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1029/2020WR028091}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Oliveira, Martins e Mendiondo 2013]{oliveira2013}
 \abntrefinfo{Oliveira, Martins e Mendiondo}{OLIVEIRA; MARTINS; MENDIONDO}{2013}
-{OLIVEIRA, R.~A.; MARTINS, C.~S.; MENDIONDO, E.~M. An{\'a}lise do uso de redes neurais artificiais na previs{\~a}o de vaz{\~o}es em rios urbanos. In:  \textbf{XX SBRH}. [S.l.: s.n.], 2013.}
+{OLIVEIRA, R.~A.; MARTINS, C.~S.; MENDIONDO, E.~M. An{\'a}lise do uso de redes
+  neurais artificiais na previs{\~a}o de vaz{\~o}es em rios urbanos. In:
+  \textbf{XX SBRH}. [S.l.: s.n.], 2013.}
 
 \bibitem[Page \textit{et al.} 2021]{page2021}
 \abntrefinfo{Page \textit{et al.}}{PAGE \textit{et al.}}{2021}
-{PAGE, M.~J. \textit{et al.} The {PRISMA} 2020 statement: An updated guideline for reporting systematic reviews.
+{PAGE, M.~J. \textit{et al.} The {PRISMA} 2020 statement: An updated guideline
+  for reporting systematic reviews.
 \textbf{BMJ}, v.~372, 2021.
 Art. n71.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1136/bmj.n71}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1136/bmj.n71}. Acesso em: 28 out.
+  2026.}
 
 \bibitem[Rafiei-Sardooi \textit{et al.} 2021]{rafieisardooi2021}
-\abntrefinfo{Rafiei-Sardooi \textit{et al.}}{RAFIEI-SARDOOI \textit{et al.}}{2021}
-{RAFIEI-SARDOOI, E. \textit{et al.} Evaluating urban flood risk using hybrid method of {TOPSIS} and machine learning.
+\abntrefinfo{Rafiei-Sardooi \textit{et al.}}{RAFIEI-SARDOOI \textit{et
+  al.}}{2021}
+{RAFIEI-SARDOOI, E. \textit{et al.} Evaluating urban flood risk using hybrid
+  method of {TOPSIS} and machine learning.
 \textbf{International Journal of Disaster Risk Reduction}, v.~66, 2021.
 Art. 102614.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.ijdrr.2021.102614}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.ijdrr.2021.102614}. Acesso
+  em: 28 out. 2026.}
 
 \bibitem[Roberts \textit{et al.} 2017]{roberts2017}
 \abntrefinfo{Roberts \textit{et al.}}{ROBERTS \textit{et al.}}{2017}
-{ROBERTS, D.~R. \textit{et al.} Cross-validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure.
+{ROBERTS, D.~R. \textit{et al.} Cross-validation strategies for data with
+  temporal, spatial, hierarchical, or phylogenetic structure.
 \textbf{Ecography}, v.~40, n.~8, p. 913--929, 2017.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1111/ecog.02881}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1111/ecog.02881}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Saha \textit{et al.} 2021]{saha2021}
 \abntrefinfo{Saha \textit{et al.}}{SAHA \textit{et al.}}{2021}
-{SAHA, A. \textit{et al.} Flood susceptibility assessment using novel ensemble of {Hyperpipes} and support vector regression algorithms.
+{SAHA, A. \textit{et al.} Flood susceptibility assessment using novel ensemble
+  of {Hyperpipes} and support vector regression algorithms.
 \textbf{Water}, v.~13, n.~2, 2021.
 Art. 241.
-Dispon{\'\i}vel em: \url{https://doi.org/10.3390/w13020241}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.3390/w13020241}. Acesso em: 28 out.
+  2026.}
 
 \bibitem[Shahabi \textit{et al.} 2020]{shahabi2020}
 \abntrefinfo{Shahabi \textit{et al.}}{SHAHABI \textit{et al.}}{2020}
-{SHAHABI, H. \textit{et al.} Flood detection and susceptibility mapping using {Sentinel-1} remote sensing data and a machine learning approach: Hybrid intelligence of bagging ensemble based on {K}-nearest neighbor classifier.
+{SHAHABI, H. \textit{et al.} Flood detection and susceptibility mapping using
+  {Sentinel-1} remote sensing data and a machine learning approach: Hybrid
+  intelligence of bagging ensemble based on {K}-nearest neighbor classifier.
 \textbf{Remote Sensing}, v.~12, n.~2, 2020.
 Art. 266.
-Dispon{\'\i}vel em: \url{https://doi.org/10.3390/rs12020266}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.3390/rs12020266}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Shen 2018]{shen2018}
 \abntrefinfo{Shen}{SHEN}{2018}
-{SHEN, C. A transdisciplinary review of deep learning research and its relevance for water resources scientists.
+{SHEN, C. A transdisciplinary review of deep learning research and its
+  relevance for water resources scientists.
 \textbf{Water Resources Research}, v.~54, n.~11, p. 8558--8593, 2018.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1029/2018WR022643}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1029/2018WR022643}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Soares e Teive 2015]{soares2015}
 \abntrefinfo{Soares e Teive}{SOARES; TEIVE}{2015}
-{SOARES, D.~G.; TEIVE, R. C.~G. Previs{\~a}o de cheias do {Rio Itaja{\'i}-A{\c c}u} utilizando redes neurais artificiais. In:  \textbf{SIBGRAPI}. [S.l.: s.n.], 2015.}
+{SOARES, D.~G.; TEIVE, R. C.~G. Previs{\~a}o de cheias do {Rio Itaja{\'i}-A{\c
+  c}u} utilizando redes neurais artificiais. In:  \textbf{SIBGRAPI}. [S.l.:
+  s.n.], 2015.}
 
 \bibitem[Tyralis, Papacharalampous e Langousis 2019]{tyralis2019}
-\abntrefinfo{Tyralis, Papacharalampous e Langousis}{TYRALIS; PAPACHARALAMPOUS; LANGOUSIS}{2019}
-{TYRALIS, H.; PAPACHARALAMPOUS, G.; LANGOUSIS, A. A brief review of {Random Forests} for water scientists and practitioners and their recent history in water resources.
+\abntrefinfo{Tyralis, Papacharalampous e Langousis}{TYRALIS; PAPACHARALAMPOUS;
+  LANGOUSIS}{2019}
+{TYRALIS, H.; PAPACHARALAMPOUS, G.; LANGOUSIS, A. A brief review of {Random
+  Forests} for water scientists and practitioners and their recent history in
+  water resources.
 \textbf{Water}, v.~11, n.~5, 2019.
 Art. 910.
-Dispon{\'\i}vel em: \url{https://doi.org/10.3390/w11050910}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.3390/w11050910}. Acesso em: 28 out.
+  2026.}
 
 \bibitem[Valle 2021]{valle2021}
 \abntrefinfo{Valle}{VALLE}{2021}
-{VALLE, R.~F. \textbf{Avalia{\c c}{\~a}o da utiliza{\c c}{\~a}o de redes neurais para previs{\~a}o do risco de inunda{\c c}{\~a}o em {Curitiba/PR}}. 2021. UTFPR.}
+{VALLE, R.~F. \textbf{Avalia{\c c}{\~a}o da utiliza{\c c}{\~a}o de redes
+  neurais para previs{\~a}o do risco de inunda{\c c}{\~a}o em {Curitiba/PR}}.
+  2021. UTFPR.}
 
 \bibitem[Wahl \textit{et al.} 2015]{wahl2015}
 \abntrefinfo{Wahl \textit{et al.}}{WAHL \textit{et al.}}{2015}
-{WAHL, T. \textit{et al.} Increasing risk of compound flooding from storm surge and rainfall for major {US} cities.
+{WAHL, T. \textit{et al.} Increasing risk of compound flooding from storm surge
+  and rainfall for major {US} cities.
 \textbf{Nature Climate Change}, v.~5, p. 1093--1097, 2015.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1038/nclimate2736}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1038/nclimate2736}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Wu \textit{et al.} 2020]{wu2020}
 \abntrefinfo{Wu \textit{et al.}}{WU \textit{et al.}}{2020}
-{WU, W. \textit{et al.} Ensemble flood forecasting: Current status and future opportunities.
+{WU, W. \textit{et al.} Ensemble flood forecasting: Current status and future
+  opportunities.
 \textbf{{WIREs} Water}, v.~7, n.~3, 2020.
 Art. e1432.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1002/wat2.1432}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1002/wat2.1432}. Acesso em: 28 out.
+  2026.}
 
 \bibitem[Xiang, Yan e Demir 2020]{xiang2020}
 \abntrefinfo{Xiang, Yan e Demir}{XIANG; YAN; DEMIR}{2020}
-{XIANG, Z.; YAN, J.; DEMIR, I. A rainfall--runoff model with {LSTM}-based sequence-to-sequence learning.
+{XIANG, Z.; YAN, J.; DEMIR, I. A rainfall--runoff model with {LSTM}-based
+  sequence-to-sequence learning.
 \textbf{Water Resources Research}, v.~56, n.~1, 2020.
 Art. e2019WR025326.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1029/2019WR025326}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1029/2019WR025326}. Acesso em: 28
+  out. 2026.}
 
 \bibitem[Zhang \textit{et al.} 2019]{zhang2019}
 \abntrefinfo{Zhang \textit{et al.}}{ZHANG \textit{et al.}}{2019}
-{ZHANG, X. \textit{et al.} Urban drought challenge to 2030 sustainable development goals.
+{ZHANG, X. \textit{et al.} Urban drought challenge to 2030 sustainable
+  development goals.
 \textbf{Science of the Total Environment}, Elsevier, v.~693, p. 133455, 2019.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.scitotenv.2019.07.273}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.scitotenv.2019.07.273}.
+  Acesso em: 28 out. 2026.}
 
 \bibitem[Zhao \textit{et al.} 2019]{zhao2019}
 \abntrefinfo{Zhao \textit{et al.}}{ZHAO \textit{et al.}}{2019}
-{ZHAO, G. \textit{et al.} Assessment of urban flood susceptibility using semi-supervised machine learning model.
+{ZHAO, G. \textit{et al.} Assessment of urban flood susceptibility using
+  semi-supervised machine learning model.
 \textbf{Science of the Total Environment}, v.~659, p. 940--949, 2019.
-Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.scitotenv.2018.12.217}. Acesso em: 28 out. 2026.}
+Dispon{\'\i}vel em: \url{https://doi.org/10.1016/j.scitotenv.2018.12.217}.
+  Acesso em: 28 out. 2026.}
 
 \end{thebibliography}
