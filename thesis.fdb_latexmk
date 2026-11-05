@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex thesis"] 1793214107.15591 "thesis.aux" "thesis.bbl" "thesis" 1793214109.60102 0
+["bibtex thesis"] 1793390072.92012 "thesis.aux" "thesis.bbl" "thesis" 1793390076.56453 0
   "./references.bib" 1793212885.32806 12839 bd9bac4eb3045a6c7d8b68746aebf184 ""
   "/usr/share/texlive/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1357081713 5396 4eb260dac60f150ae608d45252853090 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1543183680 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "thesis.aux" 1793214109.17341 45531 27738718ba0ad356829ea30484f52d14 "lualatex"
+  "thesis.aux" 1793390075.96292 49251 f2b4d2ad99d58f35144643ed6e74492e "lualatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["lualatex"] 1793214107.22535 "thesis.tex" "thesis.pdf" "thesis" 1793214109.60113 0
+["lualatex"] 1793390073.03682 "thesis.tex" "thesis.pdf" "thesis" 1793390076.56467 0
   "/etc/fonts/conf.d/10-hinting-slight.conf" 1750993924 620 5da52d777c5af2cb4b7445b81ead6c3d ""
   "/etc/fonts/conf.d/10-scale-bitmap-fonts.conf" 1750993924 2068 8588f87eaf68a1eb73920066f6817b48 ""
   "/etc/fonts/conf.d/10-sub-pixel-rgb-for-kde.conf" 1787097600 765 0fedb9261edd09a152d9e85be55d706d ""
@@ -147,6 +147,7 @@
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/arialbd.luc" 1793019603.35387 647440 56b32c2aa49c5353dffea376f8982b17 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/arialbi.luc" 1793019603.54187 479362 8f004617654d459bcdac8f0fcaefcdb0 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/ariali.luc" 1793019603.44287 516244 c93e246cf3688943541596a621b1d7d5 ""
+  "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1793019604.33104 81832 626cb5cac6643b1b3306bc48b9714304 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1793019604.2669 128405 86240d2e88c12243734a13e4bf6704ec ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bolditalic.luc" 1793019603.81188 136486 668e011b54acb852a6ccdd20aad9c676 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1793019604.3099 136307 3082c70932f3684026422680569c1cb9 ""
@@ -155,7 +156,9 @@
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-italic.luc" 1793019603.84688 135238 affaea1314cca16772473c5dc5c34321 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc" 1793019602.41383 127665 a8a658210a542aa912673a950f797170 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc" 1793019604.06489 128916 42a310b573c4660dbded03bdfdcc1a80 ""
+  "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc" 1793386106.67482 128370 3af26639073de678808b31bfdb3053f4 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc" 1793019604.01189 128141 da4109061e26f6e0a56cedf21a461797 ""
+  "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.luc" 1793386106.63682 127955 e6c36598d7f0ba7e1562761e28b10203 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmromancaps10-regular.luc" 1793019603.87889 120242 4cd54ffe66b58da8b1fd7eb574e9b1b2 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-bold.luc" 1793019604.1639 128099 e575a6356d23ed4a16070b2162791453 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-boldoblique.luc" 1793019604.43091 129722 0d8aa4bd76290b194860e22962d6cee1 ""
@@ -163,6 +166,7 @@
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmsans12-regular.luc" 1793019604.1289 128160 b00aaef37814e4ddb8dcb81f8164ad21 ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmsans17-regular.luc" 1793019604.3779 127857 d6b8027c8bcdd48c342afebd6233cbde ""
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1793019602.37283 390771 95f4a6639c4821a60f72aa68b3cf658c ""
+  "/usr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf" 1255129361 64684 15a2082c8e31f411875a86ea2d29a0ee ""
   "/usr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf" 1255129361 111240 0af0b64d6d3df41bead3f9de314afbd4 ""
   "/usr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf" 1255129361 118828 4d461c73423fe2666dad2ff0dfc3ca68 ""
   "/usr/share/texlive/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf" 1255129361 111536 ae9d1b331000d544f47e5223081b7b54 ""
@@ -196,6 +200,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136849748 35941 f27169cc74234d5bd5e4cca5abafaabb ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb" 1136849748 33709 b09d2e140b7e807d3a97058263ab6693 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1136849748 46026 6dab18b61c907687b520c72847215a68 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1136849748 45458 a3faba884469519614ca56ba5f6b1de1 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf" 1136768653 2340 0efed6a948c3c37d870e4e7ddb85c7c3 ""
@@ -534,22 +539,22 @@
   "packages/fonts/arialbd.ttf" 1792505326 857344 33659c3ee1590a4826de9a70b48fb502 ""
   "packages/fonts/ariali.ttf" 1792505326 635860 0cac7d1a894ee4dc31c0ab41964ae9f7 ""
   "packages/ppg-ieee.cls" 1793214006.20917 58138 3d1fbc304b77782c685f8a04dfc9cc70 ""
-  "tex/cap1-artigo.tex" 1793212895.95218 28378 c1c64a5dad51ba9e526dc38b007fd8e9 ""
+  "tex/cap1-artigo.tex" 1793390035.01266 43454 1c331439df72cfd430995364eb5c5129 ""
   "tex/conclusao.tex" 1792505760 820 8856de7feee439c2ba26f27ade391ce2 ""
   "tex/introducao.tex" 1793213216.51941 13283 978a81c18c946e8a4e348cfc51cef3d8 ""
   "tex/metodologia.tex" 1793206832.14034 5449 fa9a18879ee326679a7c7f2968830f5d ""
   "tex/refencial-teorico.tex" 1793212867.97336 4173 cfc119bcefa71181812a9500ca2524da ""
-  "thesis.aux" 1793214109.17341 45531 27738718ba0ad356829ea30484f52d14 "lualatex"
-  "thesis.bbl" 1793214107.2206 12263 b2506904e15ac5a54ae10bf04ad43d21 "bibtex thesis"
-  "thesis.brf" 1793214109.18719 2445 9cf02da220723cb05e302fe4d5caa90b "lualatex"
+  "thesis.aux" 1793390075.96292 49251 f2b4d2ad99d58f35144643ed6e74492e "lualatex"
+  "thesis.bbl" 1793390073.03086 12263 b2506904e15ac5a54ae10bf04ad43d21 "bibtex thesis"
+  "thesis.brf" 1793390075.98054 2792 c35ee879975112807a00c67478168ede "lualatex"
   "thesis.gls" 0 -1 0 ""
   "thesis.ind" 1793214007.84852 0 d41d8cd98f00b204e9800998ecf8427e "makeindex thesis.idx"
-  "thesis.lof" 1793214109.18719 1359 240cadc2749d9a0347e4c464972f8424 "lualatex"
-  "thesis.loq" 1793214109.1732 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "thesis.lot" 1793214109.18719 955 1b3ab581b7292051a523cf3347408f11 "lualatex"
+  "thesis.lof" 1793390075.98154 1699 55ec40075fa083fff3379750d79ff04e "lualatex"
+  "thesis.loq" 1793390075.96202 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "thesis.lot" 1793390075.98154 955 95cf8d314a23d0c7387607062648e709 "lualatex"
   "thesis.nls" 0 -1 0 ""
   "thesis.tex" 1793213745.49 16528 ceb0464eda6c9589494c9809aab3b5ff ""
-  "thesis.toc" 1793214109.18719 4449 fc4de5608293361eccc5f5ad6d626d0a "lualatex"
+  "thesis.toc" 1793390075.98154 4748 6a4142f35b1f0c1842ab785b949db80b "lualatex"
   (generated)
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.lua"
   "/home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc"
@@ -566,8 +571,8 @@
   "thesis.pdf"
   "thesis.toc"
   (rewritten before read)
-["makeindex thesis.idx"] 1793214007.78678 "thesis.idx" "thesis.ind" "thesis" 1793214109.60095 0
-  "thesis.idx" 1793214108.19015 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+["makeindex thesis.idx"] 1793214007.78678 "thesis.idx" "thesis.ind" "thesis" 1793390076.56445 0
+  "thesis.idx" 1793390074.35249 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
   (generated)
   "thesis.ilg"
   "thesis.ind"

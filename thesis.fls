@@ -721,6 +721,13 @@ OUTPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaot
 OUTPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc
 INPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
 INPUT ./tex/cap1-artigo.tex
+OUTPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.lua
+OUTPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc
+INPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.luc
+OUTPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.lua
+OUTPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc
+INPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc
+INPUT /home/fedora-lema/.texlive2026/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT ./imagens/sepoc-fig2a-producao.png
 INPUT ./imagens/sepoc-fig2a-producao.png
 INPUT ./imagens/sepoc-fig2b-citacoes.png
@@ -758,5 +765,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
