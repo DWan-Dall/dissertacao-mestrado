@@ -16,5 +16,5 @@ Os parâmetros possíveis utilizados pelo `\documentclass` são:
 
 Para compilação utilizar o comando:
 ```
-latexmk -lualatex -interaction=nonstopmode -file-line-error thesis.tex
+latexmk -xelatex -interaction=nonstopmode -file-line-error thesis.tex
 ```
