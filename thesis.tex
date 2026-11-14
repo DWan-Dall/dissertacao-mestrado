@@ -1,38 +1,140 @@
-% --------------------------------------------------------------------
-% --------------------------------------------------------------------
-% Modelo de Trabalho Acadêmico (tese de doutorado, dissertação de
-% mestrado) em conformidade com 
-% --------------------------------------------------------------------
-% --------------------------------------------------------------------
+% !TEX program = xelatex
+% IMPORTANTE: compile com XeLaTeX (ou LuaLaTeX), NÃO pdfLaTeX — a classe usa
+% as fontes Arial/Times via fontspec. Jeito mais simples: latexmk thesis.tex
+% (o latexmkrc já roda XeLaTeX, biber e makeglossaries na ordem certa).
+% =====================================================================
+% DISSERTAÇÃO DE MESTRADO — PPGCA/UNIVALI
+% Modelo: template-latex-univali-com-frufru (classe packages/ppg.cls)
+% Em conformidade com:
+%   ABNT NBR 14724:2024 (apresentação de trabalhos acadêmicos)
+%   ABNT NBR 6023:2025   (referências)
+%   ABNT NBR 10520:2023  (citações)
+% =====================================================================
 
-% Opção	Efeito no Documento
-% qualificacao =	Formata para monografia de qualificação
-% mestrado	 = Dissertação de mestrado
-% doutorado	 = Tese de doutorado (padrão)
-% pre-defesa	 = Versão para apresentação à banca
-% pos-defesa	 = Versão final do trabalho
-% impressao	 = Versão para impressão (desativa capa em PDF)
+% --- OPÇÕES DA CLASSE -------------------------------------------------
+% NÍVEL: graduacao|tcc, especializacao|monografia, mestrado, doutorado
+% MODIFICADORES: qualificacao, pre-defesa, pos-defesa, impressao
+\documentclass[mestrado,qualificacao]{packages/ppg}
 
-\makeatletter\@namedef{ver@natbib.sty}{9999/12/31 natbib desativado}\makeatother
+\usepackage[brazil]{babel}
+\usepackage{csquotes}            % recomendado para biblatex + babel
 
-\documentclass[mestrado,pre-defesa]{packages/ppg-ieee}
+% --- CAIXINHA "CAPÍTULO n" (personalização do modelo) -----------------
+\caixacapitulotrue        % \caixacapitulofalse = sem caixinha (ABNT pura)
+%   \numeronotitulofalse = só "INTRODUÇÃO" (número aparece na caixinha)
+%   \numeronotitulotrue  = "1 INTRODUÇÃO" (padrão estrito NBR 6024)
+\numeronotitulofalse
 
-% \usepackage[numbers]{natbib}
-\usepackage[alf,abnt-emphasize=bf,abnt-etal-cite=3,abnt-etal-list=3,abnt-etal-text=it]{abntex2cite}
+% Arquivo de referências (biblatex-abnt; as chaves de citação não mudam)
+\addbibresource{references.bib}
 
+% Compatibilidade com o abntex2cite usado antes da migração:
+%   \citeonline{chave} -> Autor (ano) no corpo do texto (= \textcite).
+%   \cite{chave} já gera (Autor, ano) no biblatex-abnt, sem ajuste.
+\providecommand{\citeonline}{\textcite}
 
-% --------------------------------------------------------------------
-% Pacotes Opcionais
-% --------------------------------------------------------------------
-\usepackage{rotating}           % Usado para rotacionar o texto
-% \usepackage[all,knot,arc,import,poly]{xy}   % Pacote para desenhos gráficos
-% Este pacote pode conflitar com outros pacotes gráficos como o ``pictex''
-% Então é necessário usar apenas um dos pacotes conflitantes
+% --- PACOTES OPCIONAIS ------------------------------------------------
+\usepackage{multirow}            % células mescladas em tabelas
+\usepackage{makecell}            % \thead / \headrow em cabeçalhos
+\usepackage{booktabs}            % \toprule \midrule \bottomrule
+\usepackage{longtable}           % tabelas que cruzam páginas
+\usepackage{tabularx}
+\usepackage{rotating}            % Usado para rotacionar o texto
+\usepackage{tikz}                % desenhos e diagramas
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning}
+\usepackage{pgfplots}            % gráficos (barras, dispersão, linhas)
+\pgfplotsset{compat=1.17}
+\usepackage{enumitem}            % listas com rótulos personalizados
+\usepackage[breakable,skins]{tcolorbox}
+\hypersetup{hidelinks} % remove as molduras coloridas dos links no PDF
+
 \newcommand{\VerbL}{0.52\textwidth}
 \newcommand{\LatL}{0.42\textwidth}
 
-% --------------------------------------------------------------------
+\addto\captionsbrazil{\renewcommand{\listfigurename}{Lista de figuras}}
 
+% --------------------------------------------------------------------
+% --------------------------------------------------------------------
+% Marcações de revisão (Capítulo 1 e pendências do projeto)
+%   \revisor[título]{texto}  caixa vermelha: comentário do revisor
+%   \sugestao[título]{texto}     caixa azul: sugestão de ajuste
+%   \pendente{texto}         destaque amarelo: item a conferir
+% Para gerar a versão limpa, troque para \mostrarrevisorfalse e
+% \mostrarnotasfalse.
+% --------------------------------------------------------------------
+\newif\ifmostrarrevisor \mostrarrevisortrue
+\newif\ifmostrarnotas   \mostrarnotastrue
+\definecolor{vermelhorevisor}{RGB}{190,0,0}
+\definecolor{azulnota}{RGB}{25,70,125}
+\newcommand{\revisor}[2][Comentário do revisor]{%
+  \ifmostrarrevisor
+  \begin{tcolorbox}[breakable,enhanced,colback=red!4,colframe=vermelhorevisor,
+    coltext=vermelhorevisor,coltitle=white,fonttitle=\bfseries\small,title={#1},
+    boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+    before skip=10pt,after skip=10pt,fontupper=\small,
+    before upper={\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}}]
+  #2
+  \end{tcolorbox}%
+  \fi}
+\newcommand{\sugestao}[2][Sugestão para a revisão]{%
+  \ifmostrarnotas
+  \begin{tcolorbox}[breakable,enhanced,colback=azulnota!6,colframe=azulnota,
+    coltext=azulnota,coltitle=white,fonttitle=\bfseries\small,title={#1},
+    boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+    before skip=10pt,after skip=10pt,fontupper=\small,
+    before upper={\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}}]
+  #2
+  \end{tcolorbox}%
+  \fi}
+\newcommand{\pendente}[1]{\ifmostrarnotas
+  \par\noindent\colorbox{yellow!60}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\raggedright #1}}\par
+  \else #1\fi}
+
+% --- ESTILO PARA LISTAGENS DE CÓDIGO (listings) -----------------------
+% Obs.: o modelo usa captionpos = t (legenda ACIMA, NBR 14724:2024, 5.8);
+% aqui foi mantido o estilo original da autora (captionpos = b).
+% Estilo para código fonte
+
+\definecolor{codegreen}{RGB}{64, 180, 64}
+\definecolor{codegray}{RGB}{130, 130, 130}
+\definecolor{codemagenta}{RGB}{255, 4, 240}
+\definecolor{codeblue}{RGB}{1, 55, 255}
+\definecolor{backcolour}{RGB}{245, 245, 235}
+
+\lstdefinestyle{code}{
+    backgroundcolor = \color{backcolour},   
+    commentstyle = \color{codegreen},
+    keywordstyle = \color{magenta},
+    numberstyle=\tiny\color{codegreen},
+    numbers=left,                    
+    numbersep=5pt, 
+    %numberstyle = \tiny\color{codegray},
+    stringstyle = \color{codegreen},
+    %basicstyle = \ttfamily \small, 
+    %basicstyle=\ttfamily\footnotesize,
+    basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace = false,         
+    breaklines = true,                 
+    captionpos = b,                    
+    keepspaces = true,                 
+    numbers=left,                    
+    numbersep = 5pt,                  
+    showspaces = false,                
+    showstringspaces = false,
+    showtabs = false,                  
+    tabsize = 2,
+    otherkeywords = {cell, mse, regression}
+}
+
+\lstset{style=code}
+\lstset{language=Octave}
+\lstset{emph={fitnet, divideParam, trainRatio, testRatio, valRatio, trainParam, epochs, layers, numLayers, transferFcn},
+        emphstyle={\color{codeblue}},
+}
+
+% =====================================================================
+% METADADOS DA CAPA E FOLHA DE ROSTO
+% =====================================================================
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
@@ -48,6 +150,8 @@
 \data{26}{10}{2026} % Data do depósito (ajuste na entrega)
 \idioma{PT} % Idioma principal do documento (PT = português / EN = inglês)
 % ---
+\local{Itajaí}                   % cidade na capa e folha de rosto
+
 
 % ---
 % RESUMOS
@@ -93,14 +197,13 @@ areas based on multiple variables and contribute to the formulation of public po
 aims to generate positive social impact and to expand the use of computational intelligence in environmental risk management.
 }{Artificial Intelligence. Flood Forecasting. Coastal Communities.}
 
-
-% ----------------------------------------------------------
+% =====================================================================
 % ELEMENTOS PRÉ-TEXTUAIS
-% ----------------------------------------------------------
-
-% Inserir a ficha catalográfica
-%\incluifichacatalografica{tex/pre-textual/Embranco.pdf}
-% DEDICATÓRIA / AGRADECIMENTO / EPÍGRAFE
+% =====================================================================
+% Ficha catalográfica e folha de aprovação: só na versão FINAL (após a
+% defesa). Na qualificação ficam desativadas.
+%\incluifichacatalografica{tex/pre-textual/ficha-catalografica.tex}
+%\incluifolhadeaprovacao{tex/pre-textual/folha-aprovacao.tex}
 
 % Dedicatória, agradecimentos e epígrafe: os arquivos do modelo são textos de exemplo.
 % Escreva os seus em tex/pre-textual/ e descomente as três linhas abaixo.
@@ -108,25 +211,19 @@ aims to generate positive social impact and to expand the use of computational i
 %\textoagradecimentos*{tex/pre-textual/agradecimentos}
 %\textoepigrafe*{tex/pre-textual/epigrafe}
 
-% Inclui a lista de figuras
+% Listas
 \incluilistadefiguras
-
-% Inclui a lista de tabelas
 \incluilistadetabelas
-
-% Inclui a lista de quadros
 \incluilistadequadros
-
-% Inclui a lista de algoritmos
 %\incluilistadealgoritmos
-
-% Inclui a lista de códigos
 %\incluilistadecodigos
-
-% Inclui a lista de siglas e abreviaturas
 \incluilistadesiglas
+%\incluilistadesimbolos
 
-
+% =====================================================================
+% LISTA DE ABREVIATURAS E SIGLAS
+% \nomenclature sem grupo entra como Sigla [S] na classe ppg.
+% =====================================================================
 \nomenclature{ANA}{Agência Nacional de Águas e Saneamento Básico}
 \nomenclature{AUC}{Área sob a curva (\textit{Area Under the Curve})}
 \nomenclature{CNN}{Rede neural convolucional (\textit{Convolutional Neural Network})}
@@ -145,101 +242,12 @@ aims to generate positive social impact and to expand the use of computational i
 \nomenclature{SEPOC}{\textit{Seminar on Power Electronics and Control}}
 \nomenclature{SIG}{Sistema de Informação Geográfica}
 \nomenclature{SVM}{Máquina de vetores de suporte (\textit{Support Vector Machine})}
-% Inclui a lista de símbolos
-%\incluilistadesimbolos
-% \usepackage{subfig} — removido: incompatível com subcaption (já carregado pelo ppg-ieee.cls)
-\usepackage{multirow}
-\usepackage{makecell}           % Comandos \thead e \headrow para cabeçalhos de tabela
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{tabularx}
-\usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta}
-\usepackage[breakable,skins]{tcolorbox}
-\hypersetup{hidelinks} % remove as molduras coloridas dos links no PDF
 
-% --------------------------------------------------------------------
-% Marcações de revisão (Capítulo 1 e pendências do projeto)
-%   \revisor[título]{texto}  caixa vermelha: comentário do revisor
-%   \sugestao[título]{texto}     caixa azul: sugestão de ajuste
-%   \pendente{texto}         destaque amarelo: item a conferir
-% Para gerar a versão limpa, troque para \mostrarrevisorfalse e
-% \mostrarnotasfalse.
-% --------------------------------------------------------------------
-\newif\ifmostrarrevisor \mostrarrevisortrue
-\newif\ifmostrarnotas   \mostrarnotastrue
-\definecolor{vermelhorevisor}{RGB}{190,0,0}
-\definecolor{azulnota}{RGB}{25,70,125}
-\newcommand{\revisor}[2][Comentário do revisor]{%
-  \ifmostrarrevisor
-  \begin{tcolorbox}[breakable,enhanced,colback=red!4,colframe=vermelhorevisor,
-    coltext=vermelhorevisor,coltitle=white,fonttitle=\bfseries\small,title={#1},
-    boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
-    before skip=10pt,after skip=10pt,fontupper=\small,
-    before upper={\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}}]
-  #2
-  \end{tcolorbox}%
-  \fi}
-\newcommand{\sugestao}[2][Sugestão para a revisão]{%
-  \ifmostrarnotas
-  \begin{tcolorbox}[breakable,enhanced,colback=azulnota!6,colframe=azulnota,
-    coltext=azulnota,coltitle=white,fonttitle=\bfseries\small,title={#1},
-    boxrule=0.8pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
-    before skip=10pt,after skip=10pt,fontupper=\small,
-    before upper={\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}}]
-  #2
-  \end{tcolorbox}%
-  \fi}
-\newcommand{\pendente}[1]{\ifmostrarnotas
-  \par\noindent\colorbox{yellow!60}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\raggedright #1}}\par
-  \else #1\fi}\usepackage[brazil]{babel}
-\addto\captionsbrazil{\renewcommand{\listfigurename}{Lista de figuras}}
-\usepackage{listings} % Pacote para código fonte
-\usepackage{xcolor}
-% Estilo para código fonte
-
-\definecolor{codegreen}{RGB}{64, 180, 64}
-\definecolor{codegray}{RGB}{130, 130, 130}
-\definecolor{codemagenta}{RGB}{255, 4, 240}
-\definecolor{codeblue}{RGB}{1, 55, 255}
-\definecolor{backcolour}{RGB}{245, 245, 235}
-
-\lstdefinestyle{code}{
-    backgroundcolor = \color{backcolour},   
-    commentstyle = \color{codegreen},
-    keywordstyle = \color{magenta},
-    numberstyle=\tiny\color{codegreen},
-    numbers=left,                    
-    numbersep=5pt, 
-    %numberstyle = \tiny\color{codegray},
-    stringstyle = \color{codegreen},
-    %basicstyle = \ttfamily \small, 
-    %basicstyle=\ttfamily\footnotesize,
-    basicstyle=\ttfamily\scriptsize,
-    breakatwhitespace = false,         
-    breaklines = true,                 
-    captionpos = b,                    
-    keepspaces = true,                 
-    numbers=left,                    
-    numbersep = 5pt,                  
-    showspaces = false,                
-    showstringspaces = false,
-    showtabs = false,                  
-    tabsize = 2,
-    otherkeywords = {cell, mse, regression}
-}
-
-\lstset{style=code}
-\lstset{language=Octave}
-\lstset{emph={fitnet, divideParam, trainRatio, testRatio, valRatio, trainParam, epochs, layers, numLayers, transferFcn},
-        emphstyle={\color{codeblue}},
-}
-
-
-% ----
-% Início do documento
-% ----
 \begin{document}
+
+% Declaração de uso de IA generativa (Política CNPq, Portaria 2.664/2026, Art. 9).
+\input{tex/pre-textual/declaracao-ia}
+
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
@@ -300,7 +308,8 @@ Este capítulo apresenta o artigo submetido ao SEPOC, \emph{Aplicações de inte
 % ----------------------------------------------------------
 % Itens da lista de referências dos textos originais que não são citados no texto:
 \nocite{islam2025,ana2021}
-\bibliography{references}
+% Referências (obrigatórias) — NBR 6023:2025 (biblatex-abnt).
+\printbibliography[title={REFERÊNCIAS}]
 % Bibliography
 \printglossary
 % ---------------------------------------------------------------------
