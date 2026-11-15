@@ -13,7 +13,6 @@
 
 % Este capítulo é baseado no artigo \emph{Aplicações de inteligência artificial na previsão e no mapeamento de inundações: uma análise cientométrica multibase}, de autoria de Daiane Wan-Dall Splitter da Silva e Rodrigo Sant'Ana, submetido ao \emph{18th Seminar on Power Electronics and Control} (SEPOC 2026). O texto foi adaptado ao formato desta dissertação e incorpora as recomendações dos pareceres recebidos.
 
-
 Este capítulo apresenta o mapeamento cientométrico da literatura sobre inteligência artificial aplicada a inundações. Seu objetivo é caracterizar como essa literatura evoluiu, quais métodos e tarefas a compõem e quais lacunas limitam a transferência dos resultados para aplicações urbanas e costeiras, de modo a orientar a leitura e a revisão da literatura realizadas nesta dissertação.
 
 O texto parte de um artigo de autoria de Daiane Wan-Dall Splitter da Silva e Rodrigo Sant'Ana, submetido ao \emph{18th Seminar on Power Electronics and Control} (SEPOC 2026) com o título ``Aplicações de inteligência artificial na previsão e no mapeamento de inundações: uma análise cientométrica multibase''. Ele foi adaptado ao formato desta dissertação e incorpora as recomendações dos pareceres recebidos, sobretudo quanto à transparência da seleção dos registros, ao escore de priorização e ao mapeamento da estrutura temática.
@@ -30,11 +29,7 @@ Modelos hidrológicos, hidráulicos e hidrodinâmicos continuam essenciais para 
 
 O crescimento acelerado do campo dificulta distinguir tendências tecnológicas robustas de efeitos de popularidade, cobertura de base e atraso de citação. Além disso, expressões como ``previsão de inundação'', ``mapeamento de suscetibilidade'', ``detecção de inundação'' e ``avaliação de risco'' representam tarefas científicas diferentes e não devem ser avaliadas pelas mesmas métricas. Análises cientométricas permitem mapear a estrutura de um domínio, desde que a busca, a deduplicação, as unidades de contagem e as limitações de cobertura sejam explicitadas \cite{aria2017}. Recomendações de transparência de revisões estruturadas, como o PRISMA, também são úteis para documentar identificação, triagem e inclusão de registros, ainda que o presente estudo não constitua uma revisão de efeitos de intervenção \cite{page2021}.
 
-\revisor[Parecer SEPOC -- originalidade]{A originalidade do estudo também deve ser mais claramente estabelecida em relação a revisões anteriores de previsão de inundações baseada em IA, especialmente porque o próprio manuscrito cita uma revisão sistemática sobre modelos de previsão de inundações publicada na SEPOC 2025.}
-
-\sugestao[Ação realizada]{Parágrafo reescrito com o que \citeonline{dias2025} de fato fizeram (32 estudos, PRISMA, taxonomia de técnicas, sem análise bibliométrica) e com a diferença real. A frase anterior (``uma única tarefa hidrológica linear'') não correspondia ao artigo e foi removida. As referências internacionais do Dias passam a servir de validação externa de cobertura (Seção~\ref{sec:art-validacao}).}
-
-Revisões sistemáticas recentes sintetizaram técnicas de previsão de inundações. \citeonline{dias2025}, por exemplo, analisaram 32 estudos, selecionados de 433 registros conforme o PRISMA, e organizaram uma taxonomia de métodos estatísticos, de \textit{machine learning}, de \textit{deep learning} e híbridos, incluindo sistemas com IoT. O presente estudo é complementar, e não substitutivo: em vez de sintetizar qualitativamente um conjunto reduzido de estudos, mapeia de forma cientométrica um corpus de 2.068 artigos, recuperado, na prática, a partir da Lens.org e da Scopus, estratifica-o por tarefa científica (previsão, detecção, suscetibilidade e risco) e examina lacunas de cobertura, em particular as costeiras e compostas, que não foram o foco da revisão anterior. Além disso, as referências internacionais de \citeonline{dias2025} são empregadas como referência externa para avaliar a cobertura da busca e do escore aqui adotados.
+Revisões recentes já sintetizaram técnicas de previsão de inundações com inteligência artificial. \citeonline{mosavi2018} revisaram a literatura sobre modelos de aprendizado de máquina para previsão de inundações, e \citeonline{dias2025} analisaram 32 estudos, selecionados de 433 registros conforme o PRISMA, e organizaram uma taxonomia de métodos estatísticos, de \textit{machine learning}, de \textit{deep learning} e híbridos, incluindo sistemas com IoT. Essas revisões respondem à pergunta de quais técnicas existem e como se comparam em um conjunto reduzido de estudos. Este capítulo é complementar e responde a outra pergunta: como é a estrutura da literatura como um todo? Para isso, (i) mapeia de forma cientométrica um corpus de 2.068 artigos, recuperado, na prática, a partir da Lens.org e da Scopus; (ii) documenta de modo reproduzível cada etapa de redução, das exportações brutas ao corpus, com suas falhas de implementação e uma análise de sensibilidade do escore de priorização; (iii) emprega as referências internacionais de \citeonline{dias2025} como referência externa para avaliar a cobertura da busca; e (iv) sintetiza os artigos de maior prioridade segundo a tarefa científica (previsão, detecção, suscetibilidade e risco), o que evidencia que métricas e desenhos de validação não são comparáveis entre tarefas. As lacunas costeiras e compostas, que não foram o foco das revisões anteriores, são discutidas com a ressalva de que parte delas decorre do desenho da busca.
 
 Com base neste contexto, este artigo busca responder a três perguntas: (i) como a produção científica sobre IA e inundações evoluiu temporal e geograficamente? (ii) quais famílias de métodos e tarefas dominam o corpus? e (iii) quais lacunas metodológicas e geográficas limitam a transferência dos resultados para aplicações operacionais, urbanas e costeiras? A contribuição do estudo consiste em integrar múltiplas bases, documentar a redução do corpus e interpretar os resultados à luz das diferenças entre previsão temporal, detecção, suscetibilidade e risco.
 
@@ -67,47 +62,126 @@ Duas limitações de implementação afetaram a composição do corpus. Primeiro
 \subsection{Triagem temática e validação do procedimento}
 \label{sec:art-triagem}
 
-\revisor[Parecer SEPOC -- transparência da seleção]{O procedimento de seleção da literatura também requer maior transparência metodológica. Os autores afirmam que o processo de identificação e seleção foi organizado de acordo com os princípios de transparência do PRISMA, mas um fluxograma PRISMA padrão não é fornecido e o procedimento de triagem está insuficientemente documentado. Em particular, 9.479 registros foram excluídos durante a filtragem temática, reduzindo o corpus de 11.547 registros únicos para 2.068 estudos elegíveis, mas o manuscrito não explica claramente como essa triagem foi realizada, se foi manual ou automatizada, quantos revisores estiveram envolvidos, como os desacordos foram tratados ou como as decisões de elegibilidade foram validadas. Considerando o papel central da seleção do corpus em um estudo cientométrico, isso limita a reprodutibilidade da análise.}
+A triagem temática foi inteiramente automatizada. Em vez de um revisor decidir, registro a registro, se um artigo era elegível, a decisão foi tomada por regras escritas em código: o programa procura, no título, no resumo e nas palavras-chave de cada registro, listas de termos definidas previamente. Essa escolha tem uma vantagem e um custo. A vantagem é a reprodutibilidade: a mesma entrada produz sempre o mesmo resultado, sem depender de julgamento individual. O custo é a rigidez: a regra só reconhece os termos listados, de modo que sinônimos não previstos são perdidos e termos polissêmicos, ou contidos em outras palavras, podem ser aceitos ou rejeitados indevidamente.
 
-\sugestao[Resposta ao parecer]{A triagem foi \textbf{automatizada}, por regras de correspondência de termos; \textbf{nenhum revisor humano} avaliou os registros um a um, portanto não há desacordos nem concordância interavaliadores a reportar (o trecho anterior sobre auditoria cega e $\kappa=0{,}91$ foi removido por não ter respaldo em registro algum). A validade é sustentada por replicação, sensibilidade e validação externa (esta Seção e Seção~\ref{sec:art-validacao}).}
+A regra tem duas partes, aplicadas em sequência aos 11.547 registros únicos (Tabela~\ref{tab:regra}). Primeiro vem a inclusão: o registro precisa conter pelo menos um termo de cada um dos três grupos. Depois vem a exclusão: entre os que passaram, são removidos os que contêm algum termo de exclusão. As listas completas estão no material de replicação.
 
-A triagem temática dos registros únicos foi inteiramente automatizada, por regras de correspondência de termos nos metadados, implementadas em código, disponibilizado no repositório de replicação \url{https://github.com/DWan-Dall/dashboard-cientometria} (versão 0.2.1, etiqueta \texttt{v0.2.1-dissertacao}, \textit{commit} \texttt{adfa0e1}) \pendente{confirmar que a etiqueta foi publicada no GitHub}. Não houve avaliação manual de elegibilidade registro a registro nem dupla revisão independente. Por essa razão, não se reportam estatísticas de concordância entre avaliadores, como o $\kappa$ de Cohen, e a decisão de elegibilidade é plenamente determinada pelas regras descritas, o que a torna reprodutível, mas também sujeita aos limites de uma correspondência lexical (sinônimos não previstos são perdidos e termos polissêmicos podem ser aceitos). Esses limites são avaliados por três verificações: (i) reexecução do código original sobre os arquivos brutos, que reproduziu exatamente as contagens do fluxo (16.845, 11.547, 2.068) e dos estratos, e permitiu identificar suas falhas; (ii) análise de sensibilidade do escore (Seção~\ref{sec:art-sensibilidade}); e (iii) validação externa de cobertura frente às referências de \citeonline{dias2025} (Seção~\ref{sec:art-validacao}). Adicionalmente, a elegibilidade dos 13 artigos do Núcleo A foi conferida manualmente pela autora contra quatro critérios explícitos (inundação, IA/ML, previsão ou mapeamento e uso de dados hidrológicos ou geoespaciais) \pendente{concluir a conferência dos itens sinalizados: \#2 (sem menção a inundação nos metadados), \#1, \#3 e \#12 (escopo), \#7 (resumo ausente na base)}. O fluxo de redução é apresentado na Figura~\ref{fig:fluxo}.
+\begin{table}[!htb]
+\centering
+\caption{Regras da triagem temática automatizada.}
+\label{tab:regra}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{1.9cm}p{3.2cm}p{5.4cm}p{2.6cm}@{}}
+\toprule
+\textbf{Etapa} & \textbf{Condição} & \textbf{Termos (exemplos)} & \textbf{Campos}\\
+\midrule
+Inclusão 1 & Inundação ou previsão & 18 termos: \textit{flood prediction}, \textit{flood forecasting}, \textit{flood risk}, \textit{flooding}, ``inundação urbana'' & título, resumo e palavras-chave\\
+Inclusão 2 & IA ou aprendizado de máquina & 20 termos: \textit{machine learning}, \textit{deep learning}, LSTM, \textit{random forest}, \textit{ensemble} & título, resumo e palavras-chave\\
+Inclusão 3 & Dados hidrológicos ou geoespaciais & 40 termos: \textit{rainfall}, \textit{river}, \textit{satellite}, \textit{remote sensing} & resumo e palavras-chave\\
+Exclusão & Fora do escopo & 15 termos: \textit{flood insurance}, \textit{flood myth}, \textit{buffer overflow}, \textit{dam}, \textit{levee} & título e resumo\\
+\bottomrule
+\end{tabular}}\\[2mm]
+{\small Fonte: Elaborado pela autora.}
+\end{table}
+
+Dos 11.547 registros únicos, 2.068 foram mantidos e 9.479 foram excluídos. Esses 9.479 têm duas origens: 8.853 não satisfaziam ao menos um dos três grupos de inclusão (fora do escopo temático), e 626 satisfaziam os três, mas continham um termo de exclusão. Entre esses 626, 498 foram excluídos apenas porque um termo curto de exclusão (\textit{dam}) casou dentro de outra palavra, uma falha de implementação discutida na Seção~\ref{sec:art-sensibilidade}. O fluxo completo é apresentado na Figura~\ref{fig:fluxo}.
+
+Um exemplo mostra a regra em funcionamento. A revisão de \citeonline{mosavi2018} contém termos dos três grupos de inclusão e, por isso, chegou à etapa de exclusão; seu resumo, porém, menciona \textit{property damage}, e o termo de exclusão \textit{dam} casa dentro de \textit{damage}. O registro foi removido, embora seja pertinente. É esse tipo de erro que a análise da Seção~\ref{sec:art-sensibilidade} quantifica.
+
+Como a decisão de elegibilidade não envolveu revisores, não há número de avaliadores, desacordos a resolver nem estatística de concordância, como o $\kappa$ de Cohen, a reportar: a decisão é plenamente determinada pelas listas de termos. Por não ter passado por revisão humana, a validade da regra foi examinada por três verificações: (i) a reexecução do código original sobre os arquivos brutos, que reproduziu exatamente as contagens do fluxo (16.845, 11.547 e 2.068) e dos estratos e permitiu identificar suas falhas; (ii) a análise de sensibilidade do escore (Seção~\ref{sec:art-sensibilidade}); e (iii) a validação externa de cobertura frente às referências de \citeonline{dias2025} (Seção~\ref{sec:art-validacao}). Adicionalmente, a elegibilidade dos 13 artigos do Núcleo A foi conferida manualmente pela autora contra quatro critérios explícitos (inundação, IA/ML, previsão ou mapeamento e uso de dados hidrológicos ou geoespaciais). 
+%\pendente{concluir a conferência dos itens sinalizados: \#2 (sem menção a inundação nos metadados), \#1, \#3 e \#12 (escopo), \#7 (resumo ausente na base)}.
+
+\pendente{O código que implementa a triagem está disponível no repositório de replicação \url{https://github.com/DWan-Dall/dashboard-cientometria} (versão 0.2.1, etiqueta \texttt{v0.2.1-dissertacao}, \textit{commit} \texttt{adfa0e1})}
 
 \begin{figure}[!htb]
 \centering
-\caption{Fluxo de identificação, deduplicação, triagem automatizada e estratificação do corpus, no formato de relato do PRISMA. A triagem foi automatizada, sem avaliação manual por revisores. O total de 16.845 soma as exportações (inclui duas exportações sobrepostas da Scopus). Todos os valores foram reproduzidos pela reexecução do código sobre os arquivos brutos; entre os 16.845 e os 11.547 estão 539 registros sem DOI descartados.}
+\caption{Fluxo de identificação, deduplicação, triagem automatizada e estratificação do corpus, no formato de relato do PRISMA. A triagem foi automatizada, sem avaliação manual por revisores. O total de 16.845 soma as exportações e inclui duas exportações sobrepostas da Scopus. Todos os valores foram reproduzidos pela reexecução do código sobre os arquivos brutos.}
 \label{fig:fluxo}
 \begin{tikzpicture}[
-  caixa/.style={draw, rounded corners=3pt, align=center, font=\small, inner sep=4pt, minimum height=15mm, text width=3.5cm},
-  seta/.style={-{Latex[length=2.2mm]}, thick}]
-  \node[caixa] (b1) {\textbf{Identificação}\\ Registros nas exportações\\ \textit{n} = 16.845\\ (Scopus, Lens, IEEE, SciELO)};
-  \node[caixa, right=9mm of b1] (b2) {\textbf{Deduplicação}\\ Registros únicos (DOI e\\ título normalizado)\\ \textit{n} = 11.547};
-  \node[caixa, right=9mm of b2] (b3) {\textbf{Triagem automatizada}\\ Excluídos pelo filtro\\ temático por regras\\ \textit{n} = 9.479};
-  \node[caixa, below=9mm of b2] (b4) {\textbf{Corpus analisado}\\ Retidos pelo filtro\\ temático automatizado\\ \textit{n} = 2.068};
-  \node[caixa, below=9mm of b3] (b5) {\textbf{Estratificação}\\ Núcleo A: 13; Núcleo B: 494\\ Periférico: 1.508\\ Descarte: 53};
-  \draw[seta] (b1) -- (b2);
-  \draw[seta] (b2) -- (b3);
-  \draw[seta] (b2) -- (b4);
-  \draw[seta] (b4) -- (b5);
+  font=\footnotesize,
+  main/.style={draw, rounded corners=2pt, align=center, inner sep=3pt, minimum height=10mm, text width=5.0cm},
+  side/.style={draw, dashed, rounded corners=2pt, align=left, inner sep=3pt, text width=4.9cm, fill=black!5},
+  fase/.style={draw=none, fill=black!12, rounded corners=2pt, align=center, inner sep=3pt, text width=1.9cm, font=\scriptsize\bfseries},
+  seta/.style={-{Latex[length=2mm]}, thick},
+  node distance=11mm]
+  % coluna principal
+  \node[main] (m1) {\textbf{Registros nas exportações}\\ \textit{n} = 16.845\\ Lens (EN, PT); Scopus (3 arq.);\\ IEEE Xplore (612);\\ SciELO (EN, PT)};
+  \node[main, below=of m1] (m2) {\textbf{Após deduplicação por DOI}\\ \textit{n} = 12.470};
+  \node[main, below=of m2] (m3) {\textbf{Registros únicos}\\ (título normalizado)\\ \textit{n} = 11.547};
+  \node[main, below=of m3] (m4) {\textbf{Satisfazem os três grupos de inclusão}\\ \textit{n} = 2.694};
+  \node[main, below=of m4] (m5) {\textbf{Corpus analisado}\\ \textit{n} = 2.068};
+  \node[main, below=of m5] (m6) {\textbf{Estratificação pelo escore (0--100)}\\ Núcleo A ($\geq$70): 13\\ Núcleo B (50--70): 494\\ Periférico (30--50): 1.508\\ Descarte ($<$30): 53};
+  % pontos nas setas, para as caixas laterais
+  \path (m1) -- (m2) coordinate[pos=.5] (x12);
+  \path (m2) -- (m3) coordinate[pos=.5] (x23);
+  \path (m3) -- (m4) coordinate[pos=.5] (x34);
+  \path (m4) -- (m5) coordinate[pos=.5] (x45);
+  \node[side, anchor=west] (s2) at ([xshift=6mm]m1.east |- x12) {\textbf{Removidos: 4.375}\\ 3.836 duplicatas de DOI\\ 539 sem DOI (descartados)};
+  \node[side, anchor=west] (s3) at ([xshift=6mm]m1.east |- x23) {\textbf{Removidos: 923}\\ duplicatas por título normalizado};
+  \node[side, anchor=west] (s4) at ([xshift=6mm]m1.east |- x34) {\textbf{Excluídos: 8.853}\\ não atendem a pelo menos um grupo: (1) inundação ou previsão; (2) IA/ML; (3) dados hidrológicos ou geoespaciais};
+  \node[side, anchor=west] (s5) at ([xshift=6mm]m1.east |- x45) {\textbf{Excluídos: 626}\\ termo de exclusão no título ou resumo (498 apenas por \textit{dam} dentro de \textit{damage})};
+  % fases
+  \node[fase, anchor=east] at ([xshift=-3mm]m1.west) {Identificação};
+  \path (m2) -- (m3) coordinate[pos=.5] (c23);
+  \node[fase, anchor=east] at ([xshift=-3mm]m1.west |- c23) {Deduplicação};
+  \path (m4) -- (m5) coordinate[pos=.5] (c45);
+  \node[fase, anchor=east] at ([xshift=-3mm]m1.west |- c45) {Triagem temática};
+  \node[fase, anchor=east] at ([xshift=-3mm]m1.west |- m6) {Estratificação};
+  % setas
+  \foreach \a/\b in {m1/m2, m2/m3, m3/m4, m4/m5, m5/m6} \draw[seta] (\a) -- (\b);
+  \foreach \x/\s in {x12/s2, x23/s3, x34/s4, x45/s5} \draw[seta] (\x) -- (\s.west);
 \end{tikzpicture}\\[2mm]
-{\small Fonte: Elaborado pelos autores.}
+{\small Fonte: Elaborado pela autora.}
 \end{figure}
 
 \subsection{Escore de priorização}
 \label{sec:art-escore}
 
-\revisor[Parecer SEPOC -- priorização dos 13 artigos]{Outra preocupação reside no procedimento de priorização utilizado para selecionar os 13 artigos principais (Core A). A pontuação proposta combina citações, atualidade, aderência temática e articulação entre dados, método e resultados, utilizando pesos predefinidos. Alguns desses componentes envolvem julgamento subjetivo, mas o manuscrito não fornece detalhes suficientes sobre o procedimento de codificação, a concordância entre os revisores ou a análise de sensibilidade para demonstrar a robustez dessa classificação.}
+Depois da triagem, restam 2.068 artigos, número grande demais para leitura integral. O escore de priorização serve para ordenar esse conjunto e decidir por onde começar a leitura. Ele não mede a qualidade científica de um artigo: combina quatro sinais simples e verificáveis, cada um transformado em um número entre 0 e 1, e os soma com pesos diferentes (Tabela~\ref{tab:escore}).
 
-\sugestao[Resposta ao parecer]{Os componentes não dependem de julgamento humano: $T^*$ e $A^*$ são calculados por presença de termos (sem codificadores, portanto sem concordância a medir); a regra é descrita abaixo e a robustez é testada na Seção~\ref{sec:art-sensibilidade}. Foi removida a ``rubrica de hiperparâmetros e reprodutibilidade dos protocolos de treino'', que não correspondia ao cálculo realizado.}
+\begin{table}[!htb]
+\centering
+\caption{Componentes do escore de priorização.}
+\label{tab:escore}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{2.4cm}p{1cm}p{3.1cm}p{6.3cm}@{}}
+\toprule
+\textbf{Componente} & \textbf{Peso} & \textbf{Pergunta que responde} & \textbf{Como é calculado}\\
+\midrule
+$C^{*}$ Citações & 0,35 & O artigo é muito citado? & Citações na base, reescaladas de 0 a 1 entre o mínimo (0) e o máximo (555) do corpus.\\
+$R^{*}$ Recência & 0,20 & É recente? & $(\text{ano}-1992)/(2026-1992)$; os nove registros sem ano recebem 0.\\
+$T^{*}$ Aderência temática & 0,30 & Trata de inundação e de IA já no título? & 1,0 se o título contém termo de inundação ou previsão e termo de IA/ML; 0,7 se essa coocorrência só aparece no conjunto de título, resumo e palavras-chave; 0,4 nos demais casos.\\
+$A^{*}$ Dados, método e resultado & 0,15 & Descreve dados, método e resultado? & Média de quatro indicadores, $I$, $M$, $O$ e $C$, detalhados abaixo.\\
+\bottomrule
+\end{tabular}}\\[2mm]
+{\small Fonte: Elaborado pela autora.}
+\end{table}
 
-Para ordenar a leitura, foi empregado um escore composto para cada artigo $i$. A estrutura do escore, os pesos, os cortes e as listas de termos foram propostos com apoio do Perplexity AI e adotados pela autora, sem calibração empírica própria; por isso, sua influência sobre o resultado é examinada na Seção~\ref{sec:art-sensibilidade}.
+A estrutura do escore, os pesos, os cortes e as listas de termos foram propostos com apoio do Perplexity AI e adotados pela autora, sem calibração empírica própria; por isso, sua influência sobre o resultado é examinada na Seção~\ref{sec:art-sensibilidade}. Para cada artigo $i$, o escore é
 %
 \begin{equation}
-S_i = 0{,}35\,C_i^{*} + 0{,}20\,R_i^{*} + 0{,}30\,T_i^{*} + 0{,}15\,A_i^{*},
+S_i = 0{,}35\,C_i^{*} + 0{,}20\,R_i^{*} + 0{,}30\,T_i^{*} + 0{,}15\,A_i^{*}.
 \label{eq:escore}
 \end{equation}
+
+Dois componentes dependem de listas de termos e merecem explicação. O $T^{*}$ distingue os artigos que anunciam o tema no título dos que apenas o mencionam no resumo; nenhum registro recebeu 0,4, porque o filtro já exige a coocorrência, e 514 registros tiveram $T^{*}=1{,}0$ e 1.554 tiveram 0,7. O $A^{*}$ é a média de quatro indicadores, cada um valendo 1 se uma condição é verificada e 0,5 caso contrário (exceto o primeiro, que vale 0 ou 1):
 %
-em que $C_i^{*}$ são as citações normalizadas por mínimo e máximo no corpus (de 0 a 555), $R_i^{*}=(\text{ano}_i-1992)/(2026-1992)$ é a recência (nove registros sem ano receberam $R^{*}=0$), $T_i^{*}$ é a aderência temática e $A_i^{*}$ é a aderência a dados, método e resultado. As regras de $T^{*}$ e $A^{*}$ são determinísticas, baseadas em listas de termos: $T^{*}=1{,}0$ se o título contém um termo de inundação ou previsão e um termo de IA/ML; $T^{*}=0{,}7$ se essa coocorrência ocorre apenas no conjunto de título, resumo e palavras-chave; e $T^{*}=0{,}4$ nos demais casos (nenhum registro recebeu $0{,}4$, pois o filtro já exige a coocorrência; 514 registros tiveram $T^{*}=1{,}0$ e 1.554 tiveram $0{,}7$). $A^{*}=(I+M+O+C)/4$, em que $I$ vale 1 se o resumo ou as palavras-chave contêm termo de dados hidrológicos ou geoespaciais e 0 caso contrário (vale 1 para todo o corpus, pois o filtro já exige esse termo); $M$ vale 1 se título ou resumo contêm termo de método (a lista inclui algoritmos, como LSTM, CNN e \textit{random forest}, e termos genéricos, como \textit{machine learning} e \textit{neural network}; cerca de metade dos registros recebeu 1 apenas por termo genérico) e 0,5 caso contrário; $O$ vale 1 se título ou resumo mencionam previsão, alerta ou mapeamento e 0,5 caso contrário; e $C$ vale 1 se o resumo ou as palavras-chave mencionam contexto urbano, costeiro, de bacia ou de rio e 0,5 caso contrário. Assim, $A^{*}$ variou de 0,625 a 1. Não há julgamento humano nessas regras. O escore final foi reescalado por mínimo e máximo para 0--100; assim, o valor 100 corresponde ao artigo de maior escore dentro do corpus e não a um padrão absoluto de qualidade, e os cortes (Núcleo A $\geq 70$; Núcleo B de 50 a 70; Periférico de 30 a 50; Descarte $<30$) são relativos a este corpus.
+\begin{itemize}
+  \item $I$ (dados): vale 1 se o resumo ou as palavras-chave contêm termo de dados hidrológicos ou geoespaciais. Vale 1 para todo o corpus, pois o filtro já exige esse termo;
+  \item $M$ (método): vale 1 se título ou resumo contêm termo de método. A lista inclui algoritmos, como LSTM, CNN e \textit{random forest}, e termos genéricos, como \textit{machine learning} e \textit{neural network}; cerca de metade dos registros recebeu 1 apenas por termo genérico;
+  \item $O$ (objetivo): vale 1 se título ou resumo mencionam previsão, alerta ou mapeamento;
+  \item $C$ (contexto): vale 1 se o resumo ou as palavras-chave mencionam contexto urbano, costeiro, de bacia ou de rio.
+\end{itemize}
+%
+Como $I$ é sempre 1 e os demais valem no mínimo 0,5, $A^{*}$ variou de 0,625 a 1.
+
+\paragraph{Como ler o resultado.} O valor bruto de $S_i$ é reescalado de 0 a 100 pelo mínimo e pelo máximo do corpus. O valor 100 corresponde, assim, ao artigo de maior escore dentro deste corpus, e não a um padrão absoluto de qualidade. Os cortes são relativos ao mesmo corpus: Núcleo A com escore $\geq 70$; Núcleo B de 50 a 70; Periférico de 30 a 50; e Descarte abaixo de 30.
+
+\paragraph{Exemplo ilustrativo.} Considere um artigo hipotético de 2019, com 111 citações, cujo título contém termos de inundação e de IA, e cujo resumo contém termos de dados, de método e de previsão, mas nenhum de contexto. Então $C^{*}=111/555=0{,}20$; $R^{*}=(2019-1992)/34\approx 0{,}79$; $T^{*}=1{,}0$; e $A^{*}=(1+1+1+0{,}5)/4=0{,}875$. O escore bruto é $0{,}35\cdot 0{,}20+0{,}20\cdot 0{,}79+0{,}30\cdot 1{,}0+0{,}15\cdot 0{,}875\approx 0{,}66$, valor que depois é reescalado de 0 a 100. O exemplo mostra por que artigos antigos e muito citados são favorecidos pelo $C^{*}$, e por que um artigo recente com título aderente também pode ter boa posição.
+
+Quanto ao procedimento de codificação e à concordância entre avaliadores, nenhum componente do escore depende de julgamento humano: $T^{*}$ e $A^{*}$ são calculados por presença de termos e $C^{*}$ e $R^{*}$ por aritmética sobre os metadados. Não há, portanto, codificadores nem concordância a medir. A robustez da classificação resultante é testada na seção seguinte.
 
 \subsection{Análise de sensibilidade do escore}
 \label{sec:art-sensibilidade}
@@ -118,11 +192,44 @@ A estabilidade foi testada também frente à composição do corpus. A exclusão
 
 \subsection{Indicadores e mapeamento científico estrutural}
 
-\revisor[Parecer SEPOC -- contribuição científica]{Contudo, a contribuição científica ainda é limitada em sua forma atual. Embora o corpus inicial seja extenso, a maior parte da análise cientométrica baseia-se em indicadores descritivos, como número de publicações, frequência de citações, palavras-chave, categorias tecnológicas e países de afiliação. Análises mais consolidadas de mapeamento científico, como redes de coocorrência, análise de cocitação, acoplamento bibliográfico ou evolução temática, não são apresentadas.}
+Este estudo é descritivo: seu objetivo é mapear o que foi publicado, e não explicar as relações entre os autores ou reconstruir a história intelectual do campo. Por isso, a maior parte dos indicadores é descritiva, como o número anual de artigos, a distribuição de citações por ano, a frequência de categorias tecnológicas e os países de afiliação. Além desses indicadores, foram feitas análises de mapeamento científico estrutural, e outras foram calculadas pela ferramenta, mas não interpretadas (Tabela~\ref{tab:mapeamento}).
 
-\sugestao[Resposta ao parecer]{Foi retirada a afirmação de que a rede de coocorrência mapeava ``evolução e acoplamento dos clusters'', pois isso não foi feito. O estudo declara-se descritivo, apresenta a coocorrência de palavras-chave que existe e registra cocitação, acoplamento e evolução temática como agenda. Alternativa, se houver tempo: executar o script \texttt{bibliometrix} do repositório e documentar o resultado.}
+\begin{table}[!htb]
+\centering
+\caption{Análises de mapeamento científico: situação neste estudo.}
+\label{tab:mapeamento}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{5.2cm}p{3.3cm}p{4.3cm}@{}}
+\toprule
+\textbf{Análise} & \textbf{Situação} & \textbf{Onde aparece}\\
+\midrule
+Indicadores descritivos (produção, citações, países) & Realizada e interpretada & Seção~\ref{sec:art-resultados}\\
+Coocorrência dos 31 termos tecnológicos mais frequentes (203 pares) & Realizada e interpretada & Esta seção\\
+Coocorrência de 614 termos (7.864 pares), agrupamentos de Louvain e mapa temático & Realizada e interpretada & Seção~\ref{sec:art-estrutura}\\
+Evolução anual das categorias de métodos & Realizada e interpretada & Seção~\ref{sec:art-estrutura}\\
+Cocitação, acoplamento bibliográfico e coautoria & Calculadas, não interpretadas & Agenda de pesquisa\\
+Evolução temática por fatiamento do período & Não realizada & Agenda de pesquisa\\
+\bottomrule
+\end{tabular}}\\[2mm]
+{\small Fonte: Elaborado pela autora.}
+\end{table}
 
-Foram analisados indicadores bibliométricos descritivos fundamentais, incluindo o número anual de artigos, distribuição de citações por ano, frequência de categorias tecnológicas e países de afiliação. As frequências de palavras-chave foram complementadas por uma rede de coocorrência dos 31 termos tecnológicos mais frequentes (203 pares), que resultou em um único componente conexo, sem separação temática interna evidente \pendente{inserir a figura da rede de coocorrência do repositório (pasta 07\_palavras\_chave)}. A estrutura temática foi explorada por uma rede de coocorrência de 614 termos e 7.864 pares, com agrupamentos pelo método de Louvain (semente 123) posicionados em um mapa temático por centralidade e densidade, e a evolução tecnológica foi descrita pela frequência anual de categorias de métodos (Seção~\ref{sec:art-estrutura}). Cocitação, acoplamento bibliográfico e coautoria foram calculados pela ferramenta, mas não são interpretados neste estudo \pendente{confirmar o motivo com o Claude Code: identificadores de referência e cobertura de autores}; a evolução temática por fatiamento do período não foi realizada, e essas análises compõem a agenda de continuidade. Contagens geográficas representam afiliações presentes nos metadados, não necessariamente o local empírico do estudo. As citações correspondem ao estado das bases na data de extração e estão sujeitas a diferenças de cobertura e atraso de acumulação.
+As frequências de palavras-chave foram complementadas por uma rede de coocorrência dos 31 termos tecnológicos mais frequentes, ou seja, termos que aparecem juntos nos mesmos artigos. A rede tem 203 pares e resultou em um único componente conexo, sem separação temática interna evidente (Figura~\ref{fig:rede31}). Para uma visão mais ampla, a estrutura temática foi explorada por uma rede de 614 termos e 7.864 pares, com agrupamentos pelo método de Louvain (semente 123), posicionados em um mapa temático por centralidade e densidade; a evolução tecnológica foi descrita pela frequência anual de categorias de métodos (Seção~\ref{sec:art-estrutura}).
+
+\begin{figure}[!htb]
+\centering
+\caption{Rede de coocorrência dos 31 termos tecnológicos mais frequentes. O tamanho de cada círculo é proporcional à frequência do termo e a espessura da linha, ao número de artigos em que os dois termos aparecem juntos.}
+\label{fig:rede31}
+\includegraphics[width=0.85\textwidth]{imagens/sepoc-fig-rede-31-termos.png}\\[2mm]
+{\small Fonte: Elaborado pela autora.}
+\end{figure}
+
+Cocitação, acoplamento bibliográfico e coautoria foram calculados pela ferramenta, mas não são interpretados neste estudo, porque os dados de entrada ainda não são comparáveis entre as bases. Nas referências, a Lens fornece identificadores e a Scopus, texto livre (dos 33.198 itens distintos, 29.490 são identificadores da Lens e 3.708 são texto livre da Scopus), de modo que o acoplamento bibliográfico praticamente não liga as duas bases (351 de 72.231 arestas). Na coautoria, a ferramenta não leu o campo de autores da Lens: só 463 dos 2.068 documentos têm autores, todos da Scopus, e os formatos de nome diferem entre as bases, o que duplicaria a mesma pessoa em dois nós. A evolução temática por fatiamento do período não foi realizada. Essas análises compõem a agenda de continuidade (Seção~\ref{sec:art-discussao}).
+
+Assim, a contribuição deste estudo é de natureza descritiva e metodológica: um panorama quantitativo da literatura sobre inteligência artificial aplicada a inundações, um protocolo de seleção e priorização explícito e reprodutível, com suas falhas documentadas, e a identificação de lacunas, em especial a escassez de estudos costeiros. Ele não pretende propor um novo método cientométrico nem estabelecer as redes intelectuais do campo.
+
+Contagens geográficas representam afiliações presentes nos metadados, não necessariamente o local empírico do estudo. As citações correspondem ao estado das bases na data de extração e estão sujeitas a diferenças de cobertura e atraso de acumulação.
 
 % ---------------------------------------------------------------------
 \section{Resultados}
@@ -166,7 +273,7 @@ A distribuição de citações foi fortemente assimétrica, com poucos artigos c
 
 \subsection{Tecnologias e técnicas predominantes}
 
-As categorias de DL apresentaram o crescimento mais rápido após 2018, acompanhadas por ML clássico e métodos \textit{ensemble} (Figura~\ref{fig:categorias}). Como as categorias são não excludentes, as frequências anuais podem superar o número de documentos do mesmo ano. A queda observada em 2026 é artefato do período parcial.
+Entre 2018 e 2025, as categorias de DL e de ML clássico cresceram em ritmo semelhante (cerca de 23 vezes) e os métodos \textit{ensemble}, em ritmo maior (cerca de 33 vezes), partindo de bases pequenas; em números absolutos, o DL é a categoria mais frequente (Figura~\ref{fig:categorias}). Como as categorias são não excludentes, as frequências anuais podem superar o número de documentos do mesmo ano. A queda observada em 2026 é artefato do período parcial.
 
 \textit{Machine learning} foi o termo mais frequente (1.151 ocorrências), seguido por \textit{neural network} (674), \textit{deep learning} (551), Random Forest (358), LSTM (313), \textit{ensemble} (252), CNN (223) e SVM (204) (Figura~\ref{fig:termos}). Transformers e GRU apresentaram frequências menores, compatíveis com tecnologias emergentes no período analisado. A persistência de Random Forest e SVM sugere que métodos clássicos continuam competitivos em bases de dados tabulares e em tarefas de classificação espacial, nas quais interpretabilidade, amostras moderadas e custo computacional permanecem relevantes.
 
