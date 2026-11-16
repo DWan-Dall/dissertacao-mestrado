@@ -1,16 +1,18 @@
 % =====================================================================
-% Capítulo 5 -- Resultados esperados e plano de validação (versão para a qualificação)
+% Capítulo 5 -- Resultados (versão para a qualificação: resultados esperados, plano, cronograma e riscos)
 %
 % Nesta etapa NÃO há resultados de modelagem. O capítulo registra o que já se
 % sabe (Capítulo 4), as decisões em aberto e o plano de modelagem e validação.
 % Na defesa, o título volta a ser "Resultados" e a seção 5.2 é substituída
-% pelos resultados obtidos. \pendente = decisão da autora ou do orientador.
+% pelos resultados obtidos, e as seções 5.5 (cronograma) e 5.6 (riscos) saem.
+% \pendente = decisão da autora ou do orientador.
+% Usa os rótulos chp:ead (cap. 4) e chp:fundamentacao (cap. 2) do arquivo principal.
 % =====================================================================
 
 \section{Situação desta etapa}
 \label{sec:res-situacao}
 
-Até a data da qualificação, a modelagem preditiva ainda não foi executada, e por isso este capítulo não apresenta resultados de modelos. O que existe é a base de dados integrada e a análise exploratória descritiva (Capítulo~\ref{cap:aed}), que caracterizou o Atlas Digital de Desastres, o ERA5 e o MapBiomas nos 35 municípios costeiros de Santa Catarina entre 1991 e 2025. Este capítulo reúne o que essa análise permite antecipar, as decisões que ela deixou em aberto e o plano de modelagem e de validação que será seguido a partir do cronograma (Tabela~1 da Seção~\ref{sec:intro-cronograma}).
+Até a data da qualificação, a modelagem preditiva ainda não foi executada, e por isso este capítulo não apresenta resultados de modelos. O que existe é a base de dados integrada e a análise exploratória descritiva (Capítulo~\ref{chp:ead}), que caracterizou o Atlas Digital de Desastres, o ERA5 e o MapBiomas nos 35 municípios costeiros de Santa Catarina entre 1991 e 2025. Este capítulo reúne o que essa análise permite antecipar, as decisões que ela deixou em aberto e o plano de modelagem e de validação que será seguido a partir do cronograma (Tabela~\ref{tab:cronograma}, Seção~\ref{sec:res-cronograma}) e dos riscos associados (Seção~\ref{sec:res-riscos}).
 
 \section{O que a análise exploratória antecipa}
 \label{sec:res-antecipa}
@@ -26,7 +28,7 @@ O terceiro é que as variáveis de uso da terra variam quase só entre municípi
 \section{Decisões em aberto}
 \label{sec:res-decisoes}
 
-O Capítulo~\ref{cap:aed} deixou decisões que mudam os números do que será modelado: a versão da variável resposta (total, sem Chuvas Intensas ou ambas); o corte do período (2013, primeiro ano de Chuvas Intensas, ou 2012); a conversão de unidades da precipitação do ERA5; a escolha do vento como controle negativo ou de outra variável que não covarie com a chuva; e a ausência do MapBiomas em Camboriú e Paulo Lopes, que parece falha de junção \pendente{registrar a decisão tomada em cada item antes da qualificação}.
+O Capítulo~\ref{chp:ead} deixou decisões que mudam os números do que será modelado: a versão da variável resposta (total, sem Chuvas Intensas ou ambas); o corte do período (2013, primeiro ano de Chuvas Intensas, ou 2012); a conversão de unidades da precipitação do ERA5; a escolha do vento como controle negativo ou de outra variável que não covarie com a chuva; e a ausência do MapBiomas em Camboriú e Paulo Lopes, que parece falha de junção \pendente{registrar a decisão tomada em cada item antes da qualificação}.
 
 A segunda hipótese de pesquisa, de que variáveis socioeconômicas ajudam a identificar áreas críticas, depende de dados que ainda não estão na base: hoje ela tem chuva, vento, uso da terra e áreas de risco, e não tem indicadores socioeconômicos \pendente{definir a fonte dos indicadores socioeconômicos e o índice de vulnerabilidade, ou ajustar a hipótese}.
 
@@ -35,13 +37,64 @@ A segunda hipótese de pesquisa, de que variáveis socioeconômicas ajudam a ide
 
 A modelagem seguirá três cuidados que decorrem da análise exploratória.
 
-\paragraph{Modelos de referência primeiro.} Antes de árvores de decisão, redes neurais ou LSTM (Capítulo~\ref{cap:fundamentacao}), serão ajustados modelos simples de referência, como a média histórica do município. Um modelo mais complexo só é considerado melhor se superar esses modelos, o que dá sentido à primeira hipótese.
+\paragraph*{Modelos de referência primeiro.} Antes de árvores de decisão, redes neurais ou LSTM (Capítulo~\ref{chp:fundamentacao}), serão ajustados modelos simples de referência, como a média histórica do município. Um modelo mais complexo só é considerado melhor se superar esses modelos, o que dá sentido à primeira hipótese.
 
-\paragraph{Validação que respeita o tempo e o espaço.} Como os registros mudam de forma em 2013 e municípios vizinhos têm valores parecidos (índice de Moran de 0,37 na densidade de eventos), a divisão aleatória entre treino e teste superestimaria o desempenho. A validação usará períodos posteriores como teste e, em separado, municípios deixados de fora \pendente{confirmar os blocos de tempo e de município com o orientador}.
+\paragraph*{Validação que respeita o tempo e o espaço.} Como os registros mudam de forma em 2013 e municípios vizinhos têm valores parecidos (índice de Moran de 0,37 na densidade de eventos), a divisão aleatória entre treino e teste superestimaria o desempenho. A validação usará períodos posteriores como teste e, em separado, municípios deixados de fora \pendente{confirmar os blocos de tempo e de município com o orientador}.
 
-\paragraph{Métricas adequadas a poucos eventos.} Em 62,8\% dos município-anos não há registro de evento, e a série é de apenas 35 anos. Por isso as métricas devem tratar eventos raros e contagens, e não apenas o erro médio \pendente{definir as métricas; por exemplo, o erro absoluto médio da contagem e a área sob a curva de precisão e revocação da ocorrência de evento}.
+\paragraph*{Métricas adequadas a poucos eventos.} Em 62,8\% dos município-anos não há registro de evento, e a série é de apenas 35 anos. Por isso as métricas devem tratar eventos raros e contagens, e não apenas o erro médio \pendente{definir as métricas; por exemplo, o erro absoluto médio da contagem e a área sob a curva de precisão e revocação da ocorrência de evento}.
 
 \section{Cronograma}
 \label{sec:res-cronograma}
 
-A implementação dos modelos ocupa os meses M20 e M21, a validação e os testes ocupam M21 e M22, e a escrita final e a defesa ocupam M22 a M24, conforme a Tabela~1 da Seção~\ref{sec:intro-cronograma}. Os resultados obtidos nessas etapas substituirão este capítulo na versão da defesa.
+A Tabela~\ref{tab:cronograma} apresenta o cronograma restante até a defesa. A coleta e organização dos dados e a análise exploratória (Capítulo~\ref{chp:ead}) já foram concluídas em M19. A implementação dos modelos ocupa os meses M20 e M21, a validação e os testes ocupam M21 e M22, e a escrita final e a defesa ocupam M22 a M24. As decisões em aberto da Seção~\ref{sec:res-decisoes} precisam ser fechadas no início de M20, porque definem a variável resposta e o corte do período usados na modelagem.
+
+\begin{table}[htbp]
+\centering
+\caption{Cronograma restante para a defesa}
+\label{tab:cronograma}
+\begin{tabular}{lcccccc}
+\hline
+Atividade & M19 & M20 & M21 & M22 & M23 & M24 \\
+\hline
+Levantamento bibliográfico & X & X & X & X & X & \\
+Coleta e organização dos dados & X & & & & & \\
+Análise exploratória dos dados & X & & & & & \\
+Decisões em aberto sobre a base (Seção~\ref{sec:res-decisoes}) & & X & & & & \\
+Implementação do modelo & & X & X & & & \\
+Validação e testes & & & X & X & & \\
+Escrita da dissertação & & & & X & X & \\
+Defesa & & & & & & X \\
+\hline
+\end{tabular}
+\par\small Fonte: Elaborado pela autora.
+\end{table}
+
+\section{Análise de riscos}
+\label{sec:res-riscos}
+
+A Tabela~\ref{tab:riscos} reúne os riscos do projeto. Os cinco primeiros vêm da proposta original; os quatro últimos surgiram da análise exploratória e já têm efeito sobre o plano de modelagem \pendente{revisar probabilidade e impacto de cada risco com o orientador}.
+
+\begin{table}[htbp]
+\centering
+\caption{Análise de riscos do projeto}
+\label{tab:riscos}
+\small
+\begin{tabular}{p{3.3cm}cc p{3.8cm}p{4.6cm}}
+\hline
+Risco potencial & Prob. & Impacto & Gatilho & Plano de contingência \\
+\hline
+Falta de dados históricos completos & Média & Alta & Dados incompletos ou inconsistentes & Buscar fontes alternativas, interpolação e limpeza de dados \\
+Baixa performance dos modelos de inteligência artificial & Média & Média & Alto erro ou baixa precisão & Testar algoritmos alternativos, ajustar hiperparâmetros \\
+Dificuldade na integração de dados heterogêneos & Alta & Média & Inconsistências entre fontes & Uso de ferramentas de ETL e padronização \\
+Mudanças na disponibilidade de bases públicas & Baixa & Média & Remoção de acesso a APIs ou sites & Armazenar cópias locais, antecipar a coleta de dados \\
+Atraso no cronograma devido à complexidade & Média & Alta & Atividades técnicas levarem mais tempo & Reorganizar etapas e priorizar entregas parciais \\
+Mudança no registro de desastres ao longo do tempo (Chuvas Intensas a partir de 2013) & Alta & Alta & Total de eventos cresce cerca de três vezes após 2013 sem mudança na chuva & Modelar versões da resposta separadamente, validar por período e relatar a versão usada \\
+Poucos eventos por município-ano (62,8\% sem registro) & Alta & Média & Modelos preveem sempre zero ou superam o baseline só por acaso & Métricas para eventos raros, modelos de contagem e comparação com modelos de referência \\
+Ausência de indicadores socioeconômicos na base & Alta & Alta & Segunda hipótese sem dados para ser testada & Definir a fonte e o índice de vulnerabilidade em M20, ou ajustar a hipótese \\
+Falhas de unidade ou de junção nas bases (ERA5, MapBiomas) & Média & Média & Valores fora da faixa esperada, municípios sem dados & Conferir a conversão do ERA5 e a junção do MapBiomas antes de modelar \\
+\hline
+\end{tabular}
+\par\small Fonte: Elaborado pela autora.
+\end{table}
+
+Os resultados obtidos nessas etapas, e não este plano, serão apresentados neste capítulo na versão da defesa.

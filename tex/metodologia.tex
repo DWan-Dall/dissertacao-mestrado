@@ -22,6 +22,8 @@ A condução da pesquisa seguirá as seguintes etapas e técnicas:
   \item \textbf{Validação empírica:} testes dos modelos com dados históricos para verificar acurácia, sensibilidade e aplicabilidade prática.
 \end{itemize}
 
+O cronograma e a análise de riscos do projeto estão nas Seções~\ref{sec:res-cronograma} e~\ref{sec:res-riscos}.
+
 % \subsection{Plano de trabalho}
 % \label{sec:plano-trabalho}
 
@@ -35,49 +37,49 @@ A condução da pesquisa seguirá as seguintes etapas e técnicas:
 %   \item \textbf{Redação da Dissertação} -- Sistematização dos resultados, escrita e revisão do trabalho final.
 % \end{itemize}
 
-\subsection{Cronograma}
-\label{sec:cronograma}
+% \subsection{Cronograma}
+% \label{sec:cronograma}
 
-\begin{table}[H]
-\caption{Cronograma restante para Defesa}
-\label{tab:cronograma}
-\centering
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{@{}lcccccc@{}} % Corrigido para 7 colunas (l + 6 c)
-\toprule
-\textbf{Atividade} & \textbf{M19} & \textbf{M20} & \textbf{M21} & \textbf{M22} & \textbf{M23} & \textbf{M24} \\
-\midrule
-Levantamento bibliográfico     & X & X & X & X & X &   \\
-Coleta e organização dos dados & X &   &   &   &   &   \\
-Análise exploratória dos dados & X &   &   &   &   &   \\
-Implementação do modelo        &   & X & X &   &   &   \\
-Validação e testes             &   &   & X & X &   &   \\
-Escrita da dissertação         &   &   &   & X & X &   \\
-Defesa                         &   &   &   &   &   & X \\
-\bottomrule
-\end{tabular}\\[1mm]
-{\small Fonte: Elaborado pela autora.}
-\end{table}
+% \begin{table}[H]
+% \caption{Cronograma restante para Defesa}
+% \label{tab:cronograma}
+% \centering
+% \renewcommand{\arraystretch}{1.2}
+% \begin{tabular}{@{}lcccccc@{}} % Corrigido para 7 colunas (l + 6 c)
+% \toprule
+% \textbf{Atividade} & \textbf{M19} & \textbf{M20} & \textbf{M21} & \textbf{M22} & \textbf{M23} & \textbf{M24} \\
+% \midrule
+% Levantamento bibliográfico     & X & X & X & X & X &   \\
+% Coleta e organização dos dados & X &   &   &   &   &   \\
+% Análise exploratória dos dados & X &   &   &   &   &   \\
+% Implementação do modelo        &   & X & X &   &   &   \\
+% Validação e testes             &   &   & X & X &   &   \\
+% Escrita da dissertação         &   &   &   & X & X &   \\
+% Defesa                         &   &   &   &   &   & X \\
+% \bottomrule
+% \end{tabular}\\[1mm]
+% {\small Fonte: Elaborado pela autora.}
+% \end{table}
 
-\subsection{Análise de riscos}
-\label{sec:riscos}
+% \subsection{Análise de riscos}
+% \label{sec:riscos}
 
-\begin{table}[H]
-\caption{Análise de riscos do projeto}
-\label{tab:riscos}
-\centering
-\small
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{@{}p{3.1cm}p{1.3cm}p{1.6cm}p{3.1cm}X@{}}
-\toprule
-\textbf{Risco potencial} & \textbf{Prob.} & \textbf{Impacto} & \textbf{Gatilho} & \textbf{Plano de contingência}\\
-\midrule
-Falta de dados históricos completos & Média & Alta & Dados incompletos ou inconsistentes & Buscar fontes alternativas, interpolação e limpeza de dados\\
-Baixa performance dos modelos de Inteligência Artificial & Média & Média & Alto erro ou baixa precisão & Testar algoritmos alternativos, ajustar hiperparâmetros\\
-Dificuldade na integração de dados heterogêneos & Alta & Média & Inconsistências entre fontes & Uso de ferramentas de ETL e padronização\\
-Mudanças na disponibilidade de bases públicas & Baixa & Média & Remoção de acesso a APIs ou sites & Armazenar backups locais, antecipar coleta de dados\\
-Atraso no cronograma devido à complexidade & Média & Alta & Atividades técnicas levarem mais tempo & Reorganizar etapas e priorizar entregas parciais\\
-\bottomrule
-\end{tabularx}\\[1mm]
-{\small Fonte: Elaborado pela autora.}
-\end{table}
+% \begin{table}[H]
+% \caption{Análise de riscos do projeto}
+% \label{tab:riscos}
+% \centering
+% \small
+% \renewcommand{\arraystretch}{1.2}
+% \begin{tabularx}{\textwidth}{@{}p{3.1cm}p{1.3cm}p{1.6cm}p{3.1cm}X@{}}
+% \toprule
+% \textbf{Risco potencial} & \textbf{Prob.} & \textbf{Impacto} & \textbf{Gatilho} & \textbf{Plano de contingência}\\
+% \midrule
+% Falta de dados históricos completos & Média & Alta & Dados incompletos ou inconsistentes & Buscar fontes alternativas, interpolação e limpeza de dados\\
+% Baixa performance dos modelos de Inteligência Artificial & Média & Média & Alto erro ou baixa precisão & Testar algoritmos alternativos, ajustar hiperparâmetros\\
+% Dificuldade na integração de dados heterogêneos & Alta & Média & Inconsistências entre fontes & Uso de ferramentas de ETL e padronização\\
+% Mudanças na disponibilidade de bases públicas & Baixa & Média & Remoção de acesso a APIs ou sites & Armazenar backups locais, antecipar coleta de dados\\
+% Atraso no cronograma devido à complexidade & Média & Alta & Atividades técnicas levarem mais tempo & Reorganizar etapas e priorizar entregas parciais\\
+% \bottomrule
+% \end{tabularx}\\[1mm]
+% {\small Fonte: Elaborado pela autora.}
+% \end{table}
