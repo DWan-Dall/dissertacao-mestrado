@@ -1,0 +1,52 @@
+% ============================================================
+% Capítulo 2 -- Fundamentação teórica
+% Seção 2.1 -- Hidrologia e desastres hidrológicos
+% abntex2cite: \cite{} -> (AUTOR, ano); \citeonline{} -> Autor (ano)
+% \pendente{...} deve estar definido no preâmbulo (marca decisões/checagens)
+% ============================================================
+
+\section{Hidrologia e desastres hidrológicos}
+\label{sec:hidrologia}
+
+Esta seção reúne o vocabulário mínimo para ler o restante do trabalho: de onde vem a água que causa um desastre hidrológico, como a legislação brasileira nomeia esses desastres e por que uma chuva forte, sozinha, não basta para que exista um desastre. Os conceitos de aprendizado de máquina, de vulnerabilidade e de dados geoespaciais, que dependem destas definições, ficam nas seções seguintes.
+
+\subsection{Ciclo hidrológico, bacia hidrográfica, precipitação e escoamento}
+\label{subsec:ciclo}
+
+Em palavras simples, o ciclo hidrológico é a circulação contínua da água entre oceanos, atmosfera e continentes. A água evapora, forma nuvens e volta à superfície como precipitação (chuva, neve, granizo). Ao atingir o solo, ela segue por dois caminhos principais: infiltra-se, abastecendo o solo e as águas subterrâneas, ou escorre pela superfície em direção aos rios \cite{usgs_cycle}. Tecnicamente, o ciclo é descrito por reservatórios (atmosfera, oceanos, solo, aquíferos) e por fluxos entre eles (evaporação, evapotranspiração, precipitação, infiltração, escoamento) \cite{usgs_cycle}.
+
+A unidade espacial em que esse balanço é analisado é a bacia hidrográfica: a área de terra em que toda a água que cai e escorre converge para um mesmo ponto de saída \cite{usgs_streamflow}. Em uma bacia, a água que chega pela precipitação tem três destinos: volta à atmosfera por evaporação e transpiração, infiltra-se, ou sai pelo curso d'água \cite{usgs_watershed}. O escoamento superficial é a parcela que corre sobre o terreno, formando filetes que se juntam em córregos e rios \cite{usgs_runoff}.
+
+O que decide quanto da chuva vira escoamento superficial, e com que rapidez, são dois grupos de fatores. O primeiro é a característica da chuva: intensidade, quantidade, duração e distribuição sobre a bacia, além da umidade deixada por chuvas anteriores \cite{usgs_runoff}. O segundo é a característica da bacia: uso da terra, vegetação, tipo de solo, forma e área da bacia, declividade e rede de drenagem \cite{usgs_runoff}. \pendente{livro-texto de hidrologia, a indicar pela autora}
+
+Um solo já saturado absorve pouco; uma superfície impermeabilizada (ruas, telhados) não absorve e leva a água rapidamente aos cursos d'água \cite{usgs_infiltration}. Por isso, a mesma chuva pode produzir uma subida lenta e gradual do rio em uma bacia florestada e uma cheia rápida e curta em uma bacia urbanizada \cite{usgs_runoff}. Essa ideia, de que o desastre depende da chuva \emph{e} da superfície que a recebe, reaparece na Seção~\ref{sec:geoespacial}, quando o uso da terra for tratado como dado.
+
+\subsection{Inundação, enxurrada, alagamento e movimento de massa}
+\label{subsec:tipologia}
+
+Na linguagem cotidiana, \emph{enchente}, \emph{inundação}, \emph{enxurrada} e \emph{alagamento} são usados como sinônimos. Tecnicamente, designam processos diferentes, e a classificação oficial brasileira os separa. A Classificação e Codificação Brasileira de Desastres (COBRADE), anexa à Instrução Normativa nº~1/2012 do então Ministério da Integração Nacional, organiza os desastres em grupos, subgrupos e tipos, cada qual com um código \cite{brasil2012cobrade}. \pendente{conferir Anexo I na versão oficial: texto integral do Anexo I não foi aberto; códigos e grupos conferidos por fontes secundárias}
+
+No grupo \emph{hidrológico}, os três tipos relevantes aqui são:
+
+\begin{itemize}
+  \item \textbf{Inundação} (1.2.1.0.0): submersão de áreas fora dos limites normais de um curso d'água, em zonas que normalmente não ficam submersas, com transbordamento gradual, em geral após chuvas prolongadas em áreas de planície \cite{brasil2012cobrade}. \pendente{conferir redação no Anexo I}
+  \item \textbf{Enxurrada} (1.2.2.0.0): escoamento superficial de alta velocidade e energia, provocado por chuvas intensas e concentradas, normalmente em pequenas bacias de relevo acidentado \cite{cemaden_protocolo2013}. \pendente{conferir redação no Anexo I}
+  \item \textbf{Alagamento} (1.2.3.0.0): extrapolação da capacidade de escoamento dos sistemas de drenagem urbana, com acúmulo de água em áreas rebaixadas e atingindo ruas, calçadas e outras infraestruturas \cite{cemaden_protocolo2013}. \pendente{conferir redação no Anexo I}
+\end{itemize}
+
+A diferença prática está no \emph{mecanismo}: a inundação é um transbordamento gradual de rio; a enxurrada é um escoamento rápido e energético, característico de bacias pequenas e íngremes; o alagamento é uma falha de drenagem urbana, que pode ocorrer mesmo longe de qualquer rio.
+
+Dois outros tipos aparecem com frequência junto aos anteriores nos registros de chuva, mas pertencem a outros grupos. Os movimentos de massa (quedas, tombamentos, deslizamentos, corridas de massa, subsidências) são desastres do grupo \emph{geológico} \cite{cemaden_protocolo2013}; as chuvas intensas (1.3.2.1.4) pertencem ao grupo \emph{meteorológico} \cite{cemaden_educacao}. Como a chuva pode estar na origem de todos esses processos, é possível encontrar séries de registros que os reúnem sob um único rótulo. Na classificação oficial, inundações, enxurradas e alagamentos pertencem ao grupo hidrológico, os movimentos de massa ao geológico e as chuvas intensas ao meteorológico; portanto, quando uma série de ``desastres hidrológicos'' reúne também movimentos de massa e chuvas intensas, esse agrupamento é uma escolha de organização dos registros, e não uma propriedade da classificação oficial. \pendente{origem do agrupamento}
+
+\subsection{Risco, exposição e vulnerabilidade: chuva extrema não é desastre}
+\label{subsec:risco}
+
+Uma chuva extrema é um fenômeno físico; um desastre é uma consequência sobre pessoas e bens. A passagem de um a outro depende de quem e do que está no caminho da água. A literatura de gestão de risco formaliza isso decompondo o \emph{risco} em componentes. Em sua forma mais simples, o risco de inundação é o produto de três fatores: o \emph{perigo} (a probabilidade de ocorrência do evento ameaçador), a \emph{exposição} (os valores, pessoas e bens situados na área atingível) e a \emph{vulnerabilidade} (a falta de resistência desses elementos aos efeitos do evento) \cite{kron2005}. \pendente{conferir definições no texto completo de Kron (2005); aqui apoiadas em fontes secundárias} A definição de risco de desastre das Nações Unidas segue a mesma lógica, determinando a perda potencial como função de perigo, exposição, vulnerabilidade e capacidade \cite{undrr2017risk}, e define exposição como a situação de pessoas, infraestrutura, moradias e outros bens materiais localizados em áreas sujeitas ao perigo \cite{undrr2017exposure}.
+
+Neste trabalho adota-se a seguinte convenção: \emph{risco = perigo $\times$ exposição $\times$ vulnerabilidade}, com a vulnerabilidade entendida como a combinação de \emph{sensibilidade} (quanto o sistema é afetado) e \emph{capacidade adaptativa} (quanto consegue se preparar, responder e se recuperar), e com a exposição tratada \emph{fora} da vulnerabilidade. Essa é uma escolha entre leituras possíveis: parte da literatura, como \citeonline{turner2003}, inclui a exposição dentro da vulnerabilidade. A comparação entre as duas leituras é feita na Seção~\ref{subsec:vuln-conceito}. \pendente{conferir enunciado de Turner et al. (2003) no texto completo}
+
+A consequência prática é que perigo e desastre não coincidem. \citeonline{lavell2012srex}, no capítulo 1 do relatório especial do IPCC sobre eventos extremos, observam que a exposição e a vulnerabilidade ajudam a explicar por que eventos físicos não extremos podem levar a desastres, enquanto alguns eventos extremos não levam. \pendente{conferir enunciado no capítulo 1 do SREX e a lista de autores do capítulo} Em termos de bacia: a mesma chuva que provoca uma cheia em área densamente ocupada passa despercebida onde não há ninguém no caminho da água.
+
+Esse ponto tem uma implicação direta para os dados usados no trabalho. Um registro de desastre não é uma medida do fenômeno físico: é um ato administrativo, produzido quando uma autoridade local classifica e informa uma ocorrência dentro de um sistema oficial. \pendente{fonte sobre como o registro é produzido} Logo, o que se observa na série depende de três coisas ao mesmo tempo: do que choveu, de quem estava exposto e vulnerável, e de \emph{como a ocorrência foi classificada e registrada}. Se a classificação oficial muda, por exemplo com a criação ou a adoção de uma nova tipologia, a série pode mudar de patamar sem que o fenômeno físico tenha mudado. Do mesmo modo, a ausência de registro em um município e ano (município-ano sem registro) não significa, por si só, que não houve chuva extrema nem desastre: significa que nenhum desastre foi registrado naquele município naquele ano. Essa distinção volta na Seção~\ref{subsec:falhas}, quando se discute por que muitos valores sem registro afetam os modelos.
+
+\paragraph{Síntese da seção.} A chuva vira escoamento conforme as características da chuva e da bacia; a classificação oficial distingue inundação, enxurrada e alagamento (hidrológicos) de movimentos de massa (geológicos) e de chuvas intensas (meteorológicas); e o desastre resulta da combinação de perigo, exposição e vulnerabilidade, observada através de um registro administrativo.
