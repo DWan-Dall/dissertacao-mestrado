@@ -1,0 +1,47 @@
+% =====================================================================
+% Capítulo 5 -- Resultados esperados e plano de validação (versão para a qualificação)
+%
+% Nesta etapa NÃO há resultados de modelagem. O capítulo registra o que já se
+% sabe (Capítulo 4), as decisões em aberto e o plano de modelagem e validação.
+% Na defesa, o título volta a ser "Resultados" e a seção 5.2 é substituída
+% pelos resultados obtidos. \pendente = decisão da autora ou do orientador.
+% =====================================================================
+
+\section{Situação desta etapa}
+\label{sec:res-situacao}
+
+Até a data da qualificação, a modelagem preditiva ainda não foi executada, e por isso este capítulo não apresenta resultados de modelos. O que existe é a base de dados integrada e a análise exploratória descritiva (Capítulo~\ref{cap:aed}), que caracterizou o Atlas Digital de Desastres, o ERA5 e o MapBiomas nos 35 municípios costeiros de Santa Catarina entre 1991 e 2025. Este capítulo reúne o que essa análise permite antecipar, as decisões que ela deixou em aberto e o plano de modelagem e de validação que será seguido a partir do cronograma (Tabela~1 da Seção~\ref{sec:intro-cronograma}).
+
+\section{O que a análise exploratória antecipa}
+\label{sec:res-antecipa}
+
+A análise exploratória não testa as hipóteses de pesquisa, mas indica como elas devem ser testadas. Três achados orientam o plano.
+
+O primeiro é que a variável resposta muda com a versão escolhida. O total de eventos hidrológicos cresce cerca de três vezes depois de 2013, mas, sem a tipologia ``Chuvas Intensas'', criada nesse ano, a média anual praticamente não muda (razão de 1,13). Assim, qualquer resultado de previsão deve dizer de qual versão da resposta trata, e comparar versões é parte do desenho.
+
+O segundo é que a chuva mensal da reanálise não mostra tendência no período, enquanto os registros sobem. Isso indica que o aumento dos registros não acompanha, nessa escala, o aumento da chuva, e que parte dele pode vir de mudanças na forma de registrar os desastres. Por isso, a avaliação da hipótese de que a inteligência artificial melhora a previsão precisa separar o período anterior e o posterior a 2013.
+
+O terceiro é que as variáveis de uso da terra variam quase só entre municípios e se misturam com a latitude. Elas descrevem diferenças entre lugares, e não mudanças no tempo, e precisam entrar no modelo como características do município.
+
+\section{Decisões em aberto}
+\label{sec:res-decisoes}
+
+O Capítulo~\ref{cap:aed} deixou decisões que mudam os números do que será modelado: a versão da variável resposta (total, sem Chuvas Intensas ou ambas); o corte do período (2013, primeiro ano de Chuvas Intensas, ou 2012); a conversão de unidades da precipitação do ERA5; a escolha do vento como controle negativo ou de outra variável que não covarie com a chuva; e a ausência do MapBiomas em Camboriú e Paulo Lopes, que parece falha de junção \pendente{registrar a decisão tomada em cada item antes da qualificação}.
+
+A segunda hipótese de pesquisa, de que variáveis socioeconômicas ajudam a identificar áreas críticas, depende de dados que ainda não estão na base: hoje ela tem chuva, vento, uso da terra e áreas de risco, e não tem indicadores socioeconômicos \pendente{definir a fonte dos indicadores socioeconômicos e o índice de vulnerabilidade, ou ajustar a hipótese}.
+
+\section{Plano de modelagem e validação}
+\label{sec:res-plano}
+
+A modelagem seguirá três cuidados que decorrem da análise exploratória.
+
+\paragraph{Modelos de referência primeiro.} Antes de árvores de decisão, redes neurais ou LSTM (Capítulo~\ref{cap:fundamentacao}), serão ajustados modelos simples de referência, como a média histórica do município. Um modelo mais complexo só é considerado melhor se superar esses modelos, o que dá sentido à primeira hipótese.
+
+\paragraph{Validação que respeita o tempo e o espaço.} Como os registros mudam de forma em 2013 e municípios vizinhos têm valores parecidos (índice de Moran de 0,37 na densidade de eventos), a divisão aleatória entre treino e teste superestimaria o desempenho. A validação usará períodos posteriores como teste e, em separado, municípios deixados de fora \pendente{confirmar os blocos de tempo e de município com o orientador}.
+
+\paragraph{Métricas adequadas a poucos eventos.} Em 62,8\% dos município-anos não há registro de evento, e a série é de apenas 35 anos. Por isso as métricas devem tratar eventos raros e contagens, e não apenas o erro médio \pendente{definir as métricas; por exemplo, o erro absoluto médio da contagem e a área sob a curva de precisão e revocação da ocorrência de evento}.
+
+\section{Cronograma}
+\label{sec:res-cronograma}
+
+A implementação dos modelos ocupa os meses M20 e M21, a validação e os testes ocupam M21 e M22, e a escrita final e a defesa ocupam M22 a M24, conforme a Tabela~1 da Seção~\ref{sec:intro-cronograma}. Os resultados obtidos nessas etapas substituirão este capítulo na versão da defesa.
